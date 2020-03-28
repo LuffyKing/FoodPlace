@@ -1,13 +1,15 @@
 package FoodPlace;
 
-    public class Menu {
+public class Menu {
 
-    public StoreMuneItems() {
-
+    public StoreMenuItems() {
+        
+        return MenuItems;
     }
 
     public CreateNewMenuItem() {
-
+        
+        return NewMenuItem;
     }
 
     public RemoveMenu() {
@@ -19,11 +21,12 @@ package FoodPlace;
     }
 
     public CreateSpecials() {
-
+        
+        return Specials;
     }
     
     public RemoveSpecials() {
 
     }
-    }
+}
     
