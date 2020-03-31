@@ -48,7 +48,7 @@ public class Booking {
         return approved;
     }
 
-    public boolean setApproved(boolean newApproved) {
+    public boolean approveBooking(boolean newApproved) {
         approved = newApproved;
         if (approved == true) {
             notifyAcceptance();
