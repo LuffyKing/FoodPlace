@@ -25,9 +25,7 @@ public class Manager extends Staff{
     public void removeStaff(int personId){
         // db
     }
-    public void approveEvent(int eventId){
-        // db
-    }
+
     public void generateReport(){
         // db
     }

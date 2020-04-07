@@ -1,4 +1,4 @@
-package sample;
+package FoodPlace;
 
 public class Booking {
     public static final int defaultBookingLength = 1;
@@ -10,12 +10,13 @@ public class Booking {
     private boolean approved;
     private final int customerID;
 
-    public Booking(final int bookingID_, int numberOfGuests_, int bookingLength_, boolean approved_, final int customerID_){
-        bookingID = bookingID_;
+    public Booking(int numberOfGuests_, int bookingLength_, final int customerID_){
         numberOfGuests = numberOfGuests_;
         bookingLength = bookingLength_;
-        approved = approved_;
+        approved = false;
         customerID = customerID_;
+        //get from DB after save
+        bookingID = -1;
     }
 
     public int getBookingID() {
@@ -25,6 +26,8 @@ public class Booking {
     public int getNumberOfGuests() {
         return numberOfGuests;
     }
+
+
 
     public int setNumberOfGuests(final int newGuestNumber) {
         if (newGuestNumber > 0) {
