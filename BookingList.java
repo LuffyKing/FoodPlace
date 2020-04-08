@@ -52,7 +52,7 @@ public class BookingList {
         }
     }
 
-    public void editBooking(int bookingId,  int numberOfGuests_, int bookingLength_){
+    public void editBooking(int bookingId,  int numberOfGuests_, int bookingLength_, LocalDateTime bookingTime_){
         for (int i = 0; i < bookings.length; i++) {
             if(bookings[i].getBookingID() == bookingId){
                 if (!bookings[i].getApproved()){
@@ -61,6 +61,9 @@ public class BookingList {
                     }
                     if (bookingLength_ > 0){
                         bookings[i].setBookingLength(bookingLength_);
+                    }
+                    if (bookingTime_ > java.time.LocalDateTime.now()){
+                        bookings[i].setBookingTime(bookingTime_);
                     }
 
                 } else{
