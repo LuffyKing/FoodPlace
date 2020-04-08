@@ -75,14 +75,14 @@ public class Customer extends Person{
     }
 
 
-    public void createBooking(int numberOfGuests_, int bookingLength_, BookingList bookingList){
+    public void createBooking(int numberOfGuests_, int bookingLength_, LocalDateTime bookingTime_, BookingList bookingList){
         Booking booking = new Booking(numberOfGuests_, bookingLength_, customerId);
         bookingList.addBookingToList(booking);
     }
     public void cancelBooking(Booking booking, BookingList bookingList){
         bookingList.removeBooking(booking.getBookingID());
     }
-    public void editBooking(Booking booking, int numberOfGuests, int bookingLength,BookingList bookingList){
+    public void editBooking(Booking booking, int numberOfGuests, int bookingLength, LocalDateTime bookingTime_, BookingList bookingList){
         bookingList.editBooking(booking.getBookingID(), numberOfGuests, bookingLength);
     }
 }
