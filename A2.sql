@@ -2,6 +2,7 @@ CREATE TABLE `Customers` (
   `C_id` int PRIMARY KEY AUTO_INCREMENT,
   `first_name` varchar(255),
   `last_name` varchar(255),
+  `C_Username` varchar(255),
   `created_at` timestamp,
   `Address` varchar(255),
   `Password` varchar(255)
@@ -11,7 +12,8 @@ CREATE TABLE `Staff` (
   `S_id` int PRIMARY KEY AUTO_INCREMENT,
   `hours_worked` int,
   `hours_2bworked` int,
-  `Passwprd` varchar(255),
+  `S_Username` varchar(255),
+  `Password` varchar(255),
   `type` varchar(255),
   `created_at` timestamp
 );
