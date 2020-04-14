@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -15,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FoodPlace.ControllerMyOrdersHome">
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FoodPlace.ControllerMyOrdersUpdated">
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
         <VBox prefHeight="398.0" prefWidth="175.0">
             <AnchorPane prefHeight="104.0" prefWidth="175.0">
@@ -42,42 +41,40 @@
                 </HBox>
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                <VBox layoutX="-2.0" layoutY="-2.0" prefHeight="362.0" prefWidth="415.0">
-                    <AnchorPane prefHeight="30.0" prefWidth="415.0">
-                        <Text layoutX="11.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Orders" wrappingWidth="272.13672256469727">
+                <VBox layoutX="-1.0" layoutY="-3.0" prefHeight="362.0" prefWidth="417.0">
+                    <AnchorPane prefHeight="41.0" prefWidth="417.0">
+                        <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Updated" wrappingWidth="175.4700527191162">
                             <font>
                                 <Font name="System Bold" size="17.0" />
                             </font>
                         </Text>
                     </AnchorPane>
-                    <AnchorPane prefHeight="212.0" prefWidth="417.0">
-                        <TableView prefHeight="246.0" prefWidth="399.0">
+                    <AnchorPane prefHeight="37.0" prefWidth="417.0">
+                        <Text layoutX="5.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your order has been updated." wrappingWidth="407.33333333333326" />
+                    </AnchorPane>
+                    <Separator opacity="0.0" prefHeight="13.0" prefWidth="417.0" />
+                    <AnchorPane prefHeight="59.0" prefWidth="417.0">
+                        <TableView layoutX="19.0" layoutY="1.0" prefHeight="57.0" prefWidth="379.0">
                             <columns>
-                                <TableColumn prefWidth="64.00005841255188" text="Order ID" />
-                                <TableColumn prefWidth="133.33333587646484" text="Date &amp; Time Placed" />
-                                <TableColumn prefWidth="74.66667175292969" text="Type" />
-                                <TableColumn prefWidth="61.999969482421875" text="Status" />
-                        <TableColumn prefWidth="144.66668701171875" text="Edit?" />
+                                <TableColumn prefWidth="62.66676139831543" text="Quantity" />
+                                <TableColumn prefWidth="160.66669464111328" text="Item" />
+                                <TableColumn prefWidth="74.66661071777344" text="Price" />
+                                <TableColumn prefWidth="79.33328247070312" text="Status" />
                             </columns>
                         </TableView>
-                        <ScrollBar layoutX="399.0" orientation="VERTICAL" prefHeight="246.0" prefWidth="18.0" />
                     </AnchorPane>
-                    <HBox prefHeight="29.0" prefWidth="415.0">
-                        <AnchorPane prefHeight="44.0" prefWidth="105.0" />
-                        <AnchorPane prefHeight="14.0" prefWidth="202.0">
-                            <Button fx:id="linktomyordersedit" layoutX="-1.0" layoutY="4.0" mnemonicParsing="false" onAction= "#linktomyorderseditbuttonPressed" prefHeight="26.0" prefWidth="204.0" style="-fx-background-color: #C4C4C4; -fx-border-color: #868686;" text="Edit Order">
+                    <Separator opacity="0.0" prefHeight="14.0" prefWidth="417.0" />
+                    <HBox prefHeight="33.0" prefWidth="417.0">
+                        <AnchorPane prefHeight="41.0" prefWidth="113.0" />
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <Button fx:id="linkbacktomyordershome" layoutX="14.0" layoutY="2.0" mnemonicParsing="false" onAction="#linktomyordersButtonPressed" prefHeight="27.0" prefWidth="166.0" text="Return to orders list">
                                 <font>
                                     <Font name="System Italic" size="12.0" />
                                 </font>
                             </Button>
                         </AnchorPane>
-                        <AnchorPane prefHeight="44.0" prefWidth="114.0" />
+                        <AnchorPane prefHeight="41.0" prefWidth="115.0" />
                     </HBox>
-                    <AnchorPane prefHeight="57.0" prefWidth="417.0">
-                        <Text layoutX="5.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0"
-                              text="Note: Orders can only be edited if they have not yet been confirmed by the restaurant."
-                              wrappingWidth="408.0000204642613"/>
-                    </AnchorPane>
                 </VBox>
             </AnchorPane>
         </SplitPane>
