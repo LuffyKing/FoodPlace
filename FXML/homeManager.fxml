@@ -52,13 +52,13 @@
                    prefWidth="417.0">
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="22.0" prefWidth="415.0">
                 <HBox layoutY="1.0" prefHeight="26.0" prefWidth="415.0">
-                    <Button fx:id="notificationspage" mnemonicParsing="false" prefHeight="27.0"
-                            prefWidth="204.0"
+                    <Button fx:id="notificationspage" mnemonicParsing="false" onAction= "#notificationspageButtonPressed"
+                            prefHeight="27.0" prefWidth="204.0"
                             style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;"
                             text="Notifications"/>
                     <Separator orientation="VERTICAL" prefHeight="27.0" prefWidth="0.0"/>
-                    <Button fx:id="logoutbutton" mnemonicParsing="false" prefHeight="27.0"
-                            prefWidth="204.0"
+                    <Button fx:id="logoutbutton" mnemonicParsing="false" onAction= "#logoutbuttonPressed"
+                            prefHeight="27.0" prefWidth="204.0"
                             style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;"
                             text="Logout"/>
                 </HBox>
