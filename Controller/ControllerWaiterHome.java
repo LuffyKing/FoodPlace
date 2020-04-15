@@ -44,7 +44,7 @@ public class ControllerWaiterHome {
     }
 
     public void ordershomewaiterview(javafx.event.ActionEvent event) throws IOException {
-        Parent ordershomewaiterParent = FXMLLoader.load(getClass().getResource("----.fxml"));
+        Parent ordershomewaiterParent = FXMLLoader.load(getClass().getResource("waiterOrderHomepage.fxml"));
         Scene ordershomewaiterScene = new Scene(ordershomewaiterParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(ordershomewaiterScene);
@@ -53,7 +53,7 @@ public class ControllerWaiterHome {
 
 
     public void menuhomewaiter(javafx.event.ActionEvent event) throws IOException {
-        Parent menuhomewaiterParent = FXMLLoader.load(getClass().getResource("----.fxml"));
+        Parent menuhomewaiterParent = FXMLLoader.load(getClass().getResource("menuWaiter.fxml"));
         Scene menuhomewaiterScene = new Scene(menuhomewaiterParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(menuhomewaiterScene);
