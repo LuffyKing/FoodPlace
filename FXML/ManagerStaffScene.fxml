@@ -55,7 +55,7 @@
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <TableView layoutX="22.0" layoutY="14.0" prefHeight="211.0" prefWidth="381.0">
+                        <TableView layoutX="22.0" layoutY="14.0" prefHeight="255.0" prefWidth="381.0">
                           <columns>
                             <TableColumn fx:id="StaffNameColumn" prefWidth="75.0" text="StaffName" />
                             <TableColumn fx:id="StaffTypeColumn" prefWidth="57.0" text="Type" />
@@ -63,9 +63,8 @@
                               <TableColumn fx:id="StaffHoursTobeWorkedColumn" prefWidth="121.0" text="HoursTobeWorked" />
                           </columns>
                         </TableView>
-                        <Button fx:id="Add" layoutX="31.0" layoutY="303.0" mnemonicParsing="false" text="Add staff" />
-                        <Button fx:id="RemoveStaffButton" layoutX="143.0" layoutY="304.0" mnemonicParsing="false" text="Remove staff" />
-                        <Button fx:id="EditStaffButton" layoutX="263.0" layoutY="301.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="64.0" text="Edit Staff" />
+                        <Button fx:id="StaffOptionsButton" layoutX="170.0" layoutY="295.0" mnemonicParsing="false" text="Staff Options" />
+                        <Button layoutX="290.0" layoutY="295.0" mnemonicParsing="false" text="Refresh" />
                      </children></AnchorPane>
               </items>
             </SplitPane>
