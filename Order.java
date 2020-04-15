@@ -1,26 +1,40 @@
 package FoodPlace;
+import javafx.collections.ObservableList;
+
 import java.time.LocalDateTime;
 
 abstract public class Order {
     private int orderId;
     private boolean isComplete;
     private LocalDateTime dateTime;
-    private MenuItem[] orderItems;
+    private ObservableList<OrderItem> orderItems;
     private String orderType;
-    public Order(MenuItem[] items){
-        isComplete = false;
-        dateTime = LocalDateTime.now();
-        orderItems = items;
-        //save the staff to the db
-        //get orderId
-        orderId = -1;//get data from db
+    private int customerId;
+    public Order(ObservableList<OrderItem> orderItems,
+                 int orderId,
+                 LocalDateTime dateTime,
+                 int customerId,
+                 boolean isComplete){
+        this.dateTime = dateTime;
+        this.orderItems = orderItems;
+        this.orderId = orderId;//get data from db
+        this.customerId = customerId;
+        this.isComplete = isComplete;
     }
 
-    public void setOrderItems(MenuItem[] orderItems) {
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
+    }
+
+    public void setOrderItems(ObservableList<OrderItem> orderItems) {
         this.orderItems = orderItems;
     }
 
-    public MenuItem[] getOrderItems() {
+    public ObservableList<OrderItem> getOrderItems() {
         return orderItems;
     }
 
@@ -36,9 +50,17 @@ abstract public class Order {
         this.orderType = orderType;
     }
 
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
+    }
+
     public double orderTotal(){
         double sum = 0 ;
-        for(MenuItem item: orderItems){
+        for(OrderItem item: orderItems){
             sum += item.getTotal();
         }
         return sum;
@@ -53,11 +75,11 @@ abstract public class Order {
     }
 
     public String[] printReceipt(){
-        String[] receipt = new String[orderItems.length+1];
+        String[] receipt = new String[orderItems.size()+1];
         int count = 0;
-        for(MenuItem menuItem: orderItems){
-            String itemDetails = menuItem.getDescription()+","+menuItem.getUnitPrice()
-                    +","+ menuItem.getTotal();
+        for(OrderItem orderItem: orderItems){
+            String itemDetails = orderItem.getName()+","+orderItem.getUnitPrice()
+                    +","+ orderItem.getTotal();
             receipt[count++] = itemDetails;
         }
         receipt[count] = ""+orderTotal();

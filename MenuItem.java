@@ -6,27 +6,40 @@ public class MenuItem {
     private String category;
     private double unitPrice;
     private int menuItemId;
-    private int quantity;
-    public MenuItem(String desc, double unitP, String cat){
+    private String name;
+    public MenuItem(String desc,
+                    double unitP,
+                    String cat,
+                    int mId,
+                    String nameVar){
         description = desc;
         unitPrice = unitP;
         category = cat;
         isSpecial = false;
-        quantity = 0;
-        // save to db then get the id
-        menuItemId = -1;
+        menuItemId = mId;
+        name = nameVar;
     }
 
-    public double getTotal() {
-        return quantity * unitPrice;
+    public MenuItem(String desc,
+                    double unitP,
+                    String cat,
+                    int mId,
+                    String nameVar,
+                    boolean special){
+        description = desc;
+        unitPrice = unitP;
+        category = cat;
+        isSpecial = special;
+        menuItemId = mId;
+        name = nameVar;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public String getName() {
+        return name;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
@@ -59,6 +72,10 @@ public class MenuItem {
 
     public void setAsSpecial(boolean special) {
         isSpecial = special;
+    }
+
+    public boolean getSpecial(){
+        return isSpecial;
     }
 
 }

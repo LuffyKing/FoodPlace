@@ -1,25 +1,57 @@
 package FoodPlace;
 
 public class Chef extends Staff{
-    public Chef(String fname, String lname, int hoursToWork){
-        super(fname, lname, hoursToWork, "chef");
+    public Chef(String fname,
+                  String lname,
+                  int hoursToWork,
+                  String sType,
+                  int sId,
+                  String uname,
+                  String pword
+    ){
+        super(fname,
+                lname,
+                hoursToWork,
+                sType,
+                sId,
+                uname,
+                pword);
+    }
+
+    public Chef(String fname,
+                  String lname,
+                  int hoursToWork,
+                  String sType,
+                  int sId,
+                  String uname,
+                  String pword,
+                  int hWorked
+    ){
+        super(fname,
+                lname,
+                hoursToWork,
+                sType,
+                sId,
+                uname,
+                pword,
+                hWorked);
     }
     public void completeOrder(Order order) {
         order.setCompletionStatus(true);
     }
 
     public void addDailySpecial(Menu menu, String description,
-                                double price, String category){
-        menu.createDailySpecial(description, price, category);
+                                double price, String category, int mId){
+        menu.createDailySpecial(description, price, category, mId);
     }
 
     public void removeDailySpecial(Menu menu, int menuItemId){
         menu.removeMenuItem(menuItemId);
     }
 
-    public void editDailySpecial(Menu menu, int menuItemId,  String description,
+    public void editDailySpecial(Menu menu,MenuItem menuItem,  String description,
                                  double price, String category){
-        menu.editMenuItem(menuItemId, description, price, category);
+        menu.editMenuItem(menuItem, description, price, category);
     }
 
 }

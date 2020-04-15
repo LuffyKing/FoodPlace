@@ -1,16 +1,34 @@
 package FoodPlace;
 
+import javafx.collections.ObservableList;
+
 import java.time.LocalDateTime;
 
 public class Takeaway extends Order{
 
     private LocalDateTime pickupTime;
-    private boolean pickupStatus;
     private boolean collectionStatus;
-    Takeaway(MenuItem[] items, LocalDateTime ptime){
-        super(items);
-        LocalDateTime pickupTime = ptime;
+   public Takeaway(ObservableList<OrderItem> items,
+             int orderId,
+             LocalDateTime dateTime,
+             int customerId,
+             boolean isCompleted,
+             LocalDateTime ptime){
+        super(items, orderId, dateTime, customerId, isCompleted);
+        pickupTime = ptime;
         collectionStatus = false;
+    }
+
+    public Takeaway(ObservableList<OrderItem> items,
+             int orderId,
+             LocalDateTime dateTime,
+             int customerId,
+             boolean isCompleted,
+             LocalDateTime ptime,
+             boolean cStatus){
+        super(items, orderId, dateTime, customerId, isCompleted);
+        pickupTime = ptime;
+        collectionStatus = cStatus;
     }
 
     public boolean getCollectionStatus() {
@@ -19,14 +37,6 @@ public class Takeaway extends Order{
 
     public void setSetCollectionStatus(boolean status) {
         this.collectionStatus = status;
-    }
-
-    public boolean getPickupStatus() {
-        return pickupStatus;
-    }
-
-    public void setPickupStatus(boolean status) {
-        this.pickupStatus = status;
     }
 
     public LocalDateTime getPickupTime() {
