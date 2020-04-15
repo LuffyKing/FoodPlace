@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class ControllerStaffBookingHome {
+    
     public Button linktostaff;
     public Button linktoorders;
     public Button linktomenu;
@@ -46,7 +47,7 @@ public class ControllerStaffBookingHome {
     }
 
     public void ordershomewaiterview(javafx.event.ActionEvent event) throws IOException {
-        Parent ordershomewaiterParent = FXMLLoader.load(getClass().getResource("----.fxml"));
+        Parent ordershomewaiterParent = FXMLLoader.load(getClass().getResource("waiterOrderHomepage.fxml"));
         Scene ordershomewaiterScene = new Scene(ordershomewaiterParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(ordershomewaiterScene);
@@ -55,7 +56,7 @@ public class ControllerStaffBookingHome {
 
 
     public void menuhomewaiter(javafx.event.ActionEvent event) throws IOException {
-        Parent menuhomewaiterParent = FXMLLoader.load(getClass().getResource("----.fxml"));
+        Parent menuhomewaiterParent = FXMLLoader.load(getClass().getResource("menuWaiter.fxml"));
         Scene menuhomewaiterScene = new Scene(menuhomewaiterParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(menuhomewaiterScene);

@@ -1,8 +1,42 @@
 package FoodPlace;
 
+import javafx.collections.ObservableList;
+
 public class Waiter extends Staff{
-    public Waiter(String fname, String lname, int hoursToWork){
-        super(fname, lname, hoursToWork, "waiter");
+    public Waiter(String fname,
+                  String lname,
+                  int hoursToWork,
+                  String sType,
+                  int sId,
+                  String uname,
+                  String pword
+                  ){
+        super(fname,
+                lname,
+                hoursToWork,
+                sType,
+                sId,
+                uname,
+                pword);
+    }
+
+    public Waiter(String fname,
+                  String lname,
+                  int hoursToWork,
+                  String sType,
+                  int sId,
+                  String uname,
+                  String pword,
+                  int hWorked
+    ){
+        super(fname,
+                lname,
+                hoursToWork,
+                sType,
+                sId,
+                uname,
+                pword,
+                hWorked);
     }
     public void approveDelivery(Delivery delivery){
         if (!delivery.getApprovalStatus()) {
@@ -13,13 +47,13 @@ public class Waiter extends Staff{
         }
     }
 
-    public void addOrderEatIn(MenuItem[] items, OrdersList orders){
-        orders.addOrderToList(new EatIn(items));
+    public void addOrderEatIn(ObservableList<OrderItem> items, ObservableList<Order> orders){
+        orders.add(new EatIn());
     }
-    public void removeOrderEatIn(Order order, OrdersList orders){
-        orders.removeOrder(order.getOrderId());
+    public void removeOrderEatIn(int orderId,ObservableList<Order> orders){
+        orders.removeIf(anOrder -> (anOrder.getOrderId() == orderId));
     }
-    public void editOrderEatIn(Order order, OrdersList orders, MenuItem[] menuItems){
+    public void editOrderEatIn(Order order, ObservableList<OrderItem> orders, MenuItem[] menuItems){
         orders.editOrder(order.getOrderId(), menuItems);
     }
     public void approveBooking(Booking booking){

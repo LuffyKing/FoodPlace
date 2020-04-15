@@ -51,7 +51,7 @@ public class ControllerChefHome {
 
 
     public void linktoorderschefview(javafx.event.ActionEvent event) throws IOException {
-        Parent ordershomeParent = FXMLLoader.load(getClass().getResource("----.fxml"));
+        Parent ordershomeParent = FXMLLoader.load(getClass().getResource("ChefOrderHomepage.fxml"));
         Scene ordershomeScene = new Scene(ordershomeParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(ordershomeScene);

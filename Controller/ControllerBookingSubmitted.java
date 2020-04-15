@@ -20,7 +20,7 @@ public class ControllerBookingSubmitted {
     public Button notificationspage;
 
     public void linktomyaccountButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent myaccountParent = FXMLLoader.load(getClass().getResource("-----.fxml"));
+        Parent myaccountParent = FXMLLoader.load(getClass().getResource("MyAccount.fxml"));
         Scene myaccountScene = new Scene(myaccountParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(myaccountScene);
@@ -28,7 +28,7 @@ public class ControllerBookingSubmitted {
     }
 
     public void linktomenuButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent menuParent = FXMLLoader.load(getClass().getResource("------.fxml"));
+        Parent menuParent = FXMLLoader.load(getClass().getResource("customerMenu.fxml"));
         Scene menuScene = new Scene(menuParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(menuScene);
@@ -36,7 +36,7 @@ public class ControllerBookingSubmitted {
     }
 
     public void linktomyordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent myordersParent = FXMLLoader.load(getClass().getResource("------.fxml"));
+        Parent myordersParent = FXMLLoader.load(getClass().getResource("myOrdersHome.fxml"));
         Scene myordersScene = new Scene(myordersParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(myordersScene);
@@ -52,7 +52,7 @@ public class ControllerBookingSubmitted {
     }
 
     public void notificationspageButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent notificationsParent = FXMLLoader.load(getClass().getResource("------.fxml"));
+        Parent notificationsParent = FXMLLoader.load(getClass().getResource("Notification.fxml"));
         Scene notificationsScene = new Scene(notificationsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(notificationsScene);
