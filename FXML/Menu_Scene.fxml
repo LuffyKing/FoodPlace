@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="270.0" style="-fx-background-color: #E3FFFB;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@FoodPlace-master/sample/Logo.png" />
+               </image>
+            </ImageView>
+            <Button layoutY="171.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="270.0" text="Add Menu Item">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="208.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="270.0" text="Remove Menu Item">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="245.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="270.0" text="Edit Menu Item">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutY="282.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="270.0" text="Update Specials">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="405.0" prefHeight="48.0" prefWidth="88.0" text="Menu" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="285.0" layoutY="72.0" text="Espresso" />
+      <Label layoutX="281.0" layoutY="89.0" text="Americano" />
+      <Label layoutX="282.0" layoutY="106.0" text="Cafe Latte" />
+      <Label layoutX="277.0" layoutY="123.0" text="Cafe Mocha" />
+      <Label layoutX="280.0" layoutY="140.0" text="Cappucino" />
+      <Label layoutX="405.0" layoutY="225.0" text="Specials">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="283.0" layoutY="248.0" text="Daily Fish" />
+      <Label layoutX="274.0" layoutY="265.0" text="Daily Cheese" />
+      <Label layoutX="285.0" layoutY="157.0" text="Omelette" />
+      <Label layoutX="283.0" layoutY="174.0" text="Sandwich" />
+   </children>
+</Pane>

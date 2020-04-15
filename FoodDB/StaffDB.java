@@ -29,7 +29,7 @@ public class StaffDB extends DBUtil{
                         int hoursWorked = rs.getInt("hours_worked");
                         int hoursToWork = rs.getInt("hours_2bworked");
                         String type = rs.getString("type");
-                        String username = rs.getString("username");
+                        String username = rs.getString("S_username");
                         String password = rs.getString("password");
                         switch (type){
                             case "waiter": {
@@ -86,7 +86,7 @@ public class StaffDB extends DBUtil{
                         int hoursWorked = rs.getInt("hours_worked");
                         int hoursToWork = rs.getInt("hours_2bworked");
                         String type = rs.getString("type");
-                        String username = rs.getString("username");
+                        String username = rs.getString("S_username");
                         String password = rs.getString("password");
                         switch (type){
                             case "waiter": {
@@ -143,7 +143,7 @@ public class StaffDB extends DBUtil{
                 "hours_worked,\n"+
                 "hours_2bworked,\n"+
                 "type,\n"+
-                "username,\n"+
+                "S_username,\n"+
                 "password)\n"+
                 "VALUES( "+ fname+",\n"+
                 lname+",\n"+
@@ -213,7 +213,7 @@ public class StaffDB extends DBUtil{
             update += "type = '"+ sType +"',";
         }
         if (uname != null){
-            update += "username ='" + uname+"',";
+            update += "S_username ='" + uname+"',";
         }
         if (pword != null){
             update += "password = '" + pword+ "'";

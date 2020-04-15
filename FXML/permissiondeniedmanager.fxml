@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FoodPlace.ControllerManagerHome">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+        <VBox prefHeight="398.0" prefWidth="175.0">
+            <AnchorPane prefHeight="104.0" prefWidth="175.0">
+                <ImageView fitHeight="139.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <Image url="@Black%20with%20Utensils%20Icon%20Restaurant%20Logo.png" />
+                </ImageView>
+            </AnchorPane>
+            <Button fx:id="linktostaff" mnemonicParsing="false" onAction="#managerstaffpagelink"
+                    prefHeight="62.0" prefWidth="175.0"
+                    style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;"
+                    text="Staff" />
+            <Button fx:id="linktoorders" mnemonicParsing="false" onAction="#permissiondeniedscreen"
+                    prefHeight="64.0" prefWidth="175.0"
+                    style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;"
+                    text="Orders" />
+            <Button fx:id="linktomenu" mnemonicParsing="false" onAction="#permissiondeniedscreen"
+                    prefHeight="61.0" prefWidth="175.0"
+                    style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;"
+                    text="Menu" />
+            <Button fx:id="linktobookings" mnemonicParsing="false" onAction="#permissiondeniedscreen"
+                    prefHeight="63.0" prefWidth="175.0"
+                    style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;"
+                    text="Bookings" />
+            <Button fx:id="linktoreports" mnemonicParsing="false" onAction= "#managereportsscreen"
+                    prefHeight="60.0" prefWidth="175.0"
+                    style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;"
+                    text="Reports" />
+        </VBox>
+    </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+        <SplitPane dividerPositions="0.0829145728643216" orientation="VERTICAL" prefHeight="400.0" prefWidth="417.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="22.0" prefWidth="415.0">
+                <HBox layoutY="1.0" prefHeight="26.0" prefWidth="415.0">
+                    <Button fx:id="notificationspage" mnemonicParsing="false" onAction= "#notificationspageButtonPressed"
+                            prefHeight="27.0" prefWidth="204.0"
+                            style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;"
+                            text="Notifications" />
+                    <Separator orientation="VERTICAL" prefHeight="27.0" prefWidth="0.0" />
+                    <Button fx:id="logoutbutton" mnemonicParsing="false" onAction= "#logoutbuttonPressed"
+                            prefHeight="27.0" prefWidth="204.0" 
+                            style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;"
+                            text="Logout" />
+                </HBox>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                <Text layoutX="126.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Permission Denied">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Text>
+                <Text layoutX="85.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please choose a different option.">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Text>
+            </AnchorPane>
+        </SplitPane>
+    </AnchorPane>
+</SplitPane>

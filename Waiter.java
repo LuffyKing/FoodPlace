@@ -47,13 +47,13 @@ public class Waiter extends Staff{
         }
     }
 
-    public void addOrderEatIn(MenuItem[] items, ObservableList<Order> orders){
-        orders.add(new EatIn(items));
+    public void addOrderEatIn(ObservableList<OrderItem> items, ObservableList<Order> orders){
+        orders.add(new EatIn());
     }
-    public void removeOrderEatIn(Order order,ObservableList<Order> orders){
-        orders.removeIf(order -> (order.getOrderId()));
+    public void removeOrderEatIn(int orderId,ObservableList<Order> orders){
+        orders.removeIf(anOrder -> (anOrder.getOrderId() == orderId));
     }
-    public void editOrderEatIn(Order order, ObservableList<> orders, MenuItem[] menuItems){
+    public void editOrderEatIn(Order order, ObservableList<OrderItem> orders, MenuItem[] menuItems){
         orders.editOrder(order.getOrderId(), menuItems);
     }
     public void approveBooking(Booking booking){

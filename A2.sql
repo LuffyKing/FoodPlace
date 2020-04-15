@@ -2,10 +2,10 @@ CREATE TABLE `Customers` (
   `c_id` int PRIMARY KEY AUTO_INCREMENT,
   `first_name` varchar(255),
   `last_name` varchar(255),
+  `C_Username` varchar(255),
   `created_at` timestamp,
   `address` varchar(255),
   `password` varchar(255),
-  `username` varchar(255)
 );
 
 CREATE TABLE `Staff` (
@@ -14,10 +14,10 @@ CREATE TABLE `Staff` (
   `last_name` varchar(255),
   `hours_worked` int,
   `hours_2bworked` int,
-  `password` varchar(255),
+  `S_Username` varchar(255),
+  `Password` varchar(255),
   `type` varchar(255),
   `created_at` timestamp,
-  `username` varchar(255)
 );
 
 CREATE TABLE `bookings` (

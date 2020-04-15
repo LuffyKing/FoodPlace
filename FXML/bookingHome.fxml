@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+           minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="FoodPlace.ControllerBookingHome">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+        <VBox prefHeight="398.0" prefWidth="175.0">
+            <AnchorPane prefHeight="104.0" prefWidth="175.0">
+                <ImageView fitHeight="139.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                    <Image url="@Black%20with%20Utensils%20Icon%20Restaurant%20Logo.png"/>
+                </ImageView>
+            </AnchorPane>
+            <Button fx:id="linktomyaccount" mnemonicParsing="false" onAction="#linktomyaccountButtonPressed"
+                    prefHeight="73.0" prefWidth="175.0"
+                    style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;"
+                    text="My Account"/>
+            <Button fx:id="linktomenu" mnemonicParsing="false" onAction="#linktomenuButtonPressed"
+                    prefHeight="73.0" prefWidth="175.0"
+                    style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;"
+                    text="Menu"/>
+            <Button fx:id="linktomyorders" mnemonicParsing="false" onAction="#linktomyordersButtonPressed"
+                    prefHeight="73.0" prefWidth="175.0"
+                    style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;"
+                    text="My Orders"/>
+            <Button fx:id="linktobookinghome" mnemonicParsing="false" onAction="#linktobookinghomeButtonPressed"
+                    prefHeight="73.0" prefWidth="175.0"
+                    style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;"
+                    text="My Bookings"/>
+        </VBox>
+    </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+        <SplitPane dividerPositions="0.0829145728643216" orientation="VERTICAL" prefHeight="400.0"
+                   prefWidth="417.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="22.0" prefWidth="415.0">
+                <HBox layoutY="1.0" prefHeight="26.0" prefWidth="415.0">
+                    <Button fx:id="notificationspage" mnemonicParsing="false"
+                            onAction="#notificationspageButtonPressed" prefHeight="27.0"
+                            prefWidth="204.0"
+                            style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;"
+                            text="Notifications"/>
+                    <Separator orientation="VERTICAL" prefHeight="27.0" prefWidth="0.0"/>
+                    <Button fx:id="logoutbutton" mnemonicParsing="false" onAction="#logoutbuttonPressed"
+                            prefHeight="27.0" prefWidth="204.0"
+                            style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;"
+                            text="Logout"/>
+                </HBox>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                <VBox layoutX="-2.0" layoutY="-2.0" prefHeight="362.0" prefWidth="415.0">
+                    <HBox prefHeight="29.0" prefWidth="415.0">
+                        <AnchorPane prefHeight="44.0" prefWidth="105.0"/>
+                        <AnchorPane prefHeight="14.0" prefWidth="202.0">
+                            <Button fx:id="linktobookingcreate" layoutX="-1.0" layoutY="4.0"
+                                    mnemonicParsing="false"
+                                    onAction="#linktobookingcreateButtonPressed"
+                                    prefHeight="26.0" prefWidth="204.0"
+                                    style="-fx-background-color: #C4C4C4; -fx-border-color: #868686;"
+                                    text="Create New Booking">
+                                <font>
+                                    <Font name="System Italic" size="12.0"/>
+                                </font>
+                            </Button>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="44.0" prefWidth="114.0"/>
+                    </HBox>
+                    <AnchorPane prefHeight="30.0" prefWidth="415.0">
+                        <Text layoutX="11.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="My Bookings" wrappingWidth="272.13672256469727">
+                            <font>
+                                <Font name="System Bold" size="17.0"/>
+                            </font>
+                        </Text>
+                    </AnchorPane>
+                    <AnchorPane prefHeight="307.0" prefWidth="415.0">
+                        <TableView prefHeight="306.0" prefWidth="399.0">
+                            <columns>
+                                <TableColumn prefWidth="92.66676068305969" text="Date"/>
+                                <TableColumn prefWidth="82.66663360595703" text="Time"/>
+                                <TableColumn prefWidth="79.99998474121094" text="Guests"/>
+                                <TableColumn prefWidth="79.99996948242188" text="Status"/>
+                                <TableColumn prefWidth="72.0"/>
+                            </columns>
+                        </TableView>
+                        <ScrollBar layoutX="399.0" orientation="VERTICAL" prefHeight="306.0"
+                                   prefWidth="18.0"/>
+                    </AnchorPane>
+                </VBox>
+            </AnchorPane>
+        </SplitPane>
+    </AnchorPane>
+</SplitPane>
