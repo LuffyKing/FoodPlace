@@ -44,7 +44,7 @@ public class ControllerManagerHome {
     }
 
     public void managerstaffpagelink(javafx.event.ActionEvent event) throws IOException{
-        Parent managerstaffParent = FXMLLoader.load(getClass().getResource("----.fxml"));
+        Parent managerstaffParent = FXMLLoader.load(getClass().getResource("ManagerStaffScene.fxml"));
         Scene managerstaffScene = new Scene(managerstaffParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(managerstaffScene);
@@ -52,7 +52,7 @@ public class ControllerManagerHome {
     }
 
     public void managereportsscreen(javafx.event.ActionEvent event) throws IOException {
-        Parent managerreportParent = FXMLLoader.load(getClass().getResource("----.fxml"));
+        Parent managerreportParent = FXMLLoader.load(getClass().getResource("Report.fxml"));
         Scene managerreportScene = new Scene(managerreportParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(managerreportScene);
