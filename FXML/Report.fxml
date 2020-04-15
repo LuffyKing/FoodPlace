@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <VBox prefHeight="398.0" prefWidth="175.0">
+               <children>
+                  <AnchorPane prefHeight="104.0" prefWidth="175.0">
+                     <children>
+                        <ImageView fitHeight="139.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Downloads/FoodPlace-master/sample/Logo.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="linktostaff" mnemonicParsing="false" prefHeight="62.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Staff" />
+                  <Button fx:id="linktoorders" mnemonicParsing="false" prefHeight="64.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Orders" />
+                  <Button fx:id="linktomenu" mnemonicParsing="false" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Menu" />
+                  <Button fx:id="linktobookings" mnemonicParsing="false" prefHeight="63.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Bookings" />
+                  <Button fx:id="linktoreports" mnemonicParsing="false" prefHeight="60.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Reports" />
+               </children>
+            </VBox>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <SplitPane dividerPositions="0.0829145728643216" orientation="VERTICAL" prefHeight="400.0" prefWidth="417.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="22.0" prefWidth="415.0">
+                     <children>
+                        <HBox layoutY="1.0" prefHeight="26.0" prefWidth="415.0">
+                           <children>
+                              <Button fx:id="notificationspage" mnemonicParsing="false" prefHeight="27.0" prefWidth="204.0" style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;" text="Notifications" />
+                              <Separator orientation="VERTICAL" prefHeight="27.0" prefWidth="0.0" />
+                              <Button fx:id="logoutbutton" mnemonicParsing="false" prefHeight="27.0" prefWidth="204.0" style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;" text="Logout" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="145.0" text="Report">
+                           <font>
+                              <Font size="27.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="61.0" prefHeight="33.0" prefWidth="317.0" text="Most Popular Item: Fish">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="234.0" layoutY="61.0" prefHeight="33.0" prefWidth="317.0" text="Busiest period: 1pm">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="111.0" prefHeight="33.0" prefWidth="317.0" text="Most active customer: D.A">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <TableView layoutY="166.0" prefHeight="201.0" prefWidth="415.0">
+                          <columns>
+                            <TableColumn prefWidth="84.0" text="A" />
+                            <TableColumn prefWidth="81.0" text="B" />
+                              <TableColumn prefWidth="85.0" text="C" />
+                              <TableColumn prefWidth="81.0" text="D" />
+                              <TableColumn prefWidth="83.0" text="E" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
