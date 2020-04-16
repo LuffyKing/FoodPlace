@@ -1,4 +1,4 @@
-package sample;
+package FoodPlace.Controller; //you will need to update this location on fxml for it to work.
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +22,8 @@ import java.util.ResourceBundle;
 
 /**
  * Controller class for Customer Login scene
+ *@author
+ *@version ?
  */
 public class CustomerLoginController implements Initializable {
     @FXML
@@ -36,6 +38,7 @@ public class CustomerLoginController implements Initializable {
 
     /**
      * Method for changing the Scene to StaffLogin
+     *@param event Staff Login button pressed.
      */
     public void StaffLoginbuttonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent StaffViewParent = FXMLLoader.load(getClass().getResource("Staff_login_Draft.fxml"));
@@ -49,8 +52,7 @@ public class CustomerLoginController implements Initializable {
 
     /**
      * Method for changing the Scene to CustomerLogin
-     *
-     * @param event
+     * @param event Customer Sign up button pressed.
      */
     public void CustomerSignupbuttonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent CustomerViewParent = FXMLLoader.load(getClass().getResource("Customer_signup_Scene.fxml"));
@@ -67,8 +69,7 @@ public class CustomerLoginController implements Initializable {
 
     /**
      * Method for getting Username and password
-     *
-     * @param event
+     * @param event login button pressed.
      */
 
     public void LoginButtonPressed(javafx.event.ActionEvent event) throws IOException {
