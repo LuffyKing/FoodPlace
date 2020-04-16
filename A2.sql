@@ -5,7 +5,7 @@ CREATE TABLE `Customers` (
   `C_Username` varchar(255),
   `created_at` timestamp,
   `address` varchar(255),
-  `password` varchar(255),
+  `password` varchar(255)
 );
 
 CREATE TABLE `Staff` (
@@ -17,7 +17,7 @@ CREATE TABLE `Staff` (
   `S_Username` varchar(255),
   `Password` varchar(255),
   `type` varchar(255),
-  `created_at` timestamp,
+  `created_at` timestamp
 );
 
 CREATE TABLE `bookings` (
@@ -29,7 +29,7 @@ CREATE TABLE `bookings` (
   `start_time` timestamp,
   `end_time` timestamp,
   `noOfGuests` int,
-  `approved`  boolean,
+  `approved`  boolean
 
 );
 
@@ -43,7 +43,7 @@ CREATE TABLE `notifications` (
 CREATE TABLE `tables` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `seats` int,
-  `status` varchar(255),
+  `status` varchar(255)
 );
 
 CREATE TABLE `orders` (
@@ -59,7 +59,7 @@ CREATE TABLE `orders` (
   `delivery_address` varchar(255),
   `is_delivery_approved` boolean,
   `pickup_time` timestamp,
-  `collection_status` boolean,
+  `collection_status` boolean
 );
 
 CREATE TABLE `order_items` (
@@ -76,7 +76,7 @@ CREATE TABLE `Menu` (
   `isSpecial`  boolean,
   `category` varchar(255),
   `description` text,
-  `unitPrice` double,
+  `unitPrice` double
 
 );
 
