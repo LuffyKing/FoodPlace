@@ -6,11 +6,11 @@ import javafx.collections.ObservableList;
 import java.sql.*;
 import java.time.LocalDateTime;
 
-public class OrderDB extends DBUtil  {
-    DBPool pool;
+public class OrderDB {
+    DBUtil pool;
     public OrderDB() throws Exception{
         super();
-        pool = getDBConnectionPool();
+        pool = new DBUtil();
     }
 
     public Delivery editDeliveryOrder(int orderId,

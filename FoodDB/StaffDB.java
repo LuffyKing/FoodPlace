@@ -8,12 +8,12 @@ import javafx.collections.ObservableList;
 
 import java.sql.*;
 
-public class StaffDB extends DBUtil{
-     DBPool pool;
-     public StaffDB() throws Exception{
-         super();
-         pool = getDBConnectionPool();
-     }
+public class StaffDB{
+    DBUtil pool;
+    public StaffDB() throws Exception{
+        super();
+        pool = new DBUtil();
+    }
 
     public ObservableList<Staff> getAllStaff() throws SQLException {
         ObservableList<Staff> staffs = null;

@@ -1,29 +1,26 @@
 package FoodPlace;
 
+import javafx.collections.ObservableList;
+
 public class Menu {
-    private MenuItem[] menuItems;
-    int currIndex;
-    public Menu(){
-        menuItems = new MenuItem[50];
-        currIndex = 0;
-    }
-    public Menu(MenuItem[] items){
+    private ObservableList<MenuItem> menuItems;
+    public Menu(ObservableList<MenuItem> items){
         menuItems = items;
-        currIndex = menuItems.length-1;
     }
 
-    public MenuItem[] getMenuItems() {
+    public ObservableList<MenuItem> getMenuItems() {
         return menuItems;
     }
     
     public MenuItem getMenuItem(int menuItemId){
-        MenuItem menuItem = null;
-        for (int i = 0; i < menuItems.length; i++) {
-            if (menuItems[i].getMenuItemId() == menuItemId){
-                menuItem = menuItems[i];
+        MenuItem foundMenuItem = null;
+        for (MenuItem menuItem:
+             menuItems) {
+            if (menuItem.getMenuItemId() == menuItemId){
+                foundMenuItem = menuItem;
             }
         }
-        return  menuItem;
+        return  foundMenuItem;
     }
 
     public boolean isDuplicate(String description, String category){
@@ -47,19 +44,11 @@ public class Menu {
         return false;
     }
 
-    public void resize(int newLength){
-        MenuItem[] newArr = new MenuItem[newLength];
-        System.arraycopy(menuItems, 0, newArr, 0, menuItems.length);
-        menuItems = newArr;
-    }
-
-    public void addMenuItem(String description, double price, String category, int mId){
+    public MenuItem addMenuItem(String description, double price, String category, int mId, String name){
         if (!isDuplicate(description, category)){
-            MenuItem item = new MenuItem(description, price, category, mId);
-            if (currIndex + 1 == menuItems.length) {
-                resize(menuItems.length * 2);
-            }
-            menuItems[++currIndex] = item;
+            MenuItem item = new MenuItem(description, price, category, mId, name);
+            menuItems.add(item);
+            return item;
             // save to db
         } else {
             throw new RuntimeException("The menu item already exists");
@@ -67,20 +56,8 @@ public class Menu {
     }
 
     public void removeMenuItem(int menuItemId){
-        for (int i = 0; i < menuItems.length; i++) {
-            if(menuItems[i].getMenuItemId() == menuItemId){
-                MenuItem[] newArr = new MenuItem[menuItems.length-1];
-                int count = 0;
-                for (int j = 0; j < menuItems.length; j++) {
-                    if (j != i){
-                        newArr[count++] = menuItems[j];
-                    }
-                }
-                menuItems = newArr;
-                // delete from db
-                break;
-            }
-        }
+        menuItems.removeIf(menuItem -> menuItem.getMenuItemId() == menuItemId);
+
     }
 
     public void editMenuItem(MenuItem menuItem, String description, double price, String category){
@@ -110,9 +87,9 @@ public class Menu {
         updateSpecials(menuItem, false);
     }
 
-    public void createDailySpecial(String description, double price, String category, int mId){
-        addMenuItem(description, price, category, mId);
-        menuItems[currIndex].setAsSpecial(true);
+    public void createDailySpecial(String description, double price, String category, int mId, String name){
+        MenuItem item = addMenuItem(description, price, category, mId, name);
+       item.setAsSpecial(true);
     }
 
 

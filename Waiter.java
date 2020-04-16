@@ -48,7 +48,7 @@ public class Waiter extends Staff{
     }
 
     public void addOrderEatIn(ObservableList<OrderItem> items, ObservableList<Order> orders){
-        orders.add(new EatIn());
+        orders.add(new EatIn(items, ord));
     }
     public void removeOrderEatIn(int orderId,ObservableList<Order> orders){
         orders.removeIf(anOrder -> (anOrder.getOrderId() == orderId));

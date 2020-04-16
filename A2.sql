@@ -1,3 +1,9 @@
+drop database food_place;
+create database food_place;
+use food_place;
+DROP USER 'username'@'localhost';
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON food_place.* TO 'username'@'localhost';
 CREATE TABLE `Customers` (
   `c_id` int PRIMARY KEY AUTO_INCREMENT,
   `first_name` varchar(255),
@@ -22,12 +28,9 @@ CREATE TABLE `Staff` (
 
 CREATE TABLE `bookings` (
   `b_id` int PRIMARY KEY AUTO_INCREMENT,
-  `name` varchar(255),
-  `type` varchar(255),
   `customer_id` int,
-  `staff_id` int,
-  `start_time` timestamp,
-  `end_time` timestamp,
+  `waiter_id` int,
+  `booking_time` timestamp,
   `noOfGuests` int,
   `approved`  boolean,
   `booking_length` int
@@ -72,7 +75,6 @@ CREATE TABLE `order_items` (
 CREATE TABLE `Menu` (
   `m_id` int PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(255),
-  `price` int,
   `isSpecial`  boolean,
   `category` varchar(255),
   `description` text,

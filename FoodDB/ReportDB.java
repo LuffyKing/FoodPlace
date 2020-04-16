@@ -3,11 +3,24 @@ package FoodPlace.FoodDB;
 import java.sql.*;
 import java.util.HashMap;
 
-public class ReportDB extends DBUtil{
-    DBPool pool;
-    public ReportDB() throws Exception {
+public class ReportDB{
+    public static void main(String[] args) {
+        try {
+            ReportDB rp = new ReportDB();
+            int[] a = rp.getMostActiveCustomers();
+            for (int i:
+                 a) {
+                System.out.println(i);
+            }
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+    }
+    DBUtil pool;
+    public ReportDB() throws Exception{
         super();
-        pool = getDBConnectionPool();
+        pool = new DBUtil();
     }
 
     public int[] getMostPopularItems() throws SQLException {
@@ -31,7 +44,7 @@ public class ReportDB extends DBUtil{
         int[] ans = null;
         try (Connection conn = pool.getConnection()){
             try (Statement statement = conn.createStatement()) {
-                try (ResultSet rs = statement.executeQuery("SELECT Customer_id,COUNT(b_id) AS counts FROM bookings GROUP BY Customers_id ORDER BY counts DESC LIMIT 5")) {
+                try (ResultSet rs = statement.executeQuery("SELECT customer_id,COUNT(b_id) AS counts FROM bookings GROUP BY customer_id ORDER BY counts DESC LIMIT 5")) {
                     ResultSetMetaData rsMetaData = rs.getMetaData();
                     final int columnCount = rsMetaData.getColumnCount();
                     ans = new int[columnCount];

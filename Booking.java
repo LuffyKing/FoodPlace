@@ -16,6 +16,30 @@ public class Booking {
     private int bookingLength;
     private boolean approved;
     private final int customerID;
+    private int waiterID;
+
+    /**
+     *Creates a booking
+     *@param numberOfGuests_ the number of guests in the booking.
+     *@param bookingLength_ the length of the booking in hours.
+     *@param bookingTime_ the date and time of the booking.
+     *@param customerID_ the ID of the customer who has created the booking.
+     *@param bookingID_ the ID associated with the booking.
+     */
+    public Booking(int numberOfGuests_,
+                   int bookingLength_,
+                   LocalDateTime bookingTime_,
+                   final int customerID_,
+                   int bookingID_
+    ){
+        numberOfGuests = numberOfGuests_;
+        bookingLength = bookingLength_;
+        bookingTime = bookingTime_;
+        customerID = customerID_;
+        bookingID = bookingID_;
+        approved = false;
+    }
+
 
     /**
     *Creates a booking.
@@ -24,19 +48,38 @@ public class Booking {
     *@param bookingTime_ the date and time of the booking.
     *@param customerID_ the ID of the customer who has created the booking.
     *@param bookingID_ the ID associated with the booking.
+     * @param waiterID_ the id of the approving waiter
+     * @param approved_ the approval status
     */
     public Booking(int numberOfGuests_,
                    int bookingLength_,
                    LocalDateTime bookingTime_,
                    final int customerID_,
                    int bookingID_,
+                   int waiterID_,
+                   boolean approved_
                    ){
         numberOfGuests = numberOfGuests_;
         bookingLength = bookingLength_;
-        approved = false;
+        approved = approved_;
         bookingTime = bookingTime_;
         customerID = customerID_;
         bookingID = bookingID_;
+        waiterID = waiterID_;
+    }
+    /**
+     *Retrieves the staff ID of the approving waiter.
+     *@return waiterID
+     */
+    public int getWaiterID() {
+        return waiterID;
+    }
+    /**
+     *Sets ID of the approving waiter.
+     *@return waiterID
+     */
+    public void setWaiterID(int waiterID) {
+        this.waiterID = waiterID;
     }
 
     /**
