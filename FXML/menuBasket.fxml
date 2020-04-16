@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="FXML.menuBasket">
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.ControllerMenuBasket">
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
         <VBox prefHeight="398.0" prefWidth="175.0">
             <AnchorPane prefHeight="104.0" prefWidth="175.0">
@@ -29,7 +21,7 @@
             <Button fx:id="linktoorders" mnemonicParsing="false" onAction="#linktoordersdriverview" prefHeight="64.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Orders" />
             <Button fx:id="linktomenu" mnemonicParsing="false" onAction="#permissiondeniedscreen" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Menu" />
             <Button fx:id="linktobookings" mnemonicParsing="false" onAction="#permissiondeniedscreen" prefHeight="63.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Bookings" />
-            <Button fx:id="linktoreports" mnemonicParsing="false" onAction="#permissiondeniedscreen" prefHeight="60.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Reports" />
+            <Button fx:id="linktoreports" mnemonicParsing="false" onAction="#linktoreportsButtomPressed" prefHeight="60.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Reports" />
         </VBox>
     </AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
