@@ -1,20 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="FXML.customerMenu">
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.ControllerCustomerMenu">
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
         <VBox prefHeight="398.0" prefWidth="175.0">
             <AnchorPane prefHeight="104.0" prefWidth="175.0">
@@ -53,22 +45,30 @@
                     <AnchorPane prefHeight="59.0" prefWidth="417.0">
                         <TableView layoutX="19.0" layoutY="1.0" prefHeight="202.0" prefWidth="379.0">
                             <columns>
-                                <TableColumn prefWidth="88.0" text="Item" />
-                                <TableColumn prefWidth="101.0" text="Price" />
-                        <TableColumn prefWidth="101.0" text="Quality" />
-                        <TableColumn prefWidth="88.0" text="Add" />
+                                <TableColumn prefWidth="129.0" text="Item" />
+                                <TableColumn prefWidth="118.0" text="Price" />
+                        <TableColumn prefWidth="131.0" text="Quantity" />
                             </columns>
                         </TableView>
                     </AnchorPane>
                     <Separator opacity="0.0" prefHeight="14.0" prefWidth="417.0" />
                     <HBox prefHeight="33.0" prefWidth="417.0">
-                        <AnchorPane prefHeight="41.0" prefWidth="113.0" />
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                        <AnchorPane prefHeight="41.0" prefWidth="113.0">
                      <children>
-                        <Button fx:id="linktobasket" layoutX="43.0" layoutY="3.0" mnemonicParsing="false" onAction="#linktobasketButtonPressed" prefHeight="27.0" prefWidth="118.0" text="Basket" />
+                        <Text layoutX="13.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Specials" wrappingWidth="175.4700527191162">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Text>
                      </children></AnchorPane>
                         <AnchorPane prefHeight="41.0" prefWidth="115.0" />
                     </HBox>
+                     <AnchorPane prefHeight="119.0" prefWidth="417.0">
+                  <children>
+                     <Button fx:id="linktobasket" layoutX="24.0" layoutY="57.0" mnemonicParsing="false" onAction="#linktobasketButtonPressed" prefHeight="27.0" prefWidth="118.0" text="Add" />
+                     <CheckBox layoutX="30.0" layoutY="20.0" mnemonicParsing="false" text="Daily Fish" />
+                     <CheckBox layoutX="168.0" layoutY="20.0" mnemonicParsing="false" text="Daily Cheese" />
+                  </children></AnchorPane>
                 </VBox>
             </AnchorPane>
         </SplitPane>

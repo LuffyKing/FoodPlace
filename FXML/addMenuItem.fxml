@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.ControllerMenu_Scene">
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.ControllerAddMenuItem">
    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
       <VBox prefHeight="398.0" prefWidth="175.0">
          <AnchorPane prefHeight="104.0" prefWidth="175.0">
@@ -18,9 +18,9 @@
             </ImageView>
          </AnchorPane>
          <Button fx:id="linktostaff" mnemonicParsing="false" onAction="#linktostaffButtonPressed" prefHeight="62.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Staff" />
-         <Button fx:id="linktoorders" mnemonicParsing="false" onAction="#linktoordersdriverButtonPressed" prefHeight="64.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Orders" />
-         <Button fx:id="linktomenu" mnemonicParsing="false" onAction="#linktomenusceneButtonPressed" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Menu" />
-         <Button fx:id="linktobookings" mnemonicParsing="false" onAction="#linktobookinghomeButtonPressed" prefHeight="63.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Bookings" />
+         <Button fx:id="linktoordersdriver" mnemonicParsing="false" onAction="#linktoordersdriverButtonPressed" prefHeight="64.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Orders" />
+         <Button fx:id="linktomenuscene" mnemonicParsing="false" onAction="#linktomenusceneButtonPressed" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Menu" />
+         <Button fx:id="linktobookinghome" mnemonicParsing="false" onAction="#linktobookinghomeButtonPressed" prefHeight="63.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Bookings" />
          <Button fx:id="linktoreports" mnemonicParsing="false" onAction="#linktoreportsButtomPressed" prefHeight="60.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Reports" />
       </VBox>
    </AnchorPane>
@@ -58,7 +58,7 @@
                </HBox>
                <AnchorPane prefHeight="200.0" prefWidth="200.0">
                   <children>
-                     <Button fx:id="linktobasket" layoutX="20.0" layoutY="81.0" mnemonicParsing="false" onAction="#linktobasketButtonPressed" prefHeight="27.0" prefWidth="118.0" text="Edit" />
+                     <Button fx:id="linktoeidtmenuitem" layoutX="20.0" layoutY="81.0" mnemonicParsing="false" onAction="#linktoeditmenuitemButtonPressed" prefHeight="27.0" prefWidth="118.0" text="Confirm" />
                      <Text layoutX="14.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Specials" wrappingWidth="175.4700527191162">
                         <font>
                            <Font name="System Bold" size="17.0" />

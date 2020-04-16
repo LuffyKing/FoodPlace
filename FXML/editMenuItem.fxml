@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.ControllerMenu_Scene">
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.ControllerEditMenuItem">
    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
       <VBox prefHeight="398.0" prefWidth="175.0">
          <AnchorPane prefHeight="104.0" prefWidth="175.0">
@@ -58,7 +58,7 @@
                </HBox>
                <AnchorPane prefHeight="200.0" prefWidth="200.0">
                   <children>
-                     <Button fx:id="linktobasket" layoutX="20.0" layoutY="81.0" mnemonicParsing="false" onAction="#linktobasketButtonPressed" prefHeight="27.0" prefWidth="118.0" text="Edit" />
+                     <Button fx:id="linktoaddmenuitem" layoutX="20.0" layoutY="81.0" mnemonicParsing="false" onAction="#linktoaddmenuitemButtonPressed" prefHeight="27.0" prefWidth="118.0" text="Add" />
                      <Text layoutX="14.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Specials" wrappingWidth="175.4700527191162">
                         <font>
                            <Font name="System Bold" size="17.0" />
@@ -66,6 +66,7 @@
                      </Text>
                      <CheckBox layoutX="27.0" layoutY="37.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="104.0" text="Daily Fish" />
                      <CheckBox layoutX="168.0" layoutY="38.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="104.0" text="Daily Cheese" />
+                     <Button fx:id="linktoremovemenuitem" layoutX="173.0" layoutY="81.0" mnemonicParsing="false" onAction="#linktoremovemenuitemButtonPressed" prefHeight="27.0" prefWidth="118.0" text="Delete" />
                   </children>
                </AnchorPane>
             </VBox>
