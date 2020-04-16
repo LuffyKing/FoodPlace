@@ -1,12 +1,22 @@
-package FoodPlace;
+package FoodPlace.Controller;
 
+import FoodPlace.FoodDB.OrderDB;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import jdk.internal.module.Resources;
 import java.io.IOException;
+import java.net.URL;
+import java.sql.SQLException;
+import java.time.LocalDateTime;
 
 /**
 *Controller for the scene the customer views when they click on My Orders.
@@ -22,6 +32,12 @@ public class ControllerMyOrdersHome {
     public Button notificationspage;
     public Button logoutbutton;
     public Button linktomyordersedit;
+    public TableColumn orderIdColumn = new TableColumn();
+    public TableColumn datetimeColumn = new TableColumn();
+    public TableColumn orderStatusColumn = new TableColumn();
+    public TableColumn orderTypeColumn = new TableColumn();
+    public TableColumn editbuttoncolumn = new TableColumn();
+    public TableView orderstable;
 
     /**
     *Changes the customer's scene to the My Account scene.
@@ -107,6 +123,27 @@ public class ControllerMyOrdersHome {
         window.show();
     }
 
-    //still dont know how to link database stuff to the visual table sorry :( also dont know how to add checkbox to each order that is shown. Wont drag and drop.
-
+   //may or may not work, I can't get this program to run so I can't check. Made using many different tutorials until it stopped producing error messages.
+   //* Displays orders in the table on the scene.
+     * @param location
+     * @param resources
+     */
+    @FXML
+    protected void initialize(URL location, Resources resources) {
+        orderIdColumn.setCellValueFactory(new PropertyValueFactory<OrderDB, Integer>("Order ID"));
+        datetimeColumn.setCellValueFactory(new PropertyValueFactory<OrderDB, LocalDateTime>("Date & Time Placed"));
+        orderStatusColumn.setCellValueFactory(new PropertyValueFactory<OrderDB, String>("Status"));
+        orderTypeColumn.setCellValueFactory(new PropertyValueFactory<OrderDB, String>("Type"));
+        editbuttoncolumn.setCellValueFactory(new PropertyValueFactory<OrderDB, CheckBox>("Edit?"));
+        try{
+            OrderDB x = new OrderDB();
+            orderstable.getItems().setAll(x.getAllOrders());
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
