@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CustomerSignupController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="270.0" style="-fx-background-color: #E3FFFB;">
+         <children>
+            <Label layoutX="35.0" layoutY="299.0" prefHeight="44.0" prefWidth="201.0" text="Welcome Back!">
+               <font>
+                  <Font name="Calibri Light" size="32.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="36.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="62.0" layoutY="253.0" text="Food Place">
+               <font>
+                  <Font name="Cambria" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="270.0" prefHeight="400.0" prefWidth="324.0" style="-fx-background-color: #fff;">
+         <children>
+            <Button fx:id="SignUpButton" layoutX="111.0" layoutY="296.0" mnemonicParsing="false" onAction="#CustomerSignupButtonPressed" prefHeight="25.0" prefWidth="102.0" text="Sign Up" />
+            <CheckBox fx:id="TermsNCondiCheckbox" layoutX="56.0" layoutY="270.0" mnemonicParsing="false" text="I agree to the Terms and Conditions" />
+            <PasswordField fx:id="CustomerPasswordField" layoutX="90.0" layoutY="210.0" promptText="Password" />
+            <TextField fx:id="CustomerFirstnameTextField" layoutX="88.0" layoutY="70.0" promptText="First Name" />
+            <TextField fx:id="CustomerLastnameTextField" layoutX="88.0" layoutY="104.0" promptText="Last Name" />
+            <TextField fx:id="CustomerAdressTextField" layoutX="89.0" layoutY="175.0" promptText="Address" />
+            <Label layoutX="40.0" layoutY="23.0" text="Create An Account">
+               <font>
+                  <Font name="Cambria" size="31.0" />
+               </font>
+            </Label>
+            <Separator layoutX="18.0" layoutY="337.0" prefHeight="3.0" prefWidth="291.0" />
+            <Label layoutX="97.0" layoutY="329.0" style="-fx-background-color: #fff;" text="Already have an account?" />
+            <Button fx:id="CustomerSignin" layoutX="112.0" layoutY="353.0" mnemonicParsing="false" onAction="#CustomerLoginbuttonPressed" prefHeight="25.0" prefWidth="102.0" text="Sign in" />
+            <TextField fx:id="CustomerUsernameTextField" layoutX="90.0" layoutY="140.0" promptText="UserName" />
+            <Label fx:id="CustomerSignupStatusLabel" layoutX="50.0" layoutY="244.0" prefHeight="17.0" prefWidth="221.0" AnchorPane.bottomAnchor="139.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="53.0" AnchorPane.topAnchor="244.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
