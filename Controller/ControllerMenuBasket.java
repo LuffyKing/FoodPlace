@@ -1,4 +1,4 @@
-package FoodPlace;
+package FoodPlace.Controller;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ public class ControllerMenu_Scene {
     public Button linktomyordershome;
 
     public void linktostaffButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent staffParent = FXMLLoader.load(getClass().getResource("staffBookingHome.fxml"));
+        Parent staffParent = FXMLLoader.load(getClass().getResource("permissiondeniedwaiter.fxml"));
         Scene staffScene = new Scene(staffParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(staffScene);
@@ -21,7 +21,7 @@ public class ControllerMenu_Scene {
     }
 
     public void linktoordersdriverButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent ordersParent = FXMLLoader.load(getClass().getResource("ordersDriver.fxml"));
+        Parent ordersParent = FXMLLoader.load(getClass().getResource("WaiterOrderHomepage.fxml"));
         Scene ordersScene = new Scene(ordersParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(ordersScene);
@@ -29,7 +29,7 @@ public class ControllerMenu_Scene {
     }
 
     public void linktomenusceneButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent menuParent = FXMLLoader.load(getClass().getResource("Menu_Scene.fxml"));
+        Parent menuParent = FXMLLoader.load(getClass().getResource("menuWaiter.fxml"));
         Scene menuScene = new Scene(menuParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(menuScene);
@@ -45,7 +45,7 @@ public class ControllerMenu_Scene {
     }
 
     public void linktoreportsButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent reportsParent = FXMLLoader.load(getClass().getResource("Report.fxml"));
+        Parent reportsParent = FXMLLoader.load(getClass().getResource("permissiondeniedwaiter.fxml"));
         Scene reportsScene = new Scene(reportsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(reportsScene);
@@ -53,7 +53,7 @@ public class ControllerMenu_Scene {
     }
 
     public void notificationspageButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent notificationsParent = FXMLLoader.load(getClass().getResource("Notification.fxml"));
+        Parent notificationsParent = FXMLLoader.load(getClass().getResource("----.fxml"));
         Scene notificationsScene = new Scene(notificationsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(notificationsScene);
@@ -69,11 +69,12 @@ public class ControllerMenu_Scene {
     }
 
     public void linktomyordershomeButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent createParent = FXMLLoader.load(getClass().getResource("myOrdersHome.fxml"));
+        Parent createParent = FXMLLoader.load(getClass().getResource("WaiterOrderHomepage.fxml"));
         Scene createScene = new Scene(createParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(createScene);
         window.show();
     }
-
+  //method to display items in potential order missing.
+    //method to actually create order missing.
 }
