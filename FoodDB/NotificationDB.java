@@ -5,13 +5,26 @@ import javafx.collections.ObservableList;
 
 import java.sql.*;
 
+/**
+*Handles everything to do with notifications in the database.
+*@author Damola Aderinwale
+*@version ?
+*/
 public class NotificationDB {
     DBUtil pool;
+    
+    /**
+    *Function to get a new connection instance to the database.
+    */
     public NotificationDB() throws Exception{
         super();
         pool = new DBUtil();
     }
 
+    /**
+    *Returns a list of all possible notifications.
+    *@return list of notifications
+    */
     public ObservableList<Notification> getAllNotifications() throws SQLException {
         ObservableList<Notification> notifications = null;
 
@@ -31,6 +44,11 @@ public class NotificationDB {
         return notifications;
     }
 
+    /**
+    *Retrieves a specific notification from the database.
+    *@param notificationId The Id of the notification to be retrieved.
+    *@return The requested notification.
+    */
     public Notification getNotification(int notificationId) throws SQLException {
         Notification notification = null;
 
@@ -49,6 +67,12 @@ public class NotificationDB {
         return notification;
     }
 
+    /**
+    *Creates a notification in the database.
+    *@param message The notification message.
+    *@param cid The customer ID for the notification.
+    *@return The new notification.
+    */
     public Notification createNotification(String message,
                              int cid) throws SQLException {
         Notification notification = null;
@@ -78,6 +102,10 @@ public class NotificationDB {
         return notification;
     }
 
+    /**
+    *Deletes a specific notification from the database.
+    *@param notificationId The Id of the notification to be deleted.
+    */
     public void deleteNotification(int notificationId) throws SQLException {
         String delete = "DELETE FROM NOTIFICATION where id = " + notificationId;
         try (Connection conn = pool.getConnection()){
