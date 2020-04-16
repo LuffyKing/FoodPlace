@@ -15,7 +15,7 @@ public class BookingDB {
     DBUtil pool;
     
     /**
-    *
+    *Function to get a new connection instance to the database.
     */
     public BookingDB() throws Exception{
         super();
