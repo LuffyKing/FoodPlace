@@ -29,7 +29,7 @@ CREATE TABLE `bookings` (
   `start_time` timestamp,
   `end_time` timestamp,
   `noOfGuests` int,
-  `approved`  tinyint(1),
+  `approved`  boolean,
 
 );
 
@@ -49,7 +49,7 @@ CREATE TABLE `tables` (
 CREATE TABLE `orders` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `customer_id` int UNIQUE NOT NULL,
-  `status` tinyint(1),
+  `status` boolean,
   `created_at` timestamp,
   `ord_type` varchar(255),
   `waiter_id` int,
@@ -57,9 +57,9 @@ CREATE TABLE `orders` (
   `est_delivery_time` timestamp,
   `delivery_status` varchar(255),
   `delivery_address` varchar(255),
-  `is_delivery_approved` tinyint(1),
+  `is_delivery_approved` boolean,
   `pickup_time` timestamp,
-  `collection_status` tinyint(1),
+  `collection_status` boolean,
 );
 
 CREATE TABLE `order_items` (
@@ -73,7 +73,7 @@ CREATE TABLE `Menu` (
   `m_id` int PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(255),
   `price` int,
-  `isSpecial`  tinyint(1),
+  `isSpecial`  boolean,
   `category` varchar(255),
   `description` text,
   `unitPrice` double,
