@@ -7,7 +7,7 @@ import java.sql.*;
 
 /**
 *To link the menu class to the sql database.
-*@vauthor Damola Aderinwale
+*@vauthor Damola Aderinwale (JavaDoc by Sara Philipson)
 *@version ?
 */
 public class MenuDB {
