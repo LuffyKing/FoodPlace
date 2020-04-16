@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Waiter">
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Manager Notifications">
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
         <VBox prefHeight="398.0" prefWidth="175.0">
             <AnchorPane prefHeight="104.0" prefWidth="175.0">
@@ -20,7 +20,7 @@
                     <effect>
                         <DropShadow />
                     </effect>
-                    <Image url="@../Downloads/FoodPlace-master/sample/Logo.png" />
+                    <Image url="@../Documents/Swansea/Computer%20Science/Second%20Semester/CSCM94%20Software%20Engineering%20Principles/CW/Downloads/FoodPlace-master/sample/Logo.png" />
                 </ImageView>
             </AnchorPane>
             <Button fx:id="linktostaff" mnemonicParsing="false" onAction="#permissiondeniedscreen" prefHeight="62.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Staff" />
@@ -41,45 +41,44 @@
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
             <children>
-               <ImageView fitHeight="129.0" fitWidth="123.0" layoutX="292.0">
-                  <image>
-                     <Image url="@../Downloads/waiter-150452_1280.png" />
-                  </image>
-               </ImageView>
-               <Label layoutX="14.0" layoutY="14.0" text="Waiter">
+               <Label layoutX="14.0" layoutY="14.0" text="Notifications">
                   <font>
                      <Font size="33.0" />
                   </font>
                </Label>
-               <Label layoutX="18.0" layoutY="71.0" prefHeight="40.0" prefWidth="174.0" text="Order number: #123">
+               <ImageView fitHeight="129.0" fitWidth="129.0" layoutX="278.0" layoutY="6.0">
+                  <image>
+                     <Image url="@../Documents/Swansea/Computer%20Science/Second%20Semester/CSCM94%20Software%20Engineering%20Principles/CW/Downloads/waiter-150452_1280.png" />
+                  </image>
+               </ImageView>
+               <Button fx:id="linktoorders" layoutX="24.0" layoutY="71.0" mnemonicParsing="false" onAction="#ordersview" prefHeight="27.0" prefWidth="184.0" text="check orders" />
+               <Button fx:id="linktobooking" layoutX="24.0" layoutY="135.0" mnemonicParsing="false" onAction="#bookingview" prefHeight="27.0" prefWidth="184.0" text="check booking" />
+               <Button fx:id="linktoevent" layoutX="24.0" layoutY="195.0" mnemonicParsing="false" onAction="#eventview" prefHeight="27.0" prefWidth="184.0" text="check event" />
+               <Button fx:id="linktorequirements" layoutX="24.0" layoutY="254.0" mnemonicParsing="false" onAction="#requirementsview" prefHeight="27.0" prefWidth="184.0" text="staff requirements" />
+               <Button fx:id="linktoreport" layoutX="24.0" layoutY="311.0" mnemonicParsing="false" onAction="#reportview" prefHeight="27.0" prefWidth="184.0" text="check report" />
+               <Label layoutX="255.0" layoutY="71.0" text="New Orders!">
                   <font>
-                     <Font size="20.0" />
+                     <Font size="23.0" />
                   </font>
                </Label>
-               <Label layoutX="18.0" layoutY="207.0" prefHeight="40.0" prefWidth="185.0" text="Date &amp; time of order:">
+               <Label layoutX="225.0" layoutY="254.0" text="New requirements!">
                   <font>
-                     <Font size="20.0" />
+                     <Font size="23.0" />
                   </font>
                </Label>
-               <Label layoutX="18.0" layoutY="118.0" prefHeight="40.0" prefWidth="251.0" text="List of Menu objects in order:">
+               <Label layoutX="261.0" layoutY="195.0" text="New Event!">
                   <font>
-                     <Font size="20.0" />
+                     <Font size="23.0" />
                   </font>
                </Label>
-               <Label layoutX="18.0" layoutY="161.0" prefHeight="40.0" prefWidth="174.0" text="Order status:">
+               <Label layoutX="244.0" layoutY="135.0" text="New Bookings!">
                   <font>
-                     <Font size="20.0" />
+                     <Font size="23.0" />
                   </font>
                </Label>
-               <Label layoutX="18.0" layoutY="300.0" prefHeight="40.0" prefWidth="185.0" text="Calculate order total:">
+               <Label layoutX="256.0" layoutY="311.0" text="Report Done!">
                   <font>
-                     <Font size="20.0" />
-                  </font>
-               </Label>
-               <Button fx:id="linktoreceipt" layoutX="253.0" layoutY="320.0" mnemonicParsing="false" onAction="#receiptview" prefHeight="27.0" prefWidth="148.0" text="Print receipt" />
-               <Label layoutX="18.0" layoutY="253.0" prefHeight="40.0" prefWidth="185.0" text="Order status:">
-                  <font>
-                     <Font size="20.0" />
+                     <Font size="23.0" />
                   </font>
                </Label>
             </children>
