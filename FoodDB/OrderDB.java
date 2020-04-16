@@ -6,13 +6,35 @@ import javafx.collections.ObservableList;
 import java.sql.*;
 import java.time.LocalDateTime;
 
+/**
+*Links the order class to the sql database.
+*@author Damola Aderinwale
+*@version ?
+*/
 public class OrderDB {
     DBUtil pool;
+    
+    /**
+    *Function to get a new connection instance to the database.
+    */
     public OrderDB() throws Exception{
         super();
         pool = new DBUtil();
     }
 
+    /**
+    *Edits a delivery order in the database.
+    *@param orderId The Id of the order.
+    *@param dateTime The date and time of the order.
+    *@param customerId The Id of the customer associated with the order.
+    *@param isComplete The status of the order, complete or not.
+    *@param address The address the order needs to be delivered to.
+    *@param driverId The Id of the driver handling the order.
+    *@param deliveryStatus The status of the delivery.
+    *@param isApproved The approval status of the order.
+    *@param edt The estimated time of delivery.
+    *@return The updated delivery order.
+    */
     public Delivery editDeliveryOrder(int orderId,
                                       LocalDateTime dateTime,
                                       int customerId,
@@ -64,6 +86,16 @@ public class OrderDB {
         return delivery;
     }
 
+    /**
+    *Edits a takeaway order in the database.
+    *@param orderId The ID of the order.
+    *@param dateTime The date and time of the order.
+    *@param customerId The ID of the customer associated with the order.
+    *@param isComplete The completion status of the order.
+    *@param pTime The pickup time of the order.
+    *@param cStatus The collection status of the order.
+    *@return The updated takeaway order.
+    */
     public Takeaway editTakeawayOrder(int orderId,
                                       LocalDateTime dateTime,
                                       int customerId,
@@ -106,6 +138,14 @@ public class OrderDB {
         return takeaway;
     }
 
+    /**
+    *Edits an eat in order in the database.
+    *@param orderId The ID of the order.
+    *@param dateTime The date and time of the order.
+    *@param isComplete The completion status of the order.
+    *@param waiterID The waiter associated with the order.
+    *@return The updated eat in order.
+    */
     public EatIn editEatInOrder(int orderId,
                                 LocalDateTime dateTime,
                                 boolean isComplete,
@@ -142,6 +182,12 @@ public class OrderDB {
         return eatin;
     }
 
+    /**
+    *Used to retrieve an order item from the database.
+    *@param orderId The Id of the order to be retrieved.
+    *@param lineItemId ???
+    *@return The order item.
+    */
     public OrderItem getAnOrderItem(int orderId, int lineItemId) throws SQLException{
         OrderItem orderItem = null;
         String select = "SELECT\n"+
@@ -185,6 +231,13 @@ public class OrderDB {
         return orderItem;
     }
 
+    /**
+    *Creates a new order item in the database.
+    *@param quantity The number of the item you want in the order.
+    *@param order_id The Id of the order thatyou are adding the item to.
+    *@param menu_item_id The Id of the menu item being added to the order.
+    *@return The new order item.
+    */
     public OrderItem createOrderItem(int quantity, int order_id, int menu_item_id) throws SQLException{
         OrderItem orderItem = null;
         String insert = "INSERT INTO ORDER_ITEMS\n"+
@@ -215,6 +268,18 @@ public class OrderDB {
         return orderItem;
     }
 
+    /**
+    *Create a delivery order in the database.
+    *@param dateTime The date and time of the order.
+    *@param customerId The Id of the customer who made the order.
+    *@param isComplete The completion status of the order.
+    *@param address The delivery address for the order.
+    *@param driverId The driver responsible for the order.
+    *@param deliveryStatus The status of the delivery.
+    *@param isApproved The approval status of the order.
+    *@param edt The estimated delivery time.
+    *@return The new delivery order.
+    */
     public Delivery createDeliveryOrder(LocalDateTime dateTime,
                                         int customerId,
                                         boolean isComplete,
@@ -269,6 +334,14 @@ public class OrderDB {
         return delivery;
     }
 
+    /**
+    *Creates an eat in order in the database.
+    *@param item The list of items in the order.
+    *@param dateTime The date and time of the order.
+    *@param isComplete The completion status of the order.
+    *@param waiterId The ID of the waiter associated with the order.
+    *@return The new eat in order.
+    */
     public EatIn createEatInOrder(ObservableList<OrderItem> item,
                                   LocalDateTime dateTime,
                                   boolean isComplete,
@@ -307,6 +380,15 @@ public class OrderDB {
         return eatin;
     }
 
+    /**
+    *Creates a new takeaway order in the database.
+    *@param dateTime The date and time of the order.
+    *@param customerId The ID of the customer associated with the order.
+    *@param isComplete The completion status of the order.
+    *@param pTime The pickup time of the order.
+    *@param cStatus The collection status.
+    *@return The new takeaway order.
+    */
     public Takeaway createTakeawayOrder(LocalDateTime dateTime,
                                         int customerId,
                                         boolean isComplete,
@@ -350,7 +432,11 @@ public class OrderDB {
         return takeaway;
     }
 
-
+    /**
+    *Returns a list of all items in a specific order in the database.
+    *@param orderId The Id of the order in question.
+    *@return A list of all items in the order.
+    */
     public ObservableList<OrderItem> getAllOrderItems(int orderId) throws SQLException{
         ObservableList<OrderItem> orderItems = null;
         String select = "SELECT\n"+
@@ -395,6 +481,10 @@ public class OrderDB {
         return orderItems;
     }
 
+    /**
+    *Returns a list of all orders.
+    *@return A list of all orders.
+    */
     public ObservableList<Order> getAllOrders() throws SQLException {
         ObservableList<Order> orders = null;
 
@@ -460,6 +550,11 @@ public class OrderDB {
         return orders;
     }
 
+    /**
+    *Returns a list of orders a specific customer has in the database.
+    *@param custId The Id of the customer whose orders you wish to retrieve.
+    *@return A list of all orders or a specific customer.
+    */
     public ObservableList<Order> getAllOrders(int custId) throws SQLException {
         ObservableList<Order> orders = null;
 
@@ -525,6 +620,11 @@ public class OrderDB {
         return orders;
     }
 
+    /**
+    *Retrieves a specific order from the database.
+    *@param id The Id of the order to be retrieved.
+    *@return An order.
+    */
     public Order getOrder(int id) throws SQLException {
         Order order = null;
 
@@ -589,6 +689,10 @@ public class OrderDB {
         return order;
     }
 
+    /**
+    *Deletes a specific order from the database.
+    *@param orderId The Id of the order to be deleted.
+    */
     public void deleteOrder(int orderId) throws SQLException {
         String delete = "DELETE FROM ORDERS where id = " + orderId;
         try (Connection conn = pool.getConnection()){
@@ -603,6 +707,10 @@ public class OrderDB {
         }
     }
 
+    /**
+    *Deletes items from a specific order.
+    *@param orderId The Id for the order from which you wish to delete items.
+    */
     public void deleteOrderItems(int orderId) throws SQLException {
         String delete = "DELETE FROM ORDER_ITEMS where order_id = " + orderId;
         try (Connection conn = pool.getConnection()){
@@ -617,6 +725,10 @@ public class OrderDB {
         }
     }
 
+    /**
+    *Deletes a specific item from an order.
+    *@param orderItemId The Id of the order item to be deleted.
+    */
     public void deleteOrderItem(int orderItemId) throws SQLException {
         String delete = "DELETE FROM ORDER_ITEMS where id = " + orderItemId;
         try (Connection conn = pool.getConnection()){
