@@ -33,7 +33,7 @@
                      </children>
                   </AnchorPane>
                   <Button fx:id="linktostaff" mnemonicParsing="false" onAction="#linktostaffview" prefHeight="62.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Staff" />
-                  <Button fx:id="linktoorders" mnemonicParsing="false" onAction="#linktoordersview" prefHeight="64.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Orders" />
+                  <Button fx:id="linktoorders" mnemonicParsing="false" onAction="#permissiondeniedmanager" prefHeight="64.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Orders" />
                   <Button fx:id="linktomenu" mnemonicParsing="false" onAction="#linktomenuview" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Menu" />
                   <Button fx:id="linktobookings" mnemonicParsing="false" onAction="#linktobookingsview" prefHeight="63.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Bookings" />
                   <Button fx:id="linktoreports" mnemonicParsing="false" onAction="#linktoreportsview" prefHeight="60.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Reports" />
