@@ -1,4 +1,4 @@
-package FoodPlace;
+package FoodPlace.Controller;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ public class ControllerRemoveMenuItem {
     public Button linktoeidtmenuitem;
 
     public void linktostaffButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent staffParent = FXMLLoader.load(getClass().getResource("staffBookingHome.fxml"));
+        Parent staffParent = FXMLLoader.load(getClass().getResource("permissiondeniedchef.fxml"));
         Scene staffScene = new Scene(staffParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(staffScene);
@@ -21,7 +21,7 @@ public class ControllerRemoveMenuItem {
     }
 
     public void linktoordersdriverButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent ordersParent = FXMLLoader.load(getClass().getResource("ordersDriver.fxml"));
+        Parent ordersParent = FXMLLoader.load(getClass().getResource("ChefOrderHomepage.fxml"));
         Scene ordersScene = new Scene(ordersParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(ordersScene);
@@ -37,7 +37,7 @@ public class ControllerRemoveMenuItem {
     }
 
     public void linktobookinghomeButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent bookingsParent = FXMLLoader.load(getClass().getResource("staffBookingHome.fxml"));
+        Parent bookingsParent = FXMLLoader.load(getClass().getResource("permissiondeniedchef.fxml"));
         Scene bookingsScene = new Scene(bookingsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(bookingsScene);
@@ -45,7 +45,7 @@ public class ControllerRemoveMenuItem {
     }
 
     public void linktoreportsButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent reportsParent = FXMLLoader.load(getClass().getResource("Report.fxml"));
+        Parent reportsParent = FXMLLoader.load(getClass().getResource("permissiondeniedchef.fxml"));
         Scene reportsScene = new Scene(reportsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(reportsScene);
@@ -53,7 +53,7 @@ public class ControllerRemoveMenuItem {
     }
 
     public void notificationspageButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent notificationsParent = FXMLLoader.load(getClass().getResource("Notification.fxml"));
+        Parent notificationsParent = FXMLLoader.load(getClass().getResource("----.fxml"));
         Scene notificationsScene = new Scene(notificationsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(notificationsScene);
@@ -69,11 +69,13 @@ public class ControllerRemoveMenuItem {
     }
 
     public void linktoeditmenuitemButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent removeParent = FXMLLoader.load(getClass().getResource("basket.fxml"));
+        Parent removeParent = FXMLLoader.load(getClass().getResource("editMenuItem.fxml"));
         Scene removeScene = new Scene(removeParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(removeScene);
         window.show();
     }
-
+    
+    //method to display the menu item selected previously for delete missing.
+    //actual delete function missing.
 }
