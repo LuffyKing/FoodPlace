@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 /**
 *Utility class for the database, used to log in to mySQL.
-*@author Damola Aderinwale
+*@author Damola Aderinwale (JavaDoc by Sara Philipson)
 *@version ?
 */
 public class DBUtil {
