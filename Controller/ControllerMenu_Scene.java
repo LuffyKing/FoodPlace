@@ -53,7 +53,7 @@ public class ControllerMenu_Scene {
     }
 
     public void notificationspageButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent notificationsParent = FXMLLoader.load(getClass().getResource("-----.fxml"));
+        Parent notificationsParent = FXMLLoader.load(getClass().getResource("ChefNotifications.fxml"));
         Scene notificationsScene = new Scene(notificationsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(notificationsScene);
@@ -77,5 +77,5 @@ public class ControllerMenu_Scene {
     }
     //display method for menu items.
     //chef basket scene - only ones available are waiter or customer which have different functions available to them.
-    //notification scene for chef.
+ 
 }
