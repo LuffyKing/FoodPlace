@@ -1,4 +1,4 @@
-package FoodPlace;
+package FoodPlace.Controller;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
