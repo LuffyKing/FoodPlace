@@ -1,4 +1,4 @@
-package FoodPlace;
+package FoodPlace.Controller;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -95,6 +95,6 @@ public class ControllerMyOrdersUpdated {
         window.show();
     }
     
-    //link of table to database needed.
+    //line of table to database needed.
 
 }
