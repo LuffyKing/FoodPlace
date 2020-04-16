@@ -1,4 +1,4 @@
-package FoodPlace;
+package FoodPlace.Controller;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -108,7 +108,7 @@ public class ControllerMyOrdersEdit {
     }
 
         //in need of link to background stuff to update the database on confirm.
-    // Also can't seem to figure out how to get controls inside the table - perhaps once i can link the table to the rest of the stuff it will be possible.
+    // Also can't seem to figure out how to get controls inside the table so it can edit the order stuff.
 
  
 }
