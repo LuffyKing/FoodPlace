@@ -1,4 +1,4 @@
-package FoodPlace;
+package FoodPlace.Controller;
 
 import java.io.IOException;
 
@@ -13,7 +13,7 @@ public class ControllerOrderEditDriver {
     public Button linktoorderdriver;
 
     public void linktostaffButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent staffParent = FXMLLoader.load(getClass().getResource("staffBookingHome.fxml"));
+        Parent staffParent = FXMLLoader.load(getClass().getResource("permissiondenieddriver.fxml"));
         Scene staffScene = new Scene(staffParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(staffScene);
@@ -29,7 +29,7 @@ public class ControllerOrderEditDriver {
     }
 
     public void linktomenusceneButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent menuParent = FXMLLoader.load(getClass().getResource("Menu_Scene.fxml"));
+        Parent menuParent = FXMLLoader.load(getClass().getResource("permissiondenieddriver.fxml"));
         Scene menuScene = new Scene(menuParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(menuScene);
@@ -37,7 +37,7 @@ public class ControllerOrderEditDriver {
     }
 
     public void linktobookinghomeButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent bookingsParent = FXMLLoader.load(getClass().getResource("staffBookingHome.fxml"));
+        Parent bookingsParent = FXMLLoader.load(getClass().getResource("permissiondenieddriver.fxml"));
         Scene bookingsScene = new Scene(bookingsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(bookingsScene);
@@ -45,7 +45,7 @@ public class ControllerOrderEditDriver {
     }
 
     public void linktoreportsButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent reportsParent = FXMLLoader.load(getClass().getResource("Report.fxml"));
+        Parent reportsParent = FXMLLoader.load(getClass().getResource("permissiondenieddriver.fxml"));
         Scene reportsScene = new Scene(reportsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(reportsScene);
@@ -53,7 +53,7 @@ public class ControllerOrderEditDriver {
     }
 
     public void notificationspageButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent notificationsParent = FXMLLoader.load(getClass().getResource("Notification.fxml"));
+        Parent notificationsParent = FXMLLoader.load(getClass().getResource("----.fxml"));
         Scene notificationsScene = new Scene(notificationsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(notificationsScene);
@@ -75,5 +75,8 @@ public class ControllerOrderEditDriver {
         window.setScene(editScene);
         window.show();
     }
-
+//display method missing.
+    //one cancel check box available but driver can't cancel orders only mark as completed upon delivery.
+    //no way to select individual orders to mark as complete.
+    //change order status method missing.
 }
