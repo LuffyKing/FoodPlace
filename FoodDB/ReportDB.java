@@ -3,7 +3,17 @@ package FoodPlace.FoodDB;
 import java.sql.*;
 import java.util.HashMap;
 
+/**
+*Queries the database to generate specific report types.
+*@author Damola Aderinwale
+*@version ?
+*/
 public class ReportDB{
+  
+    /**
+    *Prints out the top 5 most active customers.
+    *@param args
+    */
     public static void main(String[] args) {
         try {
             ReportDB rp = new ReportDB();
@@ -17,12 +27,21 @@ public class ReportDB{
         }
 
     }
+    
     DBUtil pool;
+    
+    /**
+    *Function to get a new connection instance to the database.
+    */
     public ReportDB() throws Exception{
         super();
         pool = new DBUtil();
     }
 
+    /**
+    *Queries the database to generate most popular items report.
+    *@return The most ordered 5 items on the menu.
+    */
     public int[] getMostPopularItems() throws SQLException {
         int[] ans = null;
         try (Connection conn = pool.getConnection()){
@@ -40,6 +59,11 @@ public class ReportDB{
         }
         return ans;
     }
+    
+    /**
+    *Queries the database to generate the most active customers report.
+    *@return The 5 customers who have made the most bookings.
+    */
     public int[] getMostActiveCustomers() throws SQLException {
         int[] ans = null;
         try (Connection conn = pool.getConnection()){
@@ -57,6 +81,11 @@ public class ReportDB{
         }
         return ans;
     }
+    
+    /**
+    *Queries the database to generate the most hourd worked report.
+    *@return The top 5 staff members in terms of hours worked.
+    */
     public int[] getMostHoursWorked() throws SQLException {
         int[] ans = null;
         try (Connection conn = pool.getConnection()){
@@ -74,6 +103,11 @@ public class ReportDB{
         }
         return ans;
     }
+    
+    /**
+    *Queries the database to determine what is the busiest time for the restaurant.
+    *@return The date and time of most booked time slot.
+    */
     public String getBusiestPeriod() throws SQLException {
         HashMap<String, Integer> periods = new HashMap<String, Integer>();
         try (Connection conn = pool.getConnection()){
