@@ -51,9 +51,8 @@
                      <Image url="@../Documents/Swansea/Computer%20Science/Second%20Semester/CSCM94%20Software%20Engineering%20Principles/CW/Downloads/waiter-150452_1280.png" />
                   </image>
                </ImageView>
-               <Button fx:id="linktoorders" layoutX="24.0" layoutY="108.0" mnemonicParsing="false" onAction="#ordersview" prefHeight="27.0" prefWidth="184.0" text="check orders" />
                <Button fx:id="linktoorderstatus" layoutX="24.0" layoutY="269.0" mnemonicParsing="false" onAction="#orderstatusview" prefHeight="27.0" prefWidth="184.0" text="order status" />
-               <Label layoutX="256.0" layoutY="108.0" text="New Orders!">
+               <Label layoutX="134.0" layoutY="107.0" text="New Orders!">
                   <font>
                      <Font size="23.0" />
                   </font>
