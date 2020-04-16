@@ -5,7 +5,7 @@ CREATE TABLE `Customers` (
   `C_Username` varchar(255),
   `created_at` timestamp,
   `address` varchar(255),
-  `password` varchar(255),
+  `password` varchar(255)
 );
 
 CREATE TABLE `Staff` (
@@ -17,7 +17,7 @@ CREATE TABLE `Staff` (
   `S_Username` varchar(255),
   `Password` varchar(255),
   `type` varchar(255),
-  `created_at` timestamp,
+  `created_at` timestamp
 );
 
 CREATE TABLE `bookings` (
@@ -30,7 +30,7 @@ CREATE TABLE `bookings` (
   `end_time` timestamp,
   `noOfGuests` int,
   `approved`  boolean,
-
+  `booking_length` int
 );
 
 
@@ -43,12 +43,12 @@ CREATE TABLE `notifications` (
 CREATE TABLE `tables` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `seats` int,
-  `status` varchar(255),
+  `status` varchar(255)
 );
 
 CREATE TABLE `orders` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
-  `customer_id` int UNIQUE NOT NULL,
+  `customer_id` int,
   `status` boolean,
   `created_at` timestamp,
   `ord_type` varchar(255),
@@ -59,7 +59,7 @@ CREATE TABLE `orders` (
   `delivery_address` varchar(255),
   `is_delivery_approved` boolean,
   `pickup_time` timestamp,
-  `collection_status` boolean,
+  `collection_status` boolean
 );
 
 CREATE TABLE `order_items` (
@@ -76,13 +76,13 @@ CREATE TABLE `Menu` (
   `isSpecial`  boolean,
   `category` varchar(255),
   `description` text,
-  `unitPrice` double,
+  `unitPrice` double
 
 );
 
 ALTER TABLE `bookings` ADD FOREIGN KEY (`customer_id`) REFERENCES `customers` (`c_id`);
 
-ALTER TABLE `bookings` ADD FOREIGN KEY (`staff_id`) REFERENCES `customers` (`s_id`);
+ALTER TABLE `bookings` ADD FOREIGN KEY (`staff_id`) REFERENCES `staff` (`s_id`);
 
 ALTER TABLE `order_items` ADD FOREIGN KEY (`menu_item_id`) REFERENCES `menu` (`m_id`);
 

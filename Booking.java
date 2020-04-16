@@ -25,7 +25,12 @@ public class Booking {
     *@param customerID_ the ID of the customer who has created the booking.
     *@param bookingID_ the ID associated with the booking.
     */
-    public Booking(int numberOfGuests_, int bookingLength_, LocalDateTime bookingTime_, final int customerID_, int bookingID_){
+    public Booking(int numberOfGuests_,
+                   int bookingLength_,
+                   LocalDateTime bookingTime_,
+                   final int customerID_,
+                   int bookingID_,
+                   ){
         numberOfGuests = numberOfGuests_;
         bookingLength = bookingLength_;
         approved = false;
