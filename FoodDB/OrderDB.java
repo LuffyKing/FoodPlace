@@ -185,7 +185,7 @@ public class OrderDB {
     /**
     *Used to retrieve an order item from the database.
     *@param orderId The Id of the order to be retrieved.
-    *@param lineItemId ???
+    *@param lineItemId The Id for an order item.
     *@return The order item.
     */
     public OrderItem getAnOrderItem(int orderId, int lineItemId) throws SQLException{
