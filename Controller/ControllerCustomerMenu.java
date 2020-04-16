@@ -1,4 +1,4 @@
-package FoodPlace;
+package FoodPlace.Controller;
 
 import java.io.IOException;
 
@@ -66,5 +66,5 @@ public class ControllerCustomerMenu {
         window.setScene(addScene);
         window.show();
     }
-
+  //method to actually display menu data missing
 }
