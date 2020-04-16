@@ -1,4 +1,4 @@
-package FoodPlace;
+package FoodPlace.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -113,4 +113,6 @@ public class ControllerStaffBookingHome {
     public void declinebookingsbutton(javafx.event.ActionEvent event) throws IOException {
         //back end link needed
     }
+    //method to display & select unapproved bookings needed
+    //method to display approved bookings needed
 }
