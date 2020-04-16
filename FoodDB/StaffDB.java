@@ -10,7 +10,7 @@ import java.sql.*;
 
 /**
 *Links the staff class to the database.
-*@author Damola Aderinwale
+*@author Damola Aderinwale (JavaDoc by Sara Philipson)
 *@version ?
 */
 public class StaffDB{
