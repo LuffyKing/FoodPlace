@@ -1,4 +1,4 @@
-package FoodPlace;
+package FoodPlace.Controller;
 
 import java.io.IOException;
 
@@ -14,7 +14,7 @@ public class ControllerAddMenuItem {
     public Button linktoremovemenuitem;
 
     public void linktostaffButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent staffParent = FXMLLoader.load(getClass().getResource("staffBookingHome.fxml"));
+        Parent staffParent = FXMLLoader.load(getClass().getResource("permissiondeniedchef.fxml"));
         Scene staffScene = new Scene(staffParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(staffScene);
@@ -22,7 +22,7 @@ public class ControllerAddMenuItem {
     }
 
     public void linktoordersdriverButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent ordersParent = FXMLLoader.load(getClass().getResource("ordersDriver.fxml"));
+        Parent ordersParent = FXMLLoader.load(getClass().getResource("ordersChef.fxml"));
         Scene ordersScene = new Scene(ordersParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(ordersScene);
@@ -38,7 +38,7 @@ public class ControllerAddMenuItem {
     }
 
     public void linktobookinghomeButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent bookingsParent = FXMLLoader.load(getClass().getResource("staffBookingHome.fxml"));
+        Parent bookingsParent = FXMLLoader.load(getClass().getResource("permissiondenied.fxml"));
         Scene bookingsScene = new Scene(bookingsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(bookingsScene);
@@ -46,7 +46,7 @@ public class ControllerAddMenuItem {
     }
 
     public void linktoreportsButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent reportsParent = FXMLLoader.load(getClass().getResource("Report.fxml"));
+        Parent reportsParent = FXMLLoader.load(getClass().getResource("permissiondenied.fxml"));
         Scene reportsScene = new Scene(reportsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(reportsScene);
@@ -85,4 +85,7 @@ public class ControllerAddMenuItem {
         window.show();
     }
 
+    //method to disply menu items for edit not here.
+    //check boxes not initialised
+    //can't see how you would actually edit other than add or delete but no way to select the item in question.
 }
