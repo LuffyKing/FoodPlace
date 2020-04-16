@@ -2,6 +2,12 @@ package FoodPlace.Controller;
 
 import java.io.IOException;
 
+/**
+ *Controller for the scene a Delivery Driver gets when they log in.
+ *@author Haixin Wang
+ *@version ?
+ */
+
 public class ControllerBasket {
     public Button linktomyaccount;
     public Button linktomenu;
@@ -11,6 +17,10 @@ public class ControllerBasket {
     public Button logoutbutton;
     public Button confirmorderedit;
 
+    /**
+     *Changes the scene to the MyAccount scene.
+     *@param event Clicking on the My Account button.
+     */
     public void linktomyaccountButtonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent myaccountParent = FXMLLoader.load(getClass().getResource("MyAccount.fxml"));
         Scene myaccountScene = new Scene(myaccountParent);
@@ -19,6 +29,10 @@ public class ControllerBasket {
         window.show();
     }
 
+    /**
+     *Changes the scene to the customerMen scene.
+     *@param event Clicking on the Menu button.
+     */
     public void linktomenuButtonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent menuParent = FXMLLoader.load(getClass().getResource("customerMenu.fxml"));
         Scene menuScene = new Scene(menuParent);
@@ -27,6 +41,10 @@ public class ControllerBasket {
         window.show();
     }
 
+    /**
+     *Changes the scene to the myOrdersHome scene.
+     *@param event Clicking on the My Orders button.
+     */
     public void linktomyordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent myordersParent = FXMLLoader.load(getClass().getResource("myOrdersHome.fxml"));
         Scene myordersScene = new Scene(myordersParent);
@@ -35,6 +53,10 @@ public class ControllerBasket {
         window.show();
     }
 
+    /**
+     *Changes the scene to the bookingHome scene.
+     *@param event Clicking on the My Bookings button.
+     */
     public void linktobookinghomeButtonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent mybookingsParent = FXMLLoader.load(getClass().getResource("bookingHome.fxml"));
         Scene mybookingsScene = new Scene(mybookingsParent);
@@ -43,6 +65,10 @@ public class ControllerBasket {
         window.show();
     }
 
+    /**
+     *Changes the scene to the Notification scene.
+     *@param event Clicking on the Notifications button.
+     */
     public void notificationspageButtonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent notificationsParent = FXMLLoader.load(getClass().getResource("Notification.fxml"));
         Scene notificationsScene = new Scene(notificationsParent);
@@ -51,6 +77,10 @@ public class ControllerBasket {
         window.show();
     }
 
+    /**
+     *Changes the scene to the Customer login Scene scene.
+     *@param event Clicking on the Logout button.
+     */
     public void logoutbuttonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent logoutParent = FXMLLoader.load(getClass().getResource("Customer_login_Scene.fxml"));
         Scene logoutScene = new Scene(logoutParent);
@@ -59,6 +89,10 @@ public class ControllerBasket {
         window.show();
     }
 
+    /**
+     *Changes the scene to the myOrdersEdit scene.
+     *@param event Clicking on the Add to my orders button.
+     */
     public void linktomyorderseditButtonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent addtomyordersParent = FXMLLoader.load(getClass().getResource("myOrdersEdit.fxml"));
         Scene addtomyordersScene = new Scene(addtomyordersParent);
