@@ -3,20 +3,29 @@ package FoodPlace.Controller;
 import java.io.IOException;
 
 public class ControllerCustomerHome {
-    public Button linktomyaccount;
+    public Button linktostaff;
+    public Button linktoorders;
     public Button linktomenu;
-    public Button linktomyorders;
-    public Button linktobookinghome;
-    public Button linktoedit;
-    public Button linktochangepassword;
+    public Button linktobookings;
+    public Button linktoreports;
+    public Button linktocheckevent;
+    public Button linktostaffrequirements;
     public Button notificationspage;
     public Button logoutbutton;
 
-    public void linktomyaccountButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent myaccountParent = FXMLLoader.load(getClass().getResource("MyAccount.fxml"));
-        Scene myaccountScene = new Scene(myaccountParent);
+    public void linktostaffButtonPressed(javafx.event.ActionEvent event) throws IOException {
+        Parent staffParent = FXMLLoader.load(getClass().getResource("staff.fxml"));
+        Scene staffScene = new Scene(staffParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(myaccountScene);
+        window.setScene(staffScene);
+        window.show();
+    }
+
+    public void linktoordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
+        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondeniedmanager.fxml"));
+        Scene permissiondeniedScene = new Scene(permissiondeniedParent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(permissiondeniedScene);
         window.show();
     }
 
@@ -28,19 +37,19 @@ public class ControllerCustomerHome {
         window.show();
     }
 
-    public void linktomyordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent myordersParent = FXMLLoader.load(getClass().getResource("myOrdersHome.fxml"));
-        Scene myordersScene = new Scene(myordersParent);
+    public void linktobookingsButtonPressed(javafx.event.ActionEvent event) throws IOException {
+        Parent bookingParent = FXMLLoader.load(getClass().getResource("bookingSubmitted.fxml"));
+        Scene bookingScene = new Scene(bookingParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(myordersScene);
+        window.setScene(bookingScene);
         window.show();
     }
 
-    public void linktobookinghomeButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent mybookingsParent = FXMLLoader.load(getClass().getResource("bookingHome.fxml"));
-        Scene mybookingsScene = new Scene(mybookingsParent);
+    public void linktoreportsButtonPressed(javafx.event.ActionEvent event) throws IOException {
+        Parent reportParent = FXMLLoader.load(getClass().getResource("report.fxml"));
+        Scene reportScene = new Scene(reportParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(mybookingsScene);
+        window.setScene(reportScene);
         window.show();
     }
 
@@ -59,3 +68,5 @@ public class ControllerCustomerHome {
         window.setScene(logoutScene);
         window.show();
     }
+
+}

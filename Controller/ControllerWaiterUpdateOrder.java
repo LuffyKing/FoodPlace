@@ -8,19 +8,21 @@ public class ControllerCustomerHome {
     public Button linktomenu;
     public Button linktobookings;
     public Button linktoreports;
+    public Button linktobasket;
+    public Button linktoreceipt;
     public Button notificationspage;
     public Button logoutbutton;
 
     public void linktostaffButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent staffParent = FXMLLoader.load(getClass().getResource("staff.fxml"));
-        Scene staffScene = new Scene(staffParent);
+        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondeniedwaiter.fxml"));
+        Scene permissiondeniedScene = new Scene(permissiondeniedParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(staffScene);
+        window.setScene(permissiondeniedScene);
         window.show();
     }
 
     public void linktoordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondeniedmanager.fxml"));
+        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondeniedwaiter.fxml"));
         Scene permissiondeniedScene = new Scene(permissiondeniedParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(permissiondeniedScene);
@@ -44,10 +46,18 @@ public class ControllerCustomerHome {
     }
 
     public void linktoreportsButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent reportParent = FXMLLoader.load(getClass().getResource("report.fxml"));
-        Scene reportScene = new Scene(reportParent);
+        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondeniedwaiter.fxml"));
+        Scene permissiondeniedScene = new Scene(permissiondeniedParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(reportScene);
+        window.setScene(permissiondeniedScene);
+        window.show();
+    }
+
+    public void linktobasketButtonPressed(javafx.event.ActionEvent event) throws IOException {
+        Parent basketParent = FXMLLoader.load(getClass().getResource("basket.fxml"));
+        Scene basketScene = new Scene(basketParent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(basketScene);
         window.show();
     }
 

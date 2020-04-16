@@ -68,7 +68,7 @@ public class ControllerCustomerHome {
         window.show();
     }
 
-    public void logoutbuttonPressed(javafx.event.ActionEvent event) throws IOException {
+    public void logoutButtonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent logoutParent = FXMLLoader.load(getClass().getResource("Customer_login_Scene.fxml"));
         Scene logoutScene = new Scene(logoutParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
