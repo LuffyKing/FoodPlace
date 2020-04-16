@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="FXML.ControllerBasket">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+        <VBox prefHeight="398.0" prefWidth="175.0">
+            <AnchorPane prefHeight="104.0" prefWidth="175.0">
+                <ImageView fitHeight="139.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <Image url="@Black%20with%20Utensils%20Icon%20Restaurant%20Logo.png" />
+                </ImageView>
+            </AnchorPane>
+            <Button fx:id="linktomyaccount" mnemonicParsing="false" onAction="#linktomyaccountButtonPressed" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="My Account" />
+            <Button fx:id="linktomenu" mnemonicParsing="false" onAction="#linktomenuButtonPressed" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Menu" />
+            <Button fx:id="linktomyorders" mnemonicParsing="false" onAction="#linktomyordersButtonPressed" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="My Orders" />
+            <Button fx:id="linktobookinghome" mnemonicParsing="false" onAction="#linktobookinghomeButtonPressed" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="My Bookings" />
+        </VBox>
+    </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+        <SplitPane dividerPositions="0.0829145728643216" orientation="VERTICAL" prefHeight="400.0" prefWidth="417.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="22.0" prefWidth="415.0">
+                <HBox layoutY="1.0" prefHeight="26.0" prefWidth="415.0">
+                    <Button fx:id="notificationspage" mnemonicParsing="false" onAction="#notificationspageButtonPressed" prefHeight="27.0" prefWidth="204.0" style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;" text="Notifications" />
+                    <Separator orientation="VERTICAL" prefHeight="27.0" prefWidth="0.0" />
+                    <Button fx:id="logoutbutton" mnemonicParsing="false" onAction="#logoutbuttonPressed" prefHeight="27.0" prefWidth="204.0" style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;" text="Logout" />
+                </HBox>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                <VBox layoutX="-1.0" layoutY="-3.0" prefHeight="362.0" prefWidth="417.0">
+                    <AnchorPane prefHeight="41.0" prefWidth="417.0">
+                        <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basket" wrappingWidth="175.4700527191162">
+                            <font>
+                                <Font name="System Bold" size="17.0" />
+                            </font>
+                        </Text>
+                    </AnchorPane>
+                    <Separator opacity="0.0" prefHeight="13.0" prefWidth="417.0" />
+                    <AnchorPane prefHeight="59.0" prefWidth="417.0">
+                        <TableView layoutX="19.0" layoutY="1.0" prefHeight="202.0" prefWidth="379.0">
+                            <columns>
+                                <TableColumn prefWidth="123.0" text="Item" />
+                                <TableColumn prefWidth="132.0" text="Price" />
+                                <TableColumn prefWidth="123.0" text="Quality" />
+                            </columns>
+                        </TableView>
+                    </AnchorPane>
+                    <Separator opacity="0.0" prefHeight="14.0" prefWidth="417.0" />
+                    <HBox prefHeight="33.0" prefWidth="417.0">
+                        <AnchorPane prefHeight="41.0" prefWidth="113.0" />
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="linktomyordersedit" layoutX="30.0" layoutY="1.0" mnemonicParsing="false" onAction="#linktomyorderseditButtonPressed" prefHeight="27.0" prefWidth="139.0" text="Add to my orders" />
+                            </children></AnchorPane>
+                        <AnchorPane prefHeight="41.0" prefWidth="115.0" />
+                    </HBox>
+                </VBox>
+            </AnchorPane>
+        </SplitPane>
+    </AnchorPane>
+</SplitPane>
