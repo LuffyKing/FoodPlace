@@ -1,63 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <AnchorPane prefHeight="400.0" prefWidth="270.0" style="-fx-background-color: #E3FFFB;">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@FoodPlace-master/sample/Logo.png" />
-               </image>
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.ControllerMenu_Scene">
+   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+      <VBox prefHeight="398.0" prefWidth="175.0">
+         <AnchorPane prefHeight="104.0" prefWidth="175.0">
+            <ImageView fitHeight="139.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <Image url="@Black%20with%20Utensils%20Icon%20Restaurant%20Logo.png" />
             </ImageView>
-            <Button layoutY="171.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="270.0" text="Add Menu Item">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <Button layoutY="208.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="270.0" text="Remove Menu Item">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <Button layoutY="245.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="270.0" text="Edit Menu Item">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <Button layoutY="282.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="270.0" text="Update Specials">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-         </children>
-      </AnchorPane>
-      <Label layoutX="405.0" prefHeight="48.0" prefWidth="88.0" text="Menu" textAlignment="CENTER">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="285.0" layoutY="72.0" text="Espresso" />
-      <Label layoutX="281.0" layoutY="89.0" text="Americano" />
-      <Label layoutX="282.0" layoutY="106.0" text="Cafe Latte" />
-      <Label layoutX="277.0" layoutY="123.0" text="Cafe Mocha" />
-      <Label layoutX="280.0" layoutY="140.0" text="Cappucino" />
-      <Label layoutX="405.0" layoutY="225.0" text="Specials">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="283.0" layoutY="248.0" text="Daily Fish" />
-      <Label layoutX="274.0" layoutY="265.0" text="Daily Cheese" />
-      <Label layoutX="285.0" layoutY="157.0" text="Omelette" />
-      <Label layoutX="283.0" layoutY="174.0" text="Sandwich" />
-   </children>
-</Pane>
+         </AnchorPane>
+         <Button fx:id="linktostaff" mnemonicParsing="false" onAction="#linktostaffButtonPressed" prefHeight="62.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Staff" />
+         <Button fx:id="linktoorders" mnemonicParsing="false" onAction="#linktoordersdriverButtonPressed" prefHeight="64.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Orders" />
+         <Button fx:id="linktomenu" mnemonicParsing="false" onAction="#linktomenusceneButtonPressed" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Menu" />
+         <Button fx:id="linktobookings" mnemonicParsing="false" onAction="#linktobookinghomeButtonPressed" prefHeight="63.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Bookings" />
+         <Button fx:id="linktoreports" mnemonicParsing="false" onAction="#linktoreportsButtomPressed" prefHeight="60.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Reports" />
+      </VBox>
+   </AnchorPane>
+   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+      <SplitPane dividerPositions="0.0829145728643216" orientation="VERTICAL" prefHeight="400.0" prefWidth="417.0">
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="22.0" prefWidth="415.0">
+            <HBox layoutY="1.0" prefHeight="26.0" prefWidth="415.0">
+               <Button fx:id="notificationspage" mnemonicParsing="false" onAction="#notificationspageButtonPressed" prefHeight="27.0" prefWidth="204.0" style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;" text="Notifications" />
+               <Separator orientation="VERTICAL" prefHeight="27.0" prefWidth="0.0" />
+               <Button fx:id="logoutbutton" mnemonicParsing="false" onAction="#logoutbuttonPressed" prefHeight="27.0" prefWidth="204.0" style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;" text="Logout" />
+            </HBox>
+         </AnchorPane>
+         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <VBox layoutX="-1.0" layoutY="-3.0" prefHeight="362.0" prefWidth="417.0">
+               <AnchorPane prefHeight="41.0" prefWidth="417.0">
+                  <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" wrappingWidth="175.4700527191162">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Text>
+               </AnchorPane>
+               <Separator opacity="0.0" prefHeight="13.0" prefWidth="417.0" />
+               <AnchorPane prefHeight="59.0" prefWidth="417.0">
+                  <TableView layoutX="19.0" layoutY="1.0" prefHeight="202.0" prefWidth="379.0">
+                     <columns>
+                        <TableColumn prefWidth="187.0" text="Item" />
+                        <TableColumn prefWidth="191.0" text="Price" />
+                     </columns>
+                  </TableView>
+               </AnchorPane>
+               <Separator opacity="0.0" prefHeight="14.0" prefWidth="417.0" />
+               <HBox prefHeight="33.0" prefWidth="417.0">
+                  <AnchorPane prefHeight="41.0" prefWidth="113.0" />
+                  <AnchorPane prefHeight="41.0" prefWidth="115.0" />
+               </HBox>
+               <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                  <children>
+                     <Button fx:id="linktobasket" layoutX="20.0" layoutY="81.0" mnemonicParsing="false" onAction="#linktobasketButtonPressed" prefHeight="27.0" prefWidth="118.0" text="Edit" />
+                     <Text layoutX="14.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Specials" wrappingWidth="175.4700527191162">
+                        <font>
+                           <Font name="System Bold" size="17.0" />
+                        </font>
+                     </Text>
+                     <CheckBox layoutX="27.0" layoutY="37.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="104.0" text="Daily Fish" />
+                     <CheckBox layoutX="168.0" layoutY="38.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="104.0" text="Daily Cheese" />
+                  </children>
+               </AnchorPane>
+            </VBox>
+         </AnchorPane>
+      </SplitPane>
+   </AnchorPane>
+</SplitPane>
