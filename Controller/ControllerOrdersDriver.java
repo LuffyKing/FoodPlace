@@ -53,7 +53,7 @@ public class ControllerOrdersDriver {
     }
 
     public void notificationspageButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent notificationsParent = FXMLLoader.load(getClass().getResource("----.fxml"));
+        Parent notificationsParent = FXMLLoader.load(getClass().getResource("DriverNotifications.fxml"));
         Scene notificationsScene = new Scene(notificationsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(notificationsScene);
