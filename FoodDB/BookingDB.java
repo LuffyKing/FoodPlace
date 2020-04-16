@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 /**
 *Links the booking class to the sql database.
-*@author Damola Aderinwale
+*@author Damola Aderinwale (JavaDoc by Sara Philipson)
 *@version ?
 */
 public class BookingDB {
