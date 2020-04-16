@@ -1,4 +1,4 @@
-package FoodPlace;
+package FoodPlace.Controller;
 
 import java.io.IOException;
 
