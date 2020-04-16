@@ -7,7 +7,7 @@ import java.sql.*;
 
 /**
 *Handles everything to do with notifications in the database.
-*@author Damola Aderinwale
+*@author Damola Aderinwale (JavaDoc by Sara Philipson)
 *@version ?
 */
 public class NotificationDB {
