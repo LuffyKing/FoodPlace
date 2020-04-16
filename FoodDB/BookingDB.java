@@ -6,8 +6,17 @@ import javafx.collections.ObservableList;
 import java.sql.*;
 import java.time.LocalDateTime;
 
+/**
+*Links the booking class to the sql database.
+*@author Damola Aderinwale
+*@version ?
+*/
 public class BookingDB {
     DBUtil pool;
+    
+    /**
+    *
+    */
     public BookingDB() throws Exception{
         super();
         pool = new DBUtil();
