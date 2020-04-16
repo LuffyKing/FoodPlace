@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 /**
 *Queries the database to generate specific report types.
-*@author Damola Aderinwale
+*@author Damola Aderinwale (JavaDoc by Sara Philipson)
 *@version ?
 */
 public class ReportDB{
