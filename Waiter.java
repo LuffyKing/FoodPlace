@@ -2,6 +2,9 @@ package FoodPlace;
 
 import javafx.collections.ObservableList;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+
 public class Waiter extends Staff{
     public Waiter(String fname,
                   String lname,
@@ -47,14 +50,33 @@ public class Waiter extends Staff{
         }
     }
 
-    public void addOrderEatIn(ObservableList<OrderItem> items, ObservableList<Order> orders){
-        orders.add(new EatIn(items, ord));
+    public void addOrderEatIn(ObservableList<OrderItem> items,
+                              int orderId,
+                              LocalDateTime dateTime,
+                              int customerId,
+                              boolean isComplete,
+                              int waiterId,
+                              ObservableList<Order> orders){
+        orders.add(new EatIn(items, orderId, dateTime, customerId, isComplete, waiterId));
     }
     public void removeOrderEatIn(int orderId,ObservableList<Order> orders){
         orders.removeIf(anOrder -> (anOrder.getOrderId() == orderId));
     }
-    public void editOrderEatIn(Order order, ObservableList<OrderItem> orders, MenuItem[] menuItems){
-        orders.editOrder(order.getOrderId(), menuItems);
+    public void editOrderEatIn(EatIn eatin,
+                               ObservableList<OrderItem> items,
+                               LocalDateTime dateTime,
+                               boolean isComplete,
+                               int waiterId){
+        eatin.setCompletionStatus(isComplete);
+        if (items != null) {
+            eatin.setOrderItems(items);
+        }
+        if (waiterId > 0) {
+            eatin.setWaiterId(waiterId);
+        }
+        if (dateTime != null){
+            eatin.setDateTime(dateTime);
+        }
     }
     public void approveBooking(Booking booking){
         booking.approveBooking(true);
