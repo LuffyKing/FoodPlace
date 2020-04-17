@@ -30,7 +30,7 @@ public class ControllerDriverNotifications {
     *Changes the driver's scene to the driver permission denied scene.
     *@param event Clicking on a button that would lead to a scene that is not accessable for the driver.
     */
-    public void linktostaffButtonPressed(javafx.event.ActionEvent event) throws IOException {
+    public void permissiondeniedscreen(javafx.event.ActionEvent event) throws IOException {
         Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondenieddriver.fxml"));
         Scene permissiondeniedScene = new Scene(permissiondeniedParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -47,42 +47,6 @@ public class ControllerDriverNotifications {
         Scene myordersScene = new Scene(myordersParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(myordersScene);
-        window.show();
-    }
-
-    /**
-    *Changes the driver's scene to the driver permission denied scene.
-    *@param event Clicking on a button that would lead to a scene that is not accessable for the driver.
-    */
-    public void linktomenuButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondenieddriver.fxml"));
-        Scene permissiondeniedScene = new Scene(permissiondeniedParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(permissiondeniedScene);
-        window.show();
-    }
-
-    /**
-    *Changes the driver's scene to the driver permission denied scene.
-    *@param event Clicking on a button that would lead to a scene that is not accessable for the driver.
-    */
-    public void linktobookingsButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondenieddriver.fxml"));
-        Scene permissiondeniedScene = new Scene(permissiondeniedParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(permissiondeniedScene);
-        window.show();
-    }
-
-    /**
-    *Changes the driver's scene to the chef permission denied scene.
-    *@param event Clicking on a button that would lead to a scene that is not accessable for the driver.
-    */
-    public void linktoreportsButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondenieddriver.fxml"));
-        Scene permissiondeniedScene = new Scene(permissiondeniedParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(permissiondeniedScene);
         window.show();
     }
 
