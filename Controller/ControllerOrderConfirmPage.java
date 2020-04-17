@@ -3,7 +3,7 @@ package FoodPlace.Controller;
 import java.io.IOException;
 
 /**
- *Controller for the scene a Delivery Driver gets when they log in.
+ *Controller for the scene the customer views when their order has been confirmed by the restaurant.
  *@author Haixin Wang
  *@version ?
  */
@@ -18,7 +18,7 @@ public class ControllerOrderConfirmPage {
     public Button linkbacktomyordershome;
 
     /**
-     *Changes the scene to the MyAccount scene.
+     *Changes the scene to the My Account scene.
      *@param event Clicking on the My Account button.
      */
     public void linktomyaccountButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -30,7 +30,7 @@ public class ControllerOrderConfirmPage {
     }
 
     /**
-     *Changes the scene to the customerMen scene.
+     *Changes the scene to the customer Menu scene.
      *@param event Clicking on the Menu button.
      */
     public void linktomenuButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -42,7 +42,7 @@ public class ControllerOrderConfirmPage {
     }
 
     /**
-     *Changes the scene to the myOrdersHome scene.
+     *Changes the scene to the my Orders scene.
      *@param event Clicking on the My Orders button.
      *//
     public void linktomyordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -54,7 +54,7 @@ public class ControllerOrderConfirmPage {
     }
 
     /**
-     *Changes the scene to the bookingHome scene.
+     *Changes the scene to the my booking scene.
      *@param event Clicking on the My Bookings button.
      */
     public void linktobookinghomeButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -78,7 +78,7 @@ public class ControllerOrderConfirmPage {
     }
 
     /**
-     *Changes the scene to the Customer login Scene scene.
+     *Changes the scene to the Customer login scene.
      *@param event Clicking on the Logout button.
      */
     public void logoutbuttonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -90,7 +90,7 @@ public class ControllerOrderConfirmPage {
     }
 
     /**
-     *Changes the scene to the myOrdersHome scene.
+     *Changes the scene to the my Orders scene.
      *@param event Clicking on the Return to my orders button.
      */
     public void linktomyordershomeButtonPressed(javafx.event.ActionEvent event) throws IOException {
