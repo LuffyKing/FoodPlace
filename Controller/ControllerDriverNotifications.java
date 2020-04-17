@@ -31,7 +31,7 @@ public class ControllerDriverNotifications {
     *@param event Clicking on a button that would lead to a scene that is not accessable for the driver.
     */
     public void permissiondeniedscreen(javafx.event.ActionEvent event) throws IOException {
-        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondenieddriver.fxml"));
+        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("../FXML/permissiondenieddriver.fxml"));
         Scene permissiondeniedScene = new Scene(permissiondeniedParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(permissiondeniedScene);
@@ -43,7 +43,7 @@ public class ControllerDriverNotifications {
     *@param event Clicking on the orders button.
     */
     public void linktoordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent myordersParent = FXMLLoader.load(getClass().getResource("ordersDriver.fxml"));
+        Parent myordersParent = FXMLLoader.load(getClass().getResource("../FXML/ordersDriver.fxml"));
         Scene myordersScene = new Scene(myordersParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(myordersScene);
@@ -55,7 +55,7 @@ public class ControllerDriverNotifications {
     *@param event Clicking on the notifications button.
     */
     public void notificationspageButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent notificationsParent = FXMLLoader.load(getClass().getResource("DriverNotification.fxml"));
+        Parent notificationsParent = FXMLLoader.load(getClass().getResource("../FXML/DriverNotification.fxml"));
         Scene notificationsScene = new Scene(notificationsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(notificationsScene);
@@ -67,7 +67,7 @@ public class ControllerDriverNotifications {
     *@param event Clicking on the logout button.
     */
     public void logoutButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent logoutParent = FXMLLoader.load(getClass().getResource("Staff_login_Draft.fxml"));
+        Parent logoutParent = FXMLLoader.load(getClass().getResource("../FXML/Staff_login_Draft.fxml"));
         Scene logoutScene = new Scene(logoutParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(logoutScene);
@@ -79,7 +79,7 @@ public class ControllerDriverNotifications {
     *@param event Clicking on the check delivery button.
     */
     public void deliveryview(javafx.event.ActionEvent event) throws IOException {
-        Parent myordersParent = FXMLLoader.load(getClass().getResource("ordersDriver.fxml"));
+        Parent myordersParent = FXMLLoader.load(getClass().getResource("../FXML/ordersDriver.fxml"));
         Scene myordersScene = new Scene(myordersParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(myordersScene);
