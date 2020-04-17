@@ -42,9 +42,6 @@ public class MenuItem {
     *@param cat The category.
     *@param mId The menu item id.
     *@param nameVar The name.
-    *@param oId The older id.
-    *@param lId The line item id.
-    *@param quant The quantity.
     *@param special The special items.
     */
     public MenuItem(String desc,
