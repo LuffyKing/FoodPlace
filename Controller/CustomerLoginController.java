@@ -74,7 +74,7 @@ public class CustomerLoginController implements Initializable {
 
     public void LoginButtonPressed(javafx.event.ActionEvent event) throws IOException {
         if (login() == true) {
-            Parent HomeViewParent = FXMLLoader.load(getClass().getResource("template.fxml"));
+            Parent HomeViewParent = FXMLLoader.load(getClass().getResource("customerHome.fxml"));
             Scene HomeScene = new Scene(HomeViewParent);
             // Get Stage Info
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
