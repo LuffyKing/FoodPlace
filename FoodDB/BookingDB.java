@@ -6,13 +6,27 @@ import javafx.collections.ObservableList;
 import java.sql.*;
 import java.time.LocalDateTime;
 
+/**
+*Links the booking class to the sql database.
+*@author Damola Aderinwale (JavaDoc by Sara Philipson)
+*@version ?
+*/
 public class BookingDB {
     DBUtil pool;
+    
+    /**
+    *Function to get a new connection instance to the database.
+    */
     public BookingDB() throws Exception{
         super();
         pool = new DBUtil();
     }
 
+    /**
+    *Retrieve a booking from the database.
+    *@param bookingId the ID of the booking to be retrieved.
+    *@return booking The details of the booking.
+    */
     public Booking getBooking(int bookingId) throws SQLException {
         Booking booking = null;
 
@@ -40,6 +54,11 @@ public class BookingDB {
         return booking;
     }
 
+    /**
+    *Return a list of booking for a specific customer ID in the database.
+    *@param customerId The customer ID for which you want to retrieve the bookings of.
+    *@return a list of bookings for a specific customer.
+    */
     public ObservableList<Booking> getAllCustomerBookings(int customerId) throws SQLException {
         ObservableList<Booking> bookings = null;
 
@@ -69,6 +88,10 @@ public class BookingDB {
         return bookings;
     }
 
+    /**
+    *Retrieves a list of all bookings in the database.
+    *@return a list of all bookings.
+    */
     public ObservableList<Booking> getAllBookings() throws SQLException {
         ObservableList<Booking> bookings = null;
 
@@ -98,6 +121,17 @@ public class BookingDB {
         }
         return bookings;
     }
+    
+    /**
+    *Creates a booking in the database.
+    *@param numberOfGuests_ The number of guests in the booking.
+    *@param bookingLength_ The length of the booking.
+    *@param bookingTime_ The date and time of the booking.
+    *@param customerID_ The Id of the customer that the booking is associated with.
+    *@param waiterID_ The Id of the waiter.
+    *@param approved_ The status of the booking, approved or not.
+    *@return the booking that has been created.
+    */
     public Booking createBooking(int numberOfGuests_,
                                  int bookingLength_,
                                  LocalDateTime bookingTime_,
@@ -139,6 +173,10 @@ public class BookingDB {
         return booking;
     }
 
+    /**
+    *Deletes a specific booking from the database.
+    *@param bookingId The ID of the booking to be deleted.
+    */
     public void deleteBooking(int bookingId) throws SQLException {
         String delete = "DELETE FROM bookings where b_id = " + bookingId;
         try (Connection conn = pool.getConnection()){
@@ -153,8 +191,10 @@ public class BookingDB {
         }
     }
 
-
-
+    /**
+    *Deletes all bookings associated with a specific customer.
+    *@param customerId The Id of the customer.
+    */
     public void deleteAllCustomerBookings(int customerId) throws SQLException {
         String delete = "DELETE FROM bookings where customer_id = " + customerId;
         try (Connection conn = pool.getConnection()){
@@ -169,6 +209,15 @@ public class BookingDB {
         }
     }
 
+    /**
+    *Edits a booking in the database.
+    *@param bookingId The Id of the booking to be edited.
+    *@param numberOfGuests_ The new number of guests in the booking.
+    *@param bookingLength_ The new length of the booking.
+    *@param bookingTime_ The new date and time of the booking.
+    *@param approved_ The new approval status of the booking.
+    *@return the edited booking.
+    */
     public Booking editBooking(int bookingId,
                              int numberOfGuests_,
                              int bookingLength_,

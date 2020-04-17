@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Chef Notifications">
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FoodPlace.Controller.ControllerChefOrderHomePage">
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
         <VBox prefHeight="398.0" prefWidth="175.0">
             <AnchorPane prefHeight="104.0" prefWidth="175.0">
@@ -20,7 +21,7 @@
                     <effect>
                         <DropShadow />
                     </effect>
-                    <Image url="@../Documents/Swansea/Computer%20Science/Second%20Semester/CSCM94%20Software%20Engineering%20Principles/CW/Downloads/FoodPlace-master/sample/Logo.png" />
+                    <Image url="@../Downloads/FoodPlace-master/sample/Logo.png" />
                 </ImageView>
             </AnchorPane>
             <Button fx:id="linktostaff" mnemonicParsing="false" onAction="#permissiondeniedscreen" prefHeight="62.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Staff" />
@@ -41,28 +42,41 @@
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
             <children>
-               <Label layoutX="14.0" layoutY="14.0" text="Notifications">
+               <Label layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="142.0" text="Chef">
                   <font>
                      <Font size="33.0" />
                   </font>
                </Label>
-               <ImageView fitHeight="129.0" fitWidth="129.0" layoutX="278.0" layoutY="6.0">
+               <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="215.0" layoutY="4.0">
                   <image>
-                     <Image url="@../Documents/Swansea/Computer%20Science/Second%20Semester/CSCM94%20Software%20Engineering%20Principles/CW/Downloads/waiter-150452_1280.png" />
+                     <Image url="@../Downloads/chef-1417239_1280.png" />
                   </image>
                </ImageView>
-               <Button fx:id="linktoorders" layoutX="24.0" layoutY="108.0" mnemonicParsing="false" onAction="#ordersview" prefHeight="27.0" prefWidth="184.0" text="check orders" />
-               <Button fx:id="linktoorderstatus" layoutX="24.0" layoutY="269.0" mnemonicParsing="false" onAction="#orderstatusview" prefHeight="27.0" prefWidth="184.0" text="order status" />
-               <Label layoutX="256.0" layoutY="108.0" text="New Orders!">
+               <Label layoutX="14.0" layoutY="92.0" text="Order number: #123">
                   <font>
-                     <Font size="23.0" />
+                     <Font size="19.0" />
                   </font>
                </Label>
-               <Label layoutX="256.0" layoutY="269.0" text="Status updated!">
+               <Label layoutX="14.0" layoutY="146.0" text="List of Menu objects in order:">
                   <font>
-                     <Font size="23.0" />
+                     <Font size="19.0" />
                   </font>
                </Label>
+               <Label layoutX="14.0" layoutY="236.0" prefHeight="24.0" prefWidth="174.0" text="Date &amp; time of order:">
+                  <font>
+                     <Font size="19.0" />
+                  </font>
+               </Label>
+               <Label layoutX="14.0" layoutY="295.0" text="Update order status:">
+                  <font>
+                     <Font size="19.0" />
+                  </font>
+               </Label>
+               <TextArea layoutX="229.0" layoutY="179.0" prefHeight="178.0" prefWidth="186.0" text="Order Mark:">
+                  <font>
+                     <Font size="17.0" />
+                  </font>
+               </TextArea>
             </children>
             </AnchorPane>
         </SplitPane>

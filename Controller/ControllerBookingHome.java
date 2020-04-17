@@ -1,4 +1,4 @@
-package FoodPlace;
+package FoodPlace.Controller;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -107,6 +107,6 @@ public class ControllerBookingHome {
         window.show();
     }
 
-    //don't know how to get the table thing to work.
+    //method to display bookings missing.
 
 }

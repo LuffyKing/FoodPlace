@@ -1,4 +1,4 @@
-package FoodPlace;
+package FoodPlace.Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -31,7 +31,7 @@ public class ControllerStaffBookingHome {
     *@param event Clicking on the Notifications button.
     */
     public void notificationspageButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent notificationsParent = FXMLLoader.load(getClass().getResource("------.fxml"));
+        Parent notificationsParent = FXMLLoader.load(getClass().getResource("WaiterNotifications.fxml"));
         Scene notificationsScene = new Scene(notificationsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(notificationsScene);
@@ -113,4 +113,6 @@ public class ControllerStaffBookingHome {
     public void declinebookingsbutton(javafx.event.ActionEvent event) throws IOException {
         //back end link needed
     }
+    //method to display & select unapproved bookings needed
+    //method to display approved bookings needed
 }

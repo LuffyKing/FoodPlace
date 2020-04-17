@@ -1,4 +1,4 @@
-package FoodPlace;
+package FoodPlace.Controller;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -94,5 +94,5 @@ public class ControllerBookingSubmitted {
         window.setScene(logoutScene);
         window.show();
     }
-    
+    //method to display edited booking missing
 }

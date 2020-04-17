@@ -5,13 +5,31 @@ import javafx.collections.ObservableList;
 
 import java.sql.*;
 
+/**
+*To link the menu class to the sql database.
+*@vauthor Damola Aderinwale (JavaDoc by Sara Philipson)
+*@version ?
+*/
 public class MenuDB {
     DBUtil pool;
+   
+    /**
+    *Function to get a new connection instance to the database.
+    */
     MenuDB() throws Exception{
         super();
         pool = new DBUtil();
     }
 
+    /**
+    *Used to create a new MenuItem in the database.
+    *@param desc A description of the item.
+    *@param unitP Price of the item.
+    *@param cat Category of the item.
+    *@param nameVar The name of the item.
+    *@param special Indicates if the item is a daily special or not.
+    *@return the newly created menu item.
+    */
     public MenuItem createMenuItem(String desc,
                                 double unitP,
                                 String cat,
@@ -50,6 +68,10 @@ public class MenuDB {
         return menuItem;
     }
 
+    /**
+    *Retrives a list of all items in the menu from the database.
+    *@return A list of all MenuItems
+    */
     public ObservableList<MenuItem> getAllMenuItems() throws SQLException {
         ObservableList<MenuItem> menuItems = null;
 
@@ -72,6 +94,11 @@ public class MenuDB {
         return menuItems;
     }
 
+    /**
+    *Function to retrieve a specific menu item from the database.
+    *@param menuItemId The ID of the menu item you wish to retrieve.
+    *@return The specific menu item asked for.
+    */
     public MenuItem getMenuItem(int menuItemId) throws SQLException {
         MenuItem menuItem = null;
 
@@ -93,7 +120,10 @@ public class MenuDB {
         return menuItem;
     }
 
-
+    /**
+    *Deletes a specific menu item from the database.
+    *@param menuItemId the Id of the menu item to be deleted.
+    */
     public void deleteMenuItem(int menuItemId) throws SQLException {
         String delete = "DELETE FROM MENU where m_id = " + menuItemId;
         try (Connection conn = pool.getConnection()){
@@ -108,6 +138,16 @@ public class MenuDB {
         }
     }
 
+    /**
+    *Edits a specific menu item in the database.
+    *@param menuItemId The Id of the menu item.
+    *@param name The name of the menu item.
+    *@param isSpecial The status to say if the item is a daily special or not.
+    *@param category The menu item category.
+    *@param desc The description of the item.
+    *@param unitPrice The price of the item.
+    *@return The updated menu item.
+    */
     public MenuItem editMenuItem(int menuItemId,
                            String name,
                            boolean isSpecial,

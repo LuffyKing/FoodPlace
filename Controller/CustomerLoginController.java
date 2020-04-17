@@ -26,6 +26,7 @@ public class CustomerLoginController {
     Label CustomerLoginStatus;
     /**
      * Method for changing the Scene to StaffLogin
+     *@param event Staff Login button pressed.
      */
     public void StaffLoginbuttonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent StaffViewParent = FXMLLoader.load(getClass().getResource("../FXML/Staff_login_Draft.fxml"));
@@ -33,18 +34,20 @@ public class CustomerLoginController {
         // Get Stage Info
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 
+
         window.setScene(StaffLoginScene);
         window.show();
     }
     /**
      * Method for changing the Scene to CustomerLogin
-     * @param event
+     * @param event Customer Sign up button pressed.
      */
     public void CustomerSignupbuttonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent CustomerViewParent = FXMLLoader.load(getClass().getResource("../FXML/Customer_signup_Scene.fxml"));
         Scene CustomerSignupScene = new Scene(CustomerViewParent);
         // Get Stage Info
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+
 
         window.setScene(CustomerSignupScene);
         window.show();
@@ -56,21 +59,20 @@ public class CustomerLoginController {
      */
 
     public void LoginButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Customer customer = login();
-        if (customer != null){
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/customerHome.fxml"));
-            Parent CustomerViewParent = loader.load();
-            ControllerCustomerHome controllerCustomerHome = loader.getController();
-            controllerCustomerHome.setCustomer(customer);
-            loader.setController(controllerCustomerHome);
-            Scene CustomerHomeScene = new Scene(CustomerViewParent);
-            // Get Stage Info
-            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            Customer customer = login();
+            if (customer != null) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/customerHome.fxml"));
+                Parent CustomerViewParent = loader.load();
+                ControllerCustomerHome controllerCustomerHome = loader.getController();
+                controllerCustomerHome.setCustomer(customer);
+                loader.setController(controllerCustomerHome);
+                Scene CustomerHomeScene = new Scene(CustomerViewParent);
+                // Get Stage Info
+                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-            window.setScene(CustomerHomeScene);
-            window.show();
+                window.setScene(CustomerHomeScene);
+            }
         }
-    }
 
     /**
      * Method for customer username & password login

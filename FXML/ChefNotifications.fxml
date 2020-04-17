@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Driver Notifications">
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FoodPlace.Controller.ControllerChefNotifications">
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
         <VBox prefHeight="398.0" prefWidth="175.0">
             <AnchorPane prefHeight="104.0" prefWidth="175.0">
@@ -51,8 +51,13 @@
                      <Image url="@../Documents/Swansea/Computer%20Science/Second%20Semester/CSCM94%20Software%20Engineering%20Principles/CW/Downloads/waiter-150452_1280.png" />
                   </image>
                </ImageView>
-               <Button fx:id="linktodelivery" layoutX="24.0" layoutY="167.0" mnemonicParsing="false" onAction="#deliveryview" prefHeight="27.0" prefWidth="184.0" text="check delivery" />
-               <Label layoutX="256.0" layoutY="167.0" text="New Delivery!">
+               <Button fx:id="linktoorderstatus" layoutX="24.0" layoutY="269.0" mnemonicParsing="false" onAction="#orderstatusview" prefHeight="27.0" prefWidth="184.0" text="order status" />
+               <Label layoutX="134.0" layoutY="107.0" text="New Orders!">
+                  <font>
+                     <Font size="23.0" />
+                  </font>
+               </Label>
+               <Label layoutX="256.0" layoutY="269.0" text="Status updated!">
                   <font>
                      <Font size="23.0" />
                   </font>

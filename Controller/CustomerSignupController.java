@@ -27,6 +27,8 @@ public class CustomerSignupController {
     private TextField passwordField;
     @FXML
     private Label signupStatusField;
+
+
     /**
      * Method for changing the Scene to CustomerLogin
      * @param event
@@ -71,20 +73,19 @@ public class CustomerSignupController {
         String address = addressField.getText();
         String pword = passwordField.getText();
         if (username.isEmpty() || address.isEmpty()
-            || fname.isEmpty() || lname.isEmpty() ||
+                || fname.isEmpty() || lname.isEmpty() ||
                 pword.isEmpty()
         ) {
             signupStatusField.setText("Invalid Signup details");
-        }
-        else{
+        } else {
             //SQL query
             try {
                 CustomerDB cdb = new CustomerDB();
-                customer = cdb.createCustomer(fname,lname,address,username,pword);
-                if (customer == null){
+                customer = cdb.createCustomer(fname, lname, address, username, pword);
+                if (customer == null) {
                     signupStatusField.setText("User creation failed");
                 }
-            } catch (Exception e){
+            } catch (Exception e) {
                 System.err.println(e.getMessage());
             }
         }

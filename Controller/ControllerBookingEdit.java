@@ -1,4 +1,4 @@
-package FoodPlace;
+package FoodPlace.Controller;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -113,6 +113,6 @@ public class ControllerBookingEdit {
         window.show();
     }
 
-    //method for actual edit of booking still in progress
+    //method for actual edit of booking needed
 
 }

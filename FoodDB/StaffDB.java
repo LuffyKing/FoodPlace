@@ -8,13 +8,26 @@ import javafx.collections.ObservableList;
 
 import java.sql.*;
 
+/**
+*Links the staff class to the database.
+*@author Damola Aderinwale (JavaDoc by Sara Philipson)
+*@version ?
+*/
 public class StaffDB{
     DBUtil pool;
+    
+    /**
+    *Function to get a new connection instance to the database.
+    */
     public StaffDB() throws Exception{
         super();
         pool = new DBUtil();
     }
 
+    /**
+    *Returns a list of all staff.
+    *@return A list of all staff.
+    */
     public ObservableList<Staff> getAllStaff() throws SQLException {
         ObservableList<Staff> staffs = null;
 
@@ -74,6 +87,11 @@ public class StaffDB{
         return staffs;
     }
 
+    /**
+    *Returns details about a specific staff member.
+    *@param staffId The Id of the staff member you want to retrieve.
+    *@return The staff details in question.
+    */
     public Staff getStaff(int staffId) throws SQLException {
         Staff staff = null;
 
@@ -130,6 +148,7 @@ public class StaffDB{
         return staff;
     }
 
+<<<<<<< HEAD
     public Staff getStaff(String username, String password) throws SQLException {
         Staff staff = null;
 
@@ -185,6 +204,18 @@ public class StaffDB{
         return staff;
     }
 
+=======
+    /**
+    *Creates a new staff member in the database.
+    *@param fname The first name.
+    *@param lname The last name.
+    *@param h2Work The hours the staff member needs to work.
+    *@param sType The staff member type.
+    *@param uname The staff username.
+    *@param pword The staff password.
+    *@return The new staff item.
+    */
+>>>>>>> 3e7a98f97f4d094c86c46796a0205c22b3a13f57
     public Staff createStaff(String fname,
                              String lname,
                              int h2Work,
@@ -227,6 +258,10 @@ public class StaffDB{
         return staff;
     }
 
+    /**
+    *Deletes a staff member from the database.
+    *@param staffId The Id of the staff member to be deleted.
+    */
     public void deleteStaff(int staffId) throws SQLException {
         String delete = "DELETE FROM STAFF where s_id = " + staffId;
         try (Connection conn = pool.getConnection()){
@@ -241,6 +276,18 @@ public class StaffDB{
         }
     }
 
+    /**
+    *Edits the details of a staff member in the database.
+    *@param staffId The Id of the staff member being edited.
+    *@param fname The first name of the staff member.
+    *@param lname The last name of the staff member.
+    *@param h2Work The number of hours the staf member needs to work.
+    *@param hWorked The number of hours the staff member has worked.
+    *@param sType The type of staff member.
+    *@param uname The staff member's username.
+    *@param pword The staff member's password.
+    *@return The edited staff details.
+    */
     public Staff editStaff(int staffId,
                            String fname,
                            String lname,
