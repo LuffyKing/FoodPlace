@@ -3,11 +3,10 @@ package FoodPlace.Controller;
 import java.io.IOException;
 
 /**
- *Controller for the scene a Delivery Driver gets when they log in.
+ *Controller for the customer view of the menu.
  *@author Haixin Wang
  *@version ?
  */
-
 public class ControllerCustomerMenu {
     public Button linktomyaccount;
     public Button linktomenu;
@@ -18,7 +17,7 @@ public class ControllerCustomerMenu {
     public Button add;
 
     /**
-     *Changes the scene to the MyAccount scene.
+     *Changes the scene to the My Account scene.
      *@param event Clicking on the My Account button.
      */
     public void linktomyaccountButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -30,7 +29,7 @@ public class ControllerCustomerMenu {
     }
 
     /**
-     *Changes the scene to the customerMen scene.
+     *Changes the scene to the customer Menu scene.
      *@param event Clicking on the Menu button.
      */
     public void linktomenuButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -42,7 +41,7 @@ public class ControllerCustomerMenu {
     }
 
     /**
-     *Changes the scene to the myOrdersHome scene.
+     *Changes the scene to the my Orders scene.
      *@param event Clicking on the My Orders button.
      */
     public void linktomyordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -54,7 +53,7 @@ public class ControllerCustomerMenu {
     }
 
     /**
-     *Changes the scene to the bookingHome scene.
+     *Changes the scene to the my bookings scene.
      *@param event Clicking on the My Bookings button.
      */
     public void linktobookinghomeButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -78,7 +77,7 @@ public class ControllerCustomerMenu {
     }
 
     /**
-     *Changes the scene to the Customer login Scene scene.
+     *Changes the scene to the Customer login scene.
      *@param event Clicking on the Logout button.
      */
     public void logoutbuttonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -90,7 +89,7 @@ public class ControllerCustomerMenu {
     }
 
     /**
-     *Changes the scene to the Basket scene.
+     *Changes the scene to the items in basket scene.
      *@param event Clicking on the Add button.
      */
     public void linktobasketButtonPressed(javafx.event.ActionEvent event) throws IOException {
