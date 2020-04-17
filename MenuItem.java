@@ -1,8 +1,8 @@
 package FoodPlace;
 
 /**
-*This class represents the delivery type of order.
-*@author Damola Aderinwale (JavaDoc by Haixin Wang)
+*This class represents the items in the menu.
+*@author Damola Aderinwale (JavaDoc by Haixin Wang & Sara Philipson)
 *@version ?
 */
 
@@ -13,6 +13,15 @@ public class MenuItem {
     private double unitPrice;
     private int menuItemId;
     private String name;
+    
+    /**
+    *Constructor for a menu item.
+    *@param desc The item.
+    *@param unitP The unit price.
+    *@param cat The category.
+    *@param mId The menu item id.
+    *@param nameVar The name.
+    */
     public MenuItem(String desc,
                     double unitP,
                     String cat,
