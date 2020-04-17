@@ -15,8 +15,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
 /**
- *Controller for the scene a Delivery Driver gets when they log in.
+ *Controller for the scene a Customer gets when they log in.
  *@author Haixin Wang
  *@version ?
  */
@@ -37,6 +38,10 @@ public class ControllerCustomerHome implements Initializable {
 
     }
 
+    /**
+    *Sets the customer to the logged in customer.
+    *@param customer The logged in customer.
+    */
     public void setCustomer(Customer customer) {
         this.customer = customer;
         welcomeText.setText("Welcome "+customer.getFirstName());;
@@ -49,7 +54,7 @@ public class ControllerCustomerHome implements Initializable {
 
 
     /**
-     *Changes the scene to the MyAccount scene.
+     *Changes the scene to the My Account scene.
      *@param event Clicking on the My Account button.
      */
     public void linktomyaccountButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -61,7 +66,7 @@ public class ControllerCustomerHome implements Initializable {
     }
 
     /**
-     *Changes the scene to the customerMen scene.
+     *Changes the scene to the customer Menu scene.
      *@param event Clicking on the Menu button.
      */
     public void linktomenuButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -73,7 +78,7 @@ public class ControllerCustomerHome implements Initializable {
     }
 
     /**
-     *Changes the scene to the myOrdersHome scene.
+     *Changes the scene to the my orders scene.
      *@param event Clicking on the My Orders button.
      */
     public void linktomyordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -85,7 +90,7 @@ public class ControllerCustomerHome implements Initializable {
     }
 
     /**
-     *Changes the scene to the bookingHome scene.
+     *Changes the scene to the my bookings scene.
      *@param event Clicking on the My Bookings button.
      */
     public void linktobookinghomeButtonPressed(javafx.event.ActionEvent event) throws IOException {
