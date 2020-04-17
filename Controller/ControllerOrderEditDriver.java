@@ -3,11 +3,10 @@ package FoodPlace.Controller;
 import java.io.IOException;
 
 /**
- *Controller for the scene a Delivery Driver gets when they log in.
+ *Controller for the scene a delivery driver gets when they update an order status.
  *@author Haixin Wang
  *@version ?
  */
-
 public class ControllerOrderEditDriver {
     public Button linktostaff;
     public Button linktoorders;
@@ -16,10 +15,10 @@ public class ControllerOrderEditDriver {
     public Button linktoreports;
     public Button notificationspage;
     public Button logoutbutton;
-    public Button linktoorderdriver;
+    public Button confrimdriverorderedit;
 
     /**
-     *Changes the scene to the permissiondenied scene.
+     *Changes the scene to the permission denied scene.
      *@param event Clicking on the staff button.
      */
     public void linktostaffButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -31,7 +30,7 @@ public class ControllerOrderEditDriver {
     }
 
     /**
-     *Changes the scene to the ordersChef scene.
+     *Changes the scene to the orders scene.
      *@param event Clicking on the orders button.
      */
     public void linktoordersdriverButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -43,7 +42,7 @@ public class ControllerOrderEditDriver {
     }
 
     /**
-     *Changes the scene to the Menu_Scene scene.
+     *Changes the scene to the permission denied scene.
      *@param event Clicking on the menu button.
      */
     public void linktomenusceneButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -55,7 +54,7 @@ public class ControllerOrderEditDriver {
     }
 
     /**
-     *Changes the scene to the permissiondeniedchef scene.
+     *Changes the scene to the permission denied scene.
      *@param event Clicking on the bookings button.
      */
     public void linktobookinghomeButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -67,7 +66,7 @@ public class ControllerOrderEditDriver {
     }
 
     /**
-     *Changes the scene to the permissiondeniedchef scene.
+     *Changes the scene to the permission denied scene.
      *@param event Clicking on the reports button.
      */
     public void linktoreportsButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -79,7 +78,7 @@ public class ControllerOrderEditDriver {
     }
 
     /**
-     *Changes the scene to the Chef Notifications scene.
+     *Changes the scene to the driver Notifications scene.
      *@param event Clicking on the Notifications button.
      */
     public void notificationspageButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -91,7 +90,7 @@ public class ControllerOrderEditDriver {
     }
 
     /**
-     *Changes the scene to the Staff login Draft scene.
+     *Changes the scene to the Staff login scene.
      *@param event Clicking on the Logout button.
      */
     public void logoutbuttonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -103,7 +102,7 @@ public class ControllerOrderEditDriver {
     }
 
     /**
-     *Changes the scene to the ordersDriver scene.
+     *Changes the scene to the driver view orders scene.
      *@param event Clicking on the confirm button.
      */
     public void linktoorderdriverButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -114,7 +113,5 @@ public class ControllerOrderEditDriver {
         window.show();
     }
 //display method missing.
-    //one cancel check box available but driver can't cancel orders only mark as completed upon delivery.
-    //no way to select individual orders to mark as complete.
     //change order status method missing.
 }
