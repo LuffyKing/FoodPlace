@@ -148,7 +148,6 @@ public class StaffDB{
         return staff;
     }
 
-<<<<<<< HEAD
     public Staff getStaff(String username, String password) throws SQLException {
         Staff staff = null;
 
@@ -204,7 +203,6 @@ public class StaffDB{
         return staff;
     }
 
-=======
     /**
     *Creates a new staff member in the database.
     *@param fname The first name.
@@ -215,7 +213,6 @@ public class StaffDB{
     *@param pword The staff password.
     *@return The new staff item.
     */
->>>>>>> 3e7a98f97f4d094c86c46796a0205c22b3a13f57
     public Staff createStaff(String fname,
                              String lname,
                              int h2Work,

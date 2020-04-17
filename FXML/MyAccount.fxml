@@ -30,10 +30,10 @@
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <Button fx:id="linktomyaccount" mnemonicParsing="false" onAction="#linktomyaccountview" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="My Account" />
-                  <Button fx:id="linktomenu" mnemonicParsing="false" onAction="#linktomenuview" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Menu" />
-                  <Button fx:id="linktomyorders" mnemonicParsing="false" onAction="#linktoordersview" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="My Orders" />
-                  <Button fx:id="linktobookinghome" mnemonicParsing="false" onAction="#linktobookingsview" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="My Bookings" />
+                  <Button fx:id="linktomyaccount" mnemonicParsing="false" onAction="#linktomyaccountButtonPressed" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="My Account" />
+                  <Button fx:id="linktomenu" mnemonicParsing="false" onAction="#linktomenuButtonPressed" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Menu" />
+                  <Button fx:id="linktomyorders" mnemonicParsing="false" onAction="#linktomyaccountButtonPressed" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="My Orders" />
+                  <Button fx:id="linktobookinghome" mnemonicParsing="false" onAction="#linktobookinghomeButtonPressed" prefHeight="73.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="My Bookings" />
                </children>
             </VBox>
          </children></AnchorPane>
@@ -45,9 +45,9 @@
                      <children>
                         <HBox layoutY="1.0" prefHeight="26.0" prefWidth="415.0">
                            <children>
-                              <Button fx:id="notificationspage" mnemonicParsing="false" prefHeight="27.0" prefWidth="204.0" style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;" text="Notifications" />
+                              <Button fx:id="notificationspage" onAction="#notificationspageButtonPressed" mnemonicParsing="false" prefHeight="27.0" prefWidth="204.0" style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;" text="Notifications" />
                               <Separator orientation="VERTICAL" prefHeight="27.0" prefWidth="0.0" />
-                              <Button fx:id="logoutbutton" mnemonicParsing="false" prefHeight="27.0" prefWidth="204.0" style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;" text="Logout" />
+                              <Button fx:id="logoutbutton" onAction="#logoutButtonPressed" mnemonicParsing="false" prefHeight="27.0" prefWidth="204.0" style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;" text="Logout" />
                            </children>
                         </HBox>
                      </children>
@@ -69,33 +69,33 @@
                               <Image url="@../Downloads/map-42871_1280.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="92.0" layoutY="181.0" prefHeight="22.0" prefWidth="191.0" text="Address: London, Uk">
+                        <Label fx:id="address" layoutX="92.0" layoutY="181.0" prefHeight="22.0" prefWidth="191.0">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </Label>
-                        <Label layoutX="92.0" layoutY="93.0" prefHeight="22.0" prefWidth="103.0" text="First Name: D">
+                        <Label fx:id="firstName" layoutX="92.0" layoutY="93.0" prefHeight="22.0" prefWidth="103.0">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </Label>
-                        <Label layoutX="228.0" layoutY="93.0" prefHeight="22.0" prefWidth="110.0" text="Last Name: A">
+                        <Label fx:id="lastName" layoutX="228.0" layoutY="93.0" prefHeight="22.0" prefWidth="110.0">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </Label>
-                        <Button fx:id="linktoedit" layoutX="178.0" layoutY="18.0" mnemonicParsing="false" onAction="#editview" prefHeight="27.0" prefWidth="50.0" text="Edit" />
+<!--                        <Button fx:id="linktoedit" layoutX="178.0" layoutY="18.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="50.0" text="Edit" />-->
                         <ImageView fitHeight="59.0" fitWidth="63.0" layoutX="18.0" layoutY="248.0">
                            <image>
                               <Image url="@../Downloads/letters-1132703_1280.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="93.0" layoutY="266.0" prefHeight="22.0" prefWidth="204.0" text="Email: 000000@gamil.com">
+                        <Label fx:id="username" layoutX="93.0" layoutY="266.0" prefHeight="22.0" prefWidth="204.0">
                            <font>
                               <Font size="17.0" />
                            </font>
                         </Label>
-                        <Button fx:id="linktochangepassword" layoutX="245.0" layoutY="18.0" mnemonicParsing="false" onAction="#passwordview" prefHeight="27.0" prefWidth="129.0" text="Change Password" />
+<!--                        <Button fx:id="linktochangepassword" layoutX="245.0" layoutY="18.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="129.0" text="Change Password" />-->
                         <ImageView fitHeight="361.0" fitWidth="417.0" opacity="0.04">
                            <image>
                               <Image url="@../Downloads/id-4157974_1920.jpg" />

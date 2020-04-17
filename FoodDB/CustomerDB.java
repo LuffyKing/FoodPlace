@@ -22,7 +22,7 @@ public class CustomerDB {
                         String lastName = rs.getString("last_name");
                         String address = rs.getString("address");
                         int cid = rs.getInt("c_id");
-                        customer = new Customer(firstName, lastName, address,cid);
+                        customer = new Customer(firstName, lastName, address,cid, username);
                     }
                 }
             }
@@ -40,8 +40,9 @@ public class CustomerDB {
                         String firstName = rs.getString("first_name");
                         String lastName = rs.getString("last_name");
                         String address = rs.getString("address");
+                        String username = rs.getString("username");
                         int cid = rs.getInt("c_id");
-                        customer = new Customer(firstName, lastName, address,cid);
+                        customer = new Customer(firstName, lastName, address,cid, username);
                     }
                 }
             }

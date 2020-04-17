@@ -11,6 +11,7 @@ import javafx.collections.ObservableList;
 public class Customer extends Person{
     private String address;
     private int customerId;
+    private String username;
 
     /**
     *Constructor for the customer, some details obtained from person class.
@@ -18,12 +19,31 @@ public class Customer extends Person{
     *@param lname The last name of the customer.
     *@param add The customer address.
     *@param cid The customer Id.
+     *@param username the username of the customer
     */
-    public Customer(String fname, String lname, String add, int cid) {
+    public Customer(String fname, String lname, String add, int cid, String username) {
         super(fname, lname);
         address = add;
         // get after DB save
         customerId = cid;
+        this.username = username;
+    }
+
+    /**
+     *Get the username of the customer
+     */
+
+    public String getUsername() {
+        return username;
+    }
+
+    /**
+     *Set the username of the customer
+     *@param username The new username of the customer.
+     */
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     /**

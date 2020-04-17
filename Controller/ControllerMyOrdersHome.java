@@ -62,11 +62,13 @@ public class ControllerMyOrdersHome implements Initializable {
         dateTimeColumn.setCellValueFactory(new PropertyValueFactory<Order, LocalDateTime>("dateTime"));
         orderTypeColumn.setCellValueFactory(new PropertyValueFactory<Order, String>("orderType"));
         customerIdColumn.setCellValueFactory(new PropertyValueFactory<Order, Integer>("customerId"));
-        ObservableList<Order> orders = getAllCustomerOrders(customer.getCustomerId());
     }
 
     public void setCustomer(Customer customer) {
+
         this.customer = customer;
+        ObservableList<Order> orders = getAllCustomerOrders(customer.getCustomerId());
+        ordersTable.setItems(orders);
     }
 
     public Customer getCustomer() {

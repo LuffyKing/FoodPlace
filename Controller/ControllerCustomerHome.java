@@ -49,23 +49,29 @@ public class ControllerCustomerHome implements Initializable {
 
 
     /**
-     *Changes the scene to the MyAccount scene.
-     *@param event Clicking on the My Account button.
+     *Changes the customer's scene to the customer account scene.
+     *@param event Clicking on the account button.
      */
     public void linktomyaccountButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent myaccountParent = FXMLLoader.load(getClass().getResource("../FXML/MyAccount.fxml"));
-        Scene myaccountScene = new Scene(myaccountParent);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/MyAccount.fxml"));
+        Parent CustomerViewParent = loader.load();
+        ControllerMyAccount controllerMyAccount = loader.getController();
+        controllerMyAccount.setCustomer(customer);
+        Scene myAccountScene = new Scene(CustomerViewParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(myaccountScene);
+        window.setScene(myAccountScene);
         window.show();
     }
 
     /**
-     *Changes the scene to the customerMen scene.
-     *@param event Clicking on the Menu button.
+     *Changes the customer's scene to the customer Menu scene.
+     *@param event Clicking on the menu button.
      */
     public void linktomenuButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent menuParent = FXMLLoader.load(getClass().getResource("../FXML/customerMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/customerMenu.fxml"));
+        Parent menuParent = loader.load();
+        ControllerCustomerMenu controllerCustomerMenu = loader.getController();
+        controllerCustomerMenu.setCustomer(customer);
         Scene menuScene = new Scene(menuParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(menuScene);
@@ -73,11 +79,14 @@ public class ControllerCustomerHome implements Initializable {
     }
 
     /**
-     *Changes the scene to the myOrdersHome scene.
-     *@param event Clicking on the My Orders button.
+     *Changes the customer's scene to the customer own orders.
+     *@param event Clicking on the orders button.
      */
     public void linktomyordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent myordersParent = FXMLLoader.load(getClass().getResource("../FXML/myOrdersHome.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/myOrdersHome.fxml"));
+        ControllerMyOrdersHome controllerMyOrdersHome = loader.getController();
+        controllerMyOrdersHome.setCustomer(customer);
+        Parent myordersParent = loader.load();
         Scene myordersScene = new Scene(myordersParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(myordersScene);
@@ -85,11 +94,14 @@ public class ControllerCustomerHome implements Initializable {
     }
 
     /**
-     *Changes the scene to the bookingHome scene.
-     *@param event Clicking on the My Bookings button.
+     *Changes the customer's scene to the customer own bookings.
+     *@param event Clicking on the bookings button.
      */
     public void linktobookinghomeButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent mybookingsParent = FXMLLoader.load(getClass().getResource("../FXML/bookingHome.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/bookingHome.fxml"));
+        ControllerBookingHome controllerBookingHome = loader.getController();
+        controllerBookingHome.setCustomer(customer);
+        Parent mybookingsParent = loader.load();
         Scene mybookingsScene = new Scene(mybookingsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(mybookingsScene);
@@ -97,11 +109,14 @@ public class ControllerCustomerHome implements Initializable {
     }
 
     /**
-     *Changes the scene to the Notification scene.
-     *@param event Clicking on the Notifications button.
+     *Changes the customer's scene to the customer notifications scene.
+     *@param event Clicking on the notifications button.
      */
     public void notificationspageButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent notificationsParent = FXMLLoader.load(getClass().getResource("../FXML/Notification.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/CustomerNotification.fxml"));
+        ControllerCustomerNotifications controllerCustomerNotifications = loader.getController();
+        controllerCustomerNotifications.setCustomer(customer);
+        Parent notificationsParent = loader.load();
         Scene notificationsScene = new Scene(notificationsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(notificationsScene);
@@ -109,10 +124,10 @@ public class ControllerCustomerHome implements Initializable {
     }
 
     /**
-     *Changes the scene to the Customer login Scene scene.
-     *@param event Clicking on the Logout button.
+     *Changes the customer's scene to the customer logout scene.
+     *@param event Clicking on the logout button.
      */
-    public void logoutbuttonPressed(javafx.event.ActionEvent event) throws IOException {
+    public void logoutButtonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent logoutParent = FXMLLoader.load(getClass().getResource("../FXML/Customer_login_Scene.fxml"));
         Scene logoutScene = new Scene(logoutParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
