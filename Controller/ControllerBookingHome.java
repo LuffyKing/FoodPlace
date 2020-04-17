@@ -28,7 +28,7 @@ public class ControllerBookingHome {
     *@param event Clicking on the Create Booking button.
     */
     public void linktobookingcreateButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent bookingCreateParent = FXMLLoader.load(getClass().getResource("bookingCreate.fxml"));
+        Parent bookingCreateParent = FXMLLoader.load(getClass().getResource("../FXML/bookingCreate.fxml"));
         Scene bookingCreateScene = new Scene(bookingCreateParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(bookingCreateScene);
@@ -40,7 +40,7 @@ public class ControllerBookingHome {
     *@param event Clicking on the My Account button.
     */
     public void linktomyaccountButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent myaccountParent = FXMLLoader.load(getClass().getResource("MyAccount.fxml"));
+        Parent myaccountParent = FXMLLoader.load(getClass().getResource("../FXML/MyAccount.fxml"));
         Scene myaccountScene = new Scene(myaccountParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(myaccountScene);
@@ -52,7 +52,7 @@ public class ControllerBookingHome {
     *@param event Clicking on the Menu button.
     */
     public void linktomenuButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent menuParent = FXMLLoader.load(getClass().getResource("customerMenu.fxml"));
+        Parent menuParent = FXMLLoader.load(getClass().getResource("../FXML/customerMenu.fxml"));
         Scene menuScene = new Scene(menuParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(menuScene);
@@ -64,7 +64,7 @@ public class ControllerBookingHome {
     *@param event Clicking on the My Orders button.
     */
     public void linktomyordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent myordersParent = FXMLLoader.load(getClass().getResource("myOrdersHome.fxml"));
+        Parent myordersParent = FXMLLoader.load(getClass().getResource("../FXML/myOrdersHome.fxml"));
         Scene myordersScene = new Scene(myordersParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(myordersScene);
@@ -76,7 +76,7 @@ public class ControllerBookingHome {
     *@param event Clicking on the My Bookings button.
     */
     public void linktobookinghomeButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent mybookingsParent = FXMLLoader.load(getClass().getResource("bookingHome.fxml"));
+        Parent mybookingsParent = FXMLLoader.load(getClass().getResource("../FXML/bookingHome.fxml"));
         Scene mybookingsScene = new Scene(mybookingsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(mybookingsScene);
@@ -88,7 +88,7 @@ public class ControllerBookingHome {
     *@param event Clicking on the Notifications button.
     */
     public void notificationspageButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent notificationsParent = FXMLLoader.load(getClass().getResource("Notification.fxml"));
+        Parent notificationsParent = FXMLLoader.load(getClass().getResource("../FXML/Notification.fxml"));
         Scene notificationsScene = new Scene(notificationsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(notificationsScene);
@@ -100,7 +100,7 @@ public class ControllerBookingHome {
     *@param event Clicking on the Logout button.
     */
     public void logoutbuttonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent logoutParent = FXMLLoader.load(getClass().getResource("Customer_login_Scene.fxml"));
+        Parent logoutParent = FXMLLoader.load(getClass().getResource("../FXML/Customer_login_Scene.fxml"));
         Scene logoutScene = new Scene(logoutParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(logoutScene);
