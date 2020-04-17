@@ -130,6 +130,61 @@ public class StaffDB{
         return staff;
     }
 
+    public Staff getStaff(String username, String password) throws SQLException {
+        Staff staff = null;
+
+        try (Connection conn = pool.getConnection()){
+            try (Statement statement = conn.createStatement()) {
+                try (ResultSet rs = statement.executeQuery("select * from Staff where S_Username = '"+username+"'"+" and Password = '"+ password+"';")) {
+                    if(rs.next()) {
+                        String firstName = rs.getString("first_name");
+                        String lastName = rs.getString("last_name");
+                        int hoursWorked = rs.getInt("hours_worked");
+                        int hoursToWork = rs.getInt("hours_2bworked");
+                        String type = rs.getString("type");
+                        int staffId = rs.getInt("s_id");
+                        switch (type){
+                            case "waiter": {
+                                staff = new Waiter(firstName,
+                                        lastName,
+                                        hoursToWork,
+                                        type,
+                                        staffId,
+                                        username,
+                                        password,
+                                        hoursWorked);
+                                break;
+                            }
+                            case "chef":{
+                                staff = new Chef(firstName,
+                                        lastName,
+                                        hoursToWork,
+                                        type,
+                                        staffId,
+                                        username,
+                                        password,
+                                        hoursWorked);
+                                break;
+                            }
+                            case "driver":{
+                                staff = new Driver(firstName,
+                                        lastName,
+                                        hoursToWork,
+                                        type,
+                                        staffId,
+                                        username,
+                                        password,
+                                        hoursWorked);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return staff;
+    }
+
     public Staff createStaff(String fname,
                              String lname,
                              int h2Work,
@@ -145,14 +200,14 @@ public class StaffDB{
                 "type,\n"+
                 "S_username,\n"+
                 "password)\n"+
-                "VALUES( "+ fname+",\n"+
-                lname+",\n"+
+                "VALUES( '"+ fname+"',\n'"+
+                lname+"',\n"+
                 0+",\n"+
-                h2Work+",\n"+
-                sType+",\n"+
-                uname+",\n"+
+                h2Work+",\n'"+
+                sType+"',\n'"+
+                uname+"',\n'"+
                 pword+
-                "); \n";
+                "'); \n";
         String[] returnIds = {"s_id"};
         try (Connection conn = pool.getConnection()){
             try (PreparedStatement statement = conn.prepareStatement(insert, returnIds)) {
@@ -163,7 +218,7 @@ public class StaffDB{
                 }
                 try (ResultSet rs = statement.getGeneratedKeys()) {
                     if (rs.next()) {
-                        int sId = rs.getInt("s_id");
+                        int sId = rs.getInt("GENERATED_KEY");
                         staff = getStaff(sId);
                     }
                 }
@@ -232,7 +287,7 @@ public class StaffDB{
                 }
                 try (ResultSet rs = statement.getGeneratedKeys()) {
                     if (rs.next()) {
-                        int sId = rs.getInt("s_id");
+                        int sId = rs.getInt("GENERATED_KEY");
                         staff = getStaff(sId);
                     }
                 }

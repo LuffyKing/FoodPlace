@@ -10,7 +10,6 @@ public class Delivery extends Order {
     private LocalDateTime estimatedDeliveryTime;
     private boolean isApproved;
     private int driverId;
-    private static long deliveryTime = 45;
     public Delivery(ObservableList<OrderItem> item,
              int orderId,
              LocalDateTime dateTime,
@@ -21,7 +20,7 @@ public class Delivery extends Order {
         super(item, orderId, dateTime, customerId, isComplete);
         deliveryStatus = "Not Started";
         deliveryAddress = address;
-        estimatedDeliveryTime = LocalDateTime.now().plusMinutes(deliveryTime);
+        estimatedDeliveryTime = LocalDateTime.now().plusMinutes(45);
         isApproved = false;
         this.driverId = driverId;
     }
@@ -42,14 +41,6 @@ public class Delivery extends Order {
         estimatedDeliveryTime = edt;
         this.isApproved = isApproved;
         this.driverId = driverId;
-    }
-
-    public static void setDeliveryTime(long time){
-        deliveryTime = time;
-    }
-
-    public static long getDeliveryTime(long time){
-        return deliveryTime;
     }
 
     public void setApproved(boolean approved) {

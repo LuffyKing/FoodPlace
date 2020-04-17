@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXML.ControllerCustomerHome">
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FoodPlace.Controller.ControllerCustomerHome">
    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
       <VBox prefHeight="398.0" prefWidth="175.0">
          <AnchorPane prefHeight="104.0" prefWidth="175.0">
@@ -44,7 +44,7 @@
                <Separator opacity="0.0" prefHeight="13.0" prefWidth="417.0" />
                <AnchorPane prefHeight="59.0" prefWidth="417.0">
                   <children>
-                     <Text layoutX="14.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Customer Homepage!" wrappingWidth="308.4700527191162">
+                     <Text fx:id="welcomeText" layoutX="14.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0"  wrappingWidth="308.4700527191162">
                         <font>
                            <Font name="System Bold" size="17.0" />
                         </font>

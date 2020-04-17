@@ -5,19 +5,20 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CustomerLoginController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FoodPlace.Controller.CustomerLoginController">
    <children>
       <AnchorPane layoutX="269.0" prefHeight="400.0" prefWidth="331.0" style="-fx-background-color: #fff;">
          <children>
             <Button fx:id="CustomerLoginButton" layoutX="193.0" layoutY="203.0" mnemonicParsing="false" onAction="#LoginButtonPressed" prefHeight="25.0" prefWidth="84.0" text="Login" />
             <Button fx:id="StaffLoginButton" layoutX="247.0" layoutY="361.0" mnemonicParsing="false" onAction="#StaffLoginbuttonPressed" text="Staff Login" />
             <Hyperlink layoutX="74.0" layoutY="239.0" text="Forget Password?" />
-            <TextField fx:id="customerusernameTextField" layoutX="75.0" layoutY="130.0" prefHeight="25.0" prefWidth="200.0" promptText="Username" />
-            <PasswordField fx:id="customerpasswordPasswordField" layoutX="75.0" layoutY="168.0" prefHeight="25.0" prefWidth="200.0" promptText="Password" />
+            <Label fx:id="CustomerLoginStatus" layoutX="74.0" layoutY="260.0" text="Login Status: Ready" />
+            <TextField fx:id="customerUsernameTextField" layoutX="75.0" layoutY="130.0" prefHeight="25.0" prefWidth="200.0" promptText="Username" />
+            <PasswordField fx:id="customerPasswordField" layoutX="75.0" layoutY="168.0" prefHeight="25.0" prefWidth="200.0" promptText="Password" />
             <CheckBox layoutX="75.0" layoutY="207.0" mnemonicParsing="false" text="Remember Me" />
             <Button fx:id="CustomerSignupButton" layoutX="75.0" layoutY="312.0" mnemonicParsing="false" onAction="#CustomerSignupbuttonPressed" prefHeight="25.0" prefWidth="200.0" text="Sign Up!" />
-            <Separator layoutX="22.0" layoutY="280.0" prefHeight="4.0" prefWidth="290.0" />
-            <Label layoutX="161.0" layoutY="272.0" style="-fx-background-color: #fff;" text="Or" />
+            <Separator layoutX="22.0" layoutY="283.0" prefHeight="4.0" prefWidth="290.0" />
+            <Label layoutX="161.0" layoutY="275.0" style="-fx-background-color: #fff;" text="Or" />
             <Label layoutX="87.0" layoutY="72.0" text="Customer Login">
                <font>
                   <Font name="Courier New" size="21.0" />

@@ -41,8 +41,8 @@ public class Chef extends Staff{
     }
 
     public void addDailySpecial(Menu menu, String description,
-                                double price, String category, int mId){
-        menu.createDailySpecial(description, price, category, mId);
+                                double price, String category, int mId, String name){
+        menu.createDailySpecial(description, price, category, mId, name);
     }
 
     public void removeDailySpecial(Menu menu, int menuItemId){

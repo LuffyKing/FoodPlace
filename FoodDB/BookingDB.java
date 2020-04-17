@@ -130,7 +130,7 @@ public class BookingDB {
                 }
                 try (ResultSet rs = statement.getGeneratedKeys()) {
                     if (rs.next()) {
-                        int bId = rs.getInt("s_id");
+                        int bId = rs.getInt("GENERATED_KEY");
                         booking = getBooking(bId);
                     }
                 }
@@ -202,7 +202,7 @@ public class BookingDB {
                 }
                 try (ResultSet rs = statement.getGeneratedKeys()) {
                     if (rs.next()) {
-                        int bId = rs.getInt("b_id");
+                        int bId = rs.getInt("GENERATED_KEY");
                         booking = getBooking(bId);
                     }
                 }

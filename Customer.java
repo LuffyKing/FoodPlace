@@ -31,7 +31,7 @@ public class Customer extends Person{
     }
 
     public void addOrderDelivery(ObservableList<OrderItem> items, int orderId, LocalDateTime dateTime, ObservableList<Order> orders){
-        Delivery delivery = new Delivery(items, orderId, dateTime,address);
+        Delivery delivery = new Delivery(items, orderId, dateTime, customerId,false, address, 0);
         orders.add(delivery);
 
     }
@@ -55,7 +55,7 @@ public class Customer extends Person{
         }
     }
     public void addOrderTakeAway(ObservableList<OrderItem> items, int orderId, LocalDateTime dateTime ,LocalDateTime ptime, ObservableList<Order> orders){
-        Takeaway takeaway = new Takeaway(items, orderId, dateTime, ptime);
+        Takeaway takeaway = new Takeaway(items, orderId, dateTime, customerId, false,ptime, false);
         orders.add(takeaway);
     }
     public void editOrderTakeAway(Takeaway takeaway, ObservableList<OrderItem> items, LocalDateTime ptime){

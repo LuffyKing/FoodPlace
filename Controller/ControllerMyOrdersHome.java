@@ -1,19 +1,32 @@
-package FoodPlace;
+package FoodPlace.Controller;
 
+
+import FoodPlace.Customer;
+import FoodPlace.FoodDB.OrderDB;
+import FoodPlace.Order;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.net.URL;
+import java.time.LocalDateTime;
+import java.util.ResourceBundle;
 
 /**
 *Controller for the scene the customer views when they click on My Orders.
 *@author Sara Philipson
 *@version ?
 */
-public class ControllerMyOrdersHome {
+public class ControllerMyOrdersHome implements Initializable {
 
     public Button linktomyaccount;
     public Button linktobookinghome;
@@ -22,6 +35,49 @@ public class ControllerMyOrdersHome {
     public Button notificationspage;
     public Button logoutbutton;
     public Button linktomyordersedit;
+
+    @FXML
+    private TableView<Order> ordersTable = new TableView<Order>();
+    @FXML
+    private TableColumn<Order, Integer> orderIdColumn;
+    @FXML
+    private TableColumn<Order, Boolean>  isCompleteColumn;
+    @FXML
+    private TableColumn<Order, LocalDateTime> dateTimeColumn;
+    @FXML
+    private TableColumn<Order, String> orderTypeColumn;
+    @FXML
+    private TableColumn<Order, Integer> customerIdColumn;
+    private Customer customer;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources){
+        orderIdColumn.setCellValueFactory(new PropertyValueFactory<Order, Integer>("orderId"));
+        isCompleteColumn.setCellValueFactory(new PropertyValueFactory<Order, Boolean>("isComplete"));
+        dateTimeColumn.setCellValueFactory(new PropertyValueFactory<Order, LocalDateTime>("dateTime"));
+        orderTypeColumn.setCellValueFactory(new PropertyValueFactory<Order, String>("orderType"));
+        customerIdColumn.setCellValueFactory(new PropertyValueFactory<Order, Integer>("customerId"));
+        ObservableList<Order> orders = getAllCustomerOrders(customer.getCustomerId());
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    private ObservableList<Order> getAllCustomerOrders(int customerId){
+        ObservableList<Order> customerOrders = null;
+        try {
+            OrderDB odb = new OrderDB();
+            customerOrders = odb.getAllOrders(customerId);
+        } catch (Exception e){
+            System.err.println(e.getMessage());
+        }
+        return customerOrders;
+    }
 
     /**
     *Changes the customer's scene to the My Account scene.

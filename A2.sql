@@ -8,8 +8,8 @@ CREATE TABLE `Customers` (
   `c_id` int PRIMARY KEY AUTO_INCREMENT,
   `first_name` varchar(255),
   `last_name` varchar(255),
-  `C_Username` varchar(255),
-  `created_at` timestamp,
+  `C_Username` varchar(255) unique,
+  `created_at` timestamp DEFAULT CURRENT_TIMESTAMP,
   `address` varchar(255),
   `password` varchar(255)
 );
@@ -20,10 +20,10 @@ CREATE TABLE `Staff` (
   `last_name` varchar(255),
   `hours_worked` int,
   `hours_2bworked` int,
-  `S_Username` varchar(255),
+  `S_Username` varchar(255) unique,
   `Password` varchar(255),
   `type` varchar(255),
-  `created_at` timestamp
+  `created_at` timestamp DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE `bookings` (
@@ -53,7 +53,7 @@ CREATE TABLE `orders` (
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `customer_id` int,
   `status` boolean,
-  `created_at` timestamp,
+  `created_at` timestamp DEFAULT CURRENT_TIMESTAMP,
   `ord_type` varchar(255),
   `waiter_id` int,
   `driver_id` int,
@@ -84,7 +84,7 @@ CREATE TABLE `Menu` (
 
 ALTER TABLE `bookings` ADD FOREIGN KEY (`customer_id`) REFERENCES `customers` (`c_id`);
 
-ALTER TABLE `bookings` ADD FOREIGN KEY (`staff_id`) REFERENCES `staff` (`s_id`);
+ALTER TABLE `bookings` ADD FOREIGN KEY (`waiter_id`) REFERENCES `staff` (`s_id`);
 
 ALTER TABLE `order_items` ADD FOREIGN KEY (`menu_item_id`) REFERENCES `menu` (`m_id`);
 

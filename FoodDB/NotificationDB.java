@@ -69,7 +69,7 @@ public class NotificationDB {
                 }
                 try (ResultSet rs = statement.getGeneratedKeys()) {
                     if (rs.next()) {
-                        int id = rs.getInt("id");
+                        int id = rs.getInt("GENERATED_KEY");
                         notification = getNotification(id);
                     }
                 }

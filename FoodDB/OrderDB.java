@@ -55,7 +55,7 @@ public class OrderDB {
                 }
                 try (ResultSet rs = statement.getGeneratedKeys()) {
                     if (rs.next()) {
-                        int id = rs.getInt("id");
+                        int id = rs.getInt("GENERATED_KEY");
                         delivery = (Delivery) getOrder(id);
                     }
                 }
@@ -97,7 +97,7 @@ public class OrderDB {
                 }
                 try (ResultSet rs = statement.getGeneratedKeys()) {
                     if (rs.next()) {
-                        int id = rs.getInt("id");
+                        int id = rs.getInt("GENERATED_KEY");
                         takeaway = (Takeaway) getOrder(id);
                     }
                 }
@@ -133,7 +133,7 @@ public class OrderDB {
                 }
                 try (ResultSet rs = statement.getGeneratedKeys()) {
                     if (rs.next()) {
-                        int id = rs.getInt("id");
+                        int id = rs.getInt("GENERATED_KEY");
                         eatin = (EatIn) getOrder(id);
                     }
                 }
@@ -206,7 +206,7 @@ public class OrderDB {
                 }
                 try (ResultSet rs = statement.getGeneratedKeys()) {
                     if (rs.next()) {
-                        int line_item_id = rs.getInt("id");
+                        int line_item_id = rs.getInt("GENERATED_KEY");
                         orderItem = getAnOrderItem(order_id, line_item_id);
                     }
                 }
@@ -242,12 +242,12 @@ public class OrderDB {
                 ")"+
                 "VALUES( "+ customerId+",\n"+
                 isComplete+",\n"+
-                timestamp+",\n"+
-                type+",\n"+
+                timestamp+",\n'"+
+                type+"',\n"+
                 driverId+",\n"+
-                edtTs+",\n"+
-                deliveryStatus+",\n"+
-                address+",\n"+
+                edtTs+",\n'"+
+                deliveryStatus+"',\n'"+
+                address+"',\n"+
                 isApproved+",\n"+
                 "); \n";
         String[] returnIds = {"id"};
@@ -260,7 +260,7 @@ public class OrderDB {
                 }
                 try (ResultSet rs = statement.getGeneratedKeys()) {
                     if (rs.next()) {
-                        int order_id = rs.getInt("id");
+                        int order_id = rs.getInt("GENERATED_KEY");
                         delivery = (Delivery) getOrder(order_id);
                     }
                 }
@@ -284,8 +284,8 @@ public class OrderDB {
                 "waiter_id\n"+
                 ")"+
                 "VALUES( "+ isComplete+",\n"+
-                timestamp+",\n"+
-                type+",\n"+
+                timestamp+",\n'"+
+                type+"',\n"+
                 waiterId+",\n"+
                 "); \n";
         String[] returnIds = {"id"};
@@ -298,7 +298,7 @@ public class OrderDB {
                 }
                 try (ResultSet rs = statement.getGeneratedKeys()) {
                     if (rs.next()) {
-                        int order_id = rs.getInt("id");
+                        int order_id = rs.getInt("GENERATED_KEY");
                         eatin = (EatIn) getOrder(order_id);
                     }
                 }
@@ -326,8 +326,8 @@ public class OrderDB {
                 ")"+
                 "VALUES( "+ customerId+",\n"+
                 isComplete+",\n"+
-                timestamp+",\n"+
-                type+",\n"+
+                timestamp+",\n'"+
+                type+"',\n"+
                 ptime+",\n"+
                 cStatus+",\n"+
                 "); \n";
@@ -341,7 +341,7 @@ public class OrderDB {
                 }
                 try (ResultSet rs = statement.getGeneratedKeys()) {
                     if (rs.next()) {
-                        int order_id = rs.getInt("id");
+                        int order_id = rs.getInt("GENERATED_KEY");
                         takeaway = (Takeaway) getOrder(order_id);
                     }
                 }

@@ -41,7 +41,7 @@ public class MenuDB {
                 }
                 try (ResultSet rs = statement.getGeneratedKeys()) {
                     if (rs.next()) {
-                        int mId = rs.getInt("m_id");
+                        int mId = rs.getInt("GENERATED_KEY");
                         menuItem = getMenuItem(mId);
                     }
                 }
@@ -144,7 +144,7 @@ public class MenuDB {
                 }
                 try (ResultSet rs = statement.getGeneratedKeys()) {
                     if (rs.next()) {
-                        int mId = rs.getInt("m_id");
+                        int mId = rs.getInt("GENERATED_KEY");
                         menuItem = getMenuItem(mId);
                     }
                 }

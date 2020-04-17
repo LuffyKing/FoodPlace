@@ -1,33 +1,38 @@
 package FoodPlace;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ObservableList;
 
 import java.time.LocalDateTime;
 
 abstract public class Order {
-    private int orderId;
-    private boolean isComplete;
-    private LocalDateTime dateTime;
+    private SimpleIntegerProperty orderId;
+    private SimpleBooleanProperty isComplete;
+    private SimpleObjectProperty<LocalDateTime> dateTime;
     private ObservableList<OrderItem> orderItems;
-    private String orderType;
-    private int customerId;
+    private SimpleStringProperty orderType;
+    private SimpleIntegerProperty customerId;
     public Order(ObservableList<OrderItem> orderItems,
                  int orderId,
                  LocalDateTime dateTime,
                  int customerId,
                  boolean isComplete){
-        this.dateTime = dateTime;
+        this.dateTime = new SimpleObjectProperty<LocalDateTime>(dateTime);
         this.orderItems = orderItems;
-        this.orderId = orderId;//get data from db
-        this.customerId = customerId;
-        this.isComplete = isComplete;
+        this.orderId = new SimpleIntegerProperty(orderId);//get data from db
+        this.customerId = new SimpleIntegerProperty(customerId);
+        this.isComplete = new SimpleBooleanProperty(isComplete);
     }
 
+
     public int getCustomerId() {
-        return customerId;
+        return customerId.get();
     }
 
     public void setCustomerId(int customerId) {
-        this.customerId = customerId;
+        this.customerId.set(customerId);
     }
 
     public void setOrderItems(ObservableList<OrderItem> orderItems) {
@@ -39,23 +44,23 @@ abstract public class Order {
     }
 
     public int getOrderId() {
-        return orderId;
+        return orderId.get();
     }
 
     public String getOrderType() {
-        return orderType;
+        return orderType.get();
     }
 
     public void setOrderType(String orderType) {
-        this.orderType = orderType;
+        this.orderType.set(orderType);
     }
 
     public LocalDateTime getDateTime() {
-        return dateTime;
+        return dateTime.get();
     }
 
     public void setDateTime(LocalDateTime dateTime) {
-        this.dateTime = dateTime;
+        this.dateTime.set(dateTime);
     }
 
     public double orderTotal(){
@@ -67,11 +72,11 @@ abstract public class Order {
     }
 
     public boolean getCompletionStatus() {
-        return isComplete;
+        return isComplete.get();
     }
 
     public void setCompletionStatus(boolean status) {
-        this.isComplete = status;
+        this.isComplete.set(status);
     }
 
     public String[] printReceipt(){
