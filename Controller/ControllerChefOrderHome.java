@@ -66,7 +66,7 @@ public class ControllerChefOrderHome implements Initializable {
      *@param event Clicking on the orders button.
      */
     public void linktoordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent myordersParent = FXMLLoader.load(getClass().getResource("ChefOrderHomepage.fxml"));
+        Parent myordersParent = FXMLLoader.load(getClass().getResource("sample.fxml"));
         Scene myordersScene = new Scene(myordersParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(myordersScene);
@@ -141,7 +141,7 @@ public class ControllerChefOrderHome implements Initializable {
 
     public void getcol() {
         try {
-            ResultSet rs = con.createStatement().executeQuery("SELECT * FROM Orders");
+            ResultSet rs = con.createStatement().executeQuery("SELECT id,ord_type,created_at,status FROM Orders");
 
             //SQL FOR SELECTING ALL OF CUSTOMER
             for (int i = 0; i < rs.getMetaData().getColumnCount(); i++) {
@@ -166,7 +166,7 @@ public class ControllerChefOrderHome implements Initializable {
         data = FXCollections.observableArrayList();
         ResultSet rs;
         try {
-            rs = con.createStatement().executeQuery("SELECT * FROM Orders");
+            rs = con.createStatement().executeQuery("SELECT id,ord_type,created_at,status FROM Orders");
 
             while (rs.next()) {
                 //Iterate Row
@@ -193,6 +193,5 @@ public class ControllerChefOrderHome implements Initializable {
         getcol();
         getRow();
     }
-
 
 }
