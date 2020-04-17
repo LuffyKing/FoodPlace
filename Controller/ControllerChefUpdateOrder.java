@@ -11,11 +11,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
-*Controller for the scene that the chef see the UpdateOrder.
+*Controller for the scene that allows a chef to update Order details.
 *@author Chunlei Liu
 *@version ?
 */
-
 public class ControllerChefUpdateOrder {
     public Button linktostaff;
     public Button linktoorders;
@@ -39,11 +38,11 @@ public class ControllerChefUpdateOrder {
     }
 
     /**
-    *Changes the chef's scene to the chef orders scene.
+    *Changes the chef's scene to the chef orders homepage scene.
     *@param event Clicking on the orders button.
     */
     public void linktoordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent myordersParent = FXMLLoader.load(getClass().getResource("myOrdersHome.fxml"));
+        Parent myordersParent = FXMLLoader.load(getClass().getResource("ChefOrdersHomepage.fxml"));
         Scene myordersScene = new Scene(myordersParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(myordersScene);
@@ -55,7 +54,7 @@ public class ControllerChefUpdateOrder {
     *@param event Clicking on the menu button.
     */
     public void linktomenuButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent menuParent = FXMLLoader.load(getClass().getResource("customerMenu.fxml"));
+        Parent menuParent = FXMLLoader.load(getClass().getResource("Menu_Scene.fxml"));
         Scene menuScene = new Scene(menuParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(menuScene);
@@ -99,7 +98,7 @@ public class ControllerChefUpdateOrder {
     }
 
     /**
-    *Changes the chef's scene to the chef logout scene.
+    *Changes the chef's scene to the staff login scene.
     *@param event Clicking on the logout button.
     */
     public void logoutButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -109,5 +108,7 @@ public class ControllerChefUpdateOrder {
         window.setScene(logoutScene);
         window.show();
     }
+    
+    
 
 }
