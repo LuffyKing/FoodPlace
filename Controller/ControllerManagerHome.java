@@ -28,7 +28,7 @@ public class ControllerManagerHome {
     *@param event Clicking on the Notifications button.
     */
     public void notificationspageButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent notificationsParent = FXMLLoader.load(getClass().getResource("ManagerNotifications.fxml"));
+        Parent notificationsParent = FXMLLoader.load(getClass().getResource("../FXML/ManagerNotifications.fxml"));
         Scene notificationsScene = new Scene(notificationsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(notificationsScene);
@@ -40,7 +40,7 @@ public class ControllerManagerHome {
     *@param event Clicking on the Logout button.
     */
     public void logoutbuttonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent logoutParent = FXMLLoader.load(getClass().getResource("Staff_login_Draft.fxml"));
+        Parent logoutParent = FXMLLoader.load(getClass().getResource("../FXML/Staff_login_Draft.fxml"));
         Scene logoutScene = new Scene(logoutParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(logoutScene);
@@ -52,7 +52,7 @@ public class ControllerManagerHome {
     *@param event Clicking on the a button that would lead to a scene that the manager has no access to.
     */
     public void permissiondeniedscreen(javafx.event.ActionEvent event) throws IOException {
-        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondeniedmanager.fxml"));
+        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("../FXML/permissiondeniedmanager.fxml"));
         Scene permissiondeniedScene = new Scene(permissiondeniedParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(permissiondeniedScene);
@@ -64,7 +64,7 @@ public class ControllerManagerHome {
     *@param event Clicking on the Staff button.
     */
     public void managerstaffpagelink(javafx.event.ActionEvent event) throws IOException{
-        Parent managerstaffParent = FXMLLoader.load(getClass().getResource("ManagerStaffScene.fxml"));
+        Parent managerstaffParent = FXMLLoader.load(getClass().getResource("../FXML/ManagerStaffScene.fxml"));
         Scene managerstaffScene = new Scene(managerstaffParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(managerstaffScene);
@@ -76,7 +76,7 @@ public class ControllerManagerHome {
     *@param event Clicking on the Reports button.
     */
     public void managereportsscreen(javafx.event.ActionEvent event) throws IOException {
-        Parent managerreportParent = FXMLLoader.load(getClass().getResource("Report.fxml"));
+        Parent managerreportParent = FXMLLoader.load(getClass().getResource("../FXML/Report.fxml"));
         Scene managerreportScene = new Scene(managerreportParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(managerreportScene);
