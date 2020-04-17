@@ -1,4 +1,4 @@
-package FoodPlace.Controller; //you will need to update this location on fxml for it to work.
+package sample;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,8 +22,6 @@ import java.util.ResourceBundle;
 
 /**
  * Controller class for Customer Login scene
- *@author
- *@version ?
  */
 public class CustomerLoginController implements Initializable {
     @FXML
@@ -38,7 +36,6 @@ public class CustomerLoginController implements Initializable {
 
     /**
      * Method for changing the Scene to StaffLogin
-     *@param event Staff Login button pressed.
      */
     public void StaffLoginbuttonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent StaffViewParent = FXMLLoader.load(getClass().getResource("Staff_login_Draft.fxml"));
@@ -52,7 +49,8 @@ public class CustomerLoginController implements Initializable {
 
     /**
      * Method for changing the Scene to CustomerLogin
-     * @param event Customer Sign up button pressed.
+     *
+     * @param event
      */
     public void CustomerSignupbuttonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent CustomerViewParent = FXMLLoader.load(getClass().getResource("Customer_signup_Scene.fxml"));
@@ -63,18 +61,20 @@ public class CustomerLoginController implements Initializable {
         window.setScene(CustomerSignupScene);
         window.show();
     }
+
     public CustomerLoginController() {
         con = DBConUtil.connectDB();;
     }
 
     /**
      * Method for getting Username and password
-     * @param event login button pressed.
+     *
+     * @param event
      */
 
     public void LoginButtonPressed(javafx.event.ActionEvent event) throws IOException {
         if (login() == true) {
-            Parent HomeViewParent = FXMLLoader.load(getClass().getResource("Customer_Scene.fxml"));
+            Parent HomeViewParent = FXMLLoader.load(getClass().getResource("template.fxml"));
             Scene HomeScene = new Scene(HomeViewParent);
             // Get Stage Info
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -83,6 +83,11 @@ public class CustomerLoginController implements Initializable {
             window.show();
         }
     }
+
+    /**
+     * Boolean check for entered credentials match with database account
+     * @return
+     */
 
     public Boolean login() {
         String customerusername = customerusernameTextField.getText();
@@ -113,6 +118,11 @@ public class CustomerLoginController implements Initializable {
         }
     }
 
+    /**
+     * initialize the controller
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         if (con == null) {
