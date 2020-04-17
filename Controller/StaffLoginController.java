@@ -1,4 +1,4 @@
-package sample;
+package FoodPlace.Controller;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -34,6 +34,9 @@ public class StaffLoginController implements Initializable {
     PreparedStatement preparedStatement;
     ResultSet resultSet;
     @Override
+    /**
+     * initialize the controller
+     */
     public void initialize(URL url, ResourceBundle resourceBundle ) {
         StaffTypeCombo.getItems().addAll("Manager","Waiter","Chef","Driver");
         StaffTypeCombo.getSelectionModel().select("Manager");
@@ -59,7 +62,11 @@ public class StaffLoginController implements Initializable {
     public StaffLoginController() {
         con = DBConUtil.connectDB();;
     }
-    
+    /**
+     * Method for changing the scene depending on what type of staff
+     * @param event
+     * @throws IOException
+     */
 
     public void LoginButtonPressed2(ActionEvent event) throws IOException {
         if (login() == true) {
@@ -95,14 +102,13 @@ public class StaffLoginController implements Initializable {
             else {
                 Parent HomeViewParent = FXMLLoader.load(getClass().getResource("homeDriver.fxml"));
                 Scene HomeScene = new Scene(HomeViewParent);
-                // Get Stage Info
+
                 Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 
                 window.setScene(HomeScene);
                 window.show();
 
             }
-
         }
     }
     /**
@@ -139,13 +145,6 @@ public class StaffLoginController implements Initializable {
                 return false;
             }
         }
-        //testing use only
-        //System.out.println(staffusername);
-        //System.out.println(staffpassword);
-        //return false;
-
     }
-
-
 }
 

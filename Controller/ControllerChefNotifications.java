@@ -11,11 +11,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
-*Controller for the scene that the chef see the notifications.
+*Controller for the scene where the chef see notifications.
 *@author Chunlei Liu
 *@version ?
 */
-
 public class ControllerChefNotifications {
     public Button linktostaff;
     public Button linktoorders;
@@ -31,7 +30,7 @@ public class ControllerChefNotifications {
     *@param event Clicking on a button that would lead to a scene that is not accessable for the chef.
     */
     public void linktostaffButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondeniedwaiter.fxml"));
+        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondeniedchef.fxml"));
         Scene permissiondeniedScene = new Scene(permissiondeniedParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(permissiondeniedScene);
@@ -43,7 +42,7 @@ public class ControllerChefNotifications {
     *@param event Clicking on the orders button.
     */
     public void linktoordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent ordersParent = FXMLLoader.load(getClass().getResource("orderConfirmPage.fxml"));
+        Parent ordersParent = FXMLLoader.load(getClass().getResource("ChefOrderHomepage.fxml"));
         Scene ordersScene = new Scene(ordersParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(ordersScene);
@@ -55,7 +54,7 @@ public class ControllerChefNotifications {
     *@param event Clicking on the menu button.
     */
     public void linktomenuButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent menuParent = FXMLLoader.load(getClass().getResource("customerMenu.fxml"));
+        Parent menuParent = FXMLLoader.load(getClass().getResource("Menu_Scene.fxml"));
         Scene menuScene = new Scene(menuParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(menuScene);
@@ -79,7 +78,7 @@ public class ControllerChefNotifications {
     *@param event Clicking on a button that would lead to a scene that is not accessable for the chef.
     */
     public void linktoreportsButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondeniedwaiter.fxml"));
+        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondeniedchef.fxml"));
         Scene permissiondeniedScene = new Scene(permissiondeniedParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(permissiondeniedScene);
@@ -99,7 +98,7 @@ public class ControllerChefNotifications {
     }
 
     /**
-    *Changes the chef's scene to the chef logout scene.
+    *Changes the chef's scene to the staff login scene.
     *@param event Clicking on the logout button.
     */
     public void logoutButtonPressed(javafx.event.ActionEvent event) throws IOException {

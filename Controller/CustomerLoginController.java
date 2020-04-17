@@ -26,7 +26,6 @@ public class CustomerLoginController {
     Label CustomerLoginStatus;
     /**
      * Method for changing the Scene to StaffLogin
-     *@param event Staff Login button pressed.
      */
     public void StaffLoginbuttonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent StaffViewParent = FXMLLoader.load(getClass().getResource("../FXML/Staff_login_Draft.fxml"));
@@ -40,7 +39,8 @@ public class CustomerLoginController {
     }
     /**
      * Method for changing the Scene to CustomerLogin
-     * @param event Customer Sign up button pressed.
+     *
+     * @param event
      */
     public void CustomerSignupbuttonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent CustomerViewParent = FXMLLoader.load(getClass().getResource("../FXML/Customer_signup_Scene.fxml"));
@@ -54,49 +54,47 @@ public class CustomerLoginController {
     }
 
     /**
-     * Method for getting Username and password
+     * Method for login and scene change
+     *
      * @param event
      */
 
     public void LoginButtonPressed(javafx.event.ActionEvent event) throws IOException {
-            Customer customer = login();
-            if (customer != null) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/customerHome.fxml"));
-                Parent CustomerViewParent = loader.load();
-                ControllerCustomerHome controllerCustomerHome = loader.getController();
-                controllerCustomerHome.setCustomer(customer);
-                loader.setController(controllerCustomerHome);
-                Scene CustomerHomeScene = new Scene(CustomerViewParent);
-                // Get Stage Info
-                Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-                window.setScene(CustomerHomeScene);
+        Customer customer = login();
+        if (customer != null) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/customerHome.fxml"));
+            Parent CustomerViewParent = loader.load();
+            ControllerCustomerHome controllerCustomerHome = loader.getController();
+            controllerCustomerHome.setCustomer(customer);
+            loader.setController(controllerCustomerHome);
+            Scene CustomerHomeScene = new Scene(CustomerViewParent);
+            // Get Stage Info
+            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            window.setScene(CustomerHomeScene);
             }
         }
 
-    /**
-     * Method for customer username & password login
-     */
-    public Customer login() {
-        Customer customer = null;
-        customerUsername = customerUsernameTextField.getText();
-        customerPassword = customerPasswordField.getText();
-        if (customerUsername.isEmpty() || (customerPassword.isEmpty())) {
-            CustomerLoginStatus.setText("Invalid Username/Password");
-        }
-        else{
-            //SQL query
+        /**
+         * Method for customer username & password login
+         */
+        public Customer login () {
+            Customer customer = null;
+            customerUsername = customerUsernameTextField.getText();
+            customerPassword = customerPasswordField.getText();
+            if (customerUsername.isEmpty() || (customerPassword.isEmpty())) {
+                CustomerLoginStatus.setText("Invalid Username/Password");
+            }
+
             try {
                 CustomerDB cdb = new CustomerDB();
                 customer = cdb.getCustomer(customerUsername, customerPassword);
-                if (customer == null){
+                if (customer == null) {
                     CustomerLoginStatus.setText("User not found");
                 }
-            } catch (Exception e){
+            } catch (Exception e) {
                 System.err.println(e.getMessage());
             }
-        }
         return customer;
-
     }
+
 }
