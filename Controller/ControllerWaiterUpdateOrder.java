@@ -1,5 +1,13 @@
 package FoodPlace.Controller;
 
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
@@ -7,6 +15,7 @@ import java.io.IOException;
 *@author Chunlei Liu (JavaDoc by Sara Philipson)
 *@version ?
 */
+
 public class ControllerWaiterUpdateOrder {
     public Button linktostaff;
     public Button linktoorders;
@@ -35,7 +44,7 @@ public class ControllerWaiterUpdateOrder {
     *@param event Click on Order button.
     */
     public void linktoordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("WaiterOrderHomepage.fxml"));
+        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondeniedwaiter.fxml"));
         Scene permissiondeniedScene = new Scene(permissiondeniedParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(permissiondeniedScene);
@@ -47,7 +56,7 @@ public class ControllerWaiterUpdateOrder {
     *@param event Click on Menu button.
     */
     public void linktomenuButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent menuParent = FXMLLoader.load(getClass().getResource("menuWaiter.fxml"));
+        Parent menuParent = FXMLLoader.load(getClass().getResource("customerMenu.fxml"));
         Scene menuScene = new Scene(menuParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(menuScene);
@@ -83,7 +92,7 @@ public class ControllerWaiterUpdateOrder {
     *@param event Click on Add or remove item button.
     */
     public void linktobasketButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent basketParent = FXMLLoader.load(getClass().getResource("menuBasket.fxml"));
+        Parent basketParent = FXMLLoader.load(getClass().getResource("basket.fxml"));
         Scene basketScene = new Scene(basketParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(basketScene);
@@ -95,7 +104,7 @@ public class ControllerWaiterUpdateOrder {
     *@param event Click on Notifications button.
     */
     public void notificationspageButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent notificationsParent = FXMLLoader.load(getClass().getResource("WaiterNotifications.fxml"));
+        Parent notificationsParent = FXMLLoader.load(getClass().getResource("WaiterNotification.fxml"));
         Scene notificationsScene = new Scene(notificationsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(notificationsScene);
@@ -113,5 +122,4 @@ public class ControllerWaiterUpdateOrder {
         window.setScene(logoutScene);
         window.show();
     }
-
 }

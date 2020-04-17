@@ -1,5 +1,12 @@
 package FoodPlace.Controller;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
@@ -7,6 +14,7 @@ import java.io.IOException;
 *@author Chunlei Liu (JavaDoc by Sara Philipson)
 *@version ?
 */
+
 public class ControllerWaiterOrderHomepage {
     public Button linktostaff;
     public Button linktoorders;
@@ -34,7 +42,7 @@ public class ControllerWaiterOrderHomepage {
     *@param event Click on Orders Button.
     */
     public void linktoordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("WaiterOrderHomepage.fxml"));
+        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondeniedwaiter.fxml"));
         Scene permissiondeniedScene = new Scene(permissiondeniedParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(permissiondeniedScene);
@@ -46,7 +54,7 @@ public class ControllerWaiterOrderHomepage {
     *@param event Click on the Menu button.
     */
     public void linktomenuButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent menuParent = FXMLLoader.load(getClass().getResource("menuWaiter.fxml"));
+        Parent menuParent = FXMLLoader.load(getClass().getResource("customerMenu.fxml"));
         Scene menuScene = new Scene(menuParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(menuScene);
@@ -58,7 +66,7 @@ public class ControllerWaiterOrderHomepage {
     *@param event Click on the Bookings button.
     */
     public void linktobookingsButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent bookingParent = FXMLLoader.load(getClass().getResource("staffBookingHome.fxml"));
+        Parent bookingParent = FXMLLoader.load(getClass().getResource("bookingSubmitted.fxml"));
         Scene bookingScene = new Scene(bookingParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(bookingScene);
@@ -100,5 +108,4 @@ public class ControllerWaiterOrderHomepage {
         window.setScene(logoutScene);
         window.show();
     }
-
 }
