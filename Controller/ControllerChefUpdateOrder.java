@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
-*Controller for the scene that allows a chef to update Order details.
+*Controller for the chef update order scene.
 *@author Chunlei Liu
 *@version ?
 */
@@ -21,9 +21,9 @@ public class ControllerChefUpdateOrder {
     public Button linktomenu;
     public Button linktobookings;
     public Button linktoreports;
-    public Button linktoeditdailyspecial;
     public Button notificationspage;
     public Button logoutbutton;
+    public Button linktodailyspecial
 
     /**
     *Changes the chef's scene to the chef permission denied scene.
@@ -109,6 +109,16 @@ public class ControllerChefUpdateOrder {
         window.show();
     }
     
-    
+    /**
+    *Changes the chef's scene to the staff login scene.
+    *@param event Clicking on the logout button.
+    */
+    public void dailyspecialview(javafx.event.ActionEvent event) throws IOException {
+        Parent updateParent = FXMLLoader.load(getClass().getResource("ChefOrderHomepage.fxml"));
+        Scene updateScene = new Scene(updateParent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(updateScene);
+        window.show();
+    }
 
 }

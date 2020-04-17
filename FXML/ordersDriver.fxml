@@ -36,7 +36,7 @@
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                 <VBox layoutX="-2.0" layoutY="-2.0" prefHeight="362.0" prefWidth="415.0">
                     <AnchorPane prefHeight="30.0" prefWidth="415.0">
-                        <Text layoutX="11.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Orders" wrappingWidth="272.13672256469727">
+                        <Text layoutX="11.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delivery Orders" wrappingWidth="272.13672256469727">
                             <font>
                                 <Font name="System Bold" size="17.0" />
                             </font>
@@ -55,7 +55,7 @@
                     <HBox prefHeight="29.0" prefWidth="415.0">
                         <AnchorPane prefHeight="44.0" prefWidth="105.0" />
                         <AnchorPane prefHeight="14.0" prefWidth="202.0">
-                            <Button fx:id="linktoordereditdriver" layoutX="-1.0" layoutY="4.0" mnemonicParsing="false" onAction="#linktoordereditdriverButtonPressed" prefHeight="26.0" prefWidth="204.0" style="-fx-background-color: #C4C4C4; -fx-border-color: #868686;" text="Edit Order">
+                            <Button fx:id="linktoordereditdriver" layoutX="-1.0" layoutY="4.0" mnemonicParsing="false" onAction="#linktoordereditdriverButtonPressed" prefHeight="26.0" prefWidth="204.0" style="-fx-background-color: #C4C4C4; -fx-border-color: #868686;" text="Complete Delivery Order">
                                 <font>
                                     <Font name="System Italic" size="12.0" />
                                 </font>

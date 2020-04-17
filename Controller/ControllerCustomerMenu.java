@@ -15,7 +15,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 /**
- *Controller for the scene a Delivery Driver gets when they log in.
+ *Controller for the customer view of the menu.
  *@author Haixin Wang
  *@version ?
  */
@@ -66,8 +66,8 @@ public class ControllerCustomerMenu implements Initializable {
     }
 
     /**
-     *Changes the customer's scene to the customer Menu scene.
-     *@param event Clicking on the menu button.
+     *Changes the scene to the customer Menu scene.
+     *@param event Clicking on the Menu button.
      */
     public void linktomenuButtonPressed(javafx.event.ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/customerMenu.fxml"));
@@ -81,8 +81,8 @@ public class ControllerCustomerMenu implements Initializable {
     }
 
     /**
-     *Changes the customer's scene to the customer own orders.
-     *@param event Clicking on the orders button.
+     *Changes the scene to the my Orders scene.
+     *@param event Clicking on the My Orders button.
      */
     public void linktomyordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/myOrdersHome.fxml"));
@@ -96,8 +96,8 @@ public class ControllerCustomerMenu implements Initializable {
     }
 
     /**
-     *Changes the customer's scene to the customer own bookings.
-     *@param event Clicking on the bookings button.
+     *Changes the scene to the my bookings scene.
+     *@param event Clicking on the My Bookings button.
      */
     public void linktobookinghomeButtonPressed(javafx.event.ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/bookingHome.fxml"));
@@ -126,8 +126,8 @@ public class ControllerCustomerMenu implements Initializable {
     }
 
     /**
-     *Changes the customer's scene to the customer logout scene.
-     *@param event Clicking on the logout button.
+     *Changes the scene to the Customer login scene.
+     *@param event Clicking on the Logout button.
      */
     public void logoutButtonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent logoutParent = FXMLLoader.load(getClass().getResource("../FXML/Customer_login_Scene.fxml"));
@@ -138,7 +138,7 @@ public class ControllerCustomerMenu implements Initializable {
     }
 
     /**
-     *Changes the scene to the Basket scene.
+     *Changes the scene to the items in basket scene.
      *@param event Clicking on the Add button.
      */
     public void linktobasketButtonPressed(javafx.event.ActionEvent event) throws IOException {

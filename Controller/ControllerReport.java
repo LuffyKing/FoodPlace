@@ -29,7 +29,7 @@ public class ControllerReport {
     *Changes the Manager's scene to the Manager staff scene.
     *@param event Clicking on the staff button.
     */
-    public void linktostaffButtonPressed(javafx.event.ActionEvent event) throws IOException {
+    public void linktostaffview(javafx.event.ActionEvent event) throws IOException {
         Parent staffParent = FXMLLoader.load(getClass().getResource("staff.fxml"));
         Scene staffScene = new Scene(staffParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -41,7 +41,7 @@ public class ControllerReport {
     *Changes the manager's scene to the manager permission denied scene.
     *@param event Clicking on a button that would lead to a scene that is not accessable for the manager.
     */
-    public void linktoordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
+    public void permissiondeniedmanager(javafx.event.ActionEvent event) throws IOException {
         Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondeniedmanager.fxml"));
         Scene permissiondeniedScene = new Scene(permissiondeniedParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -53,7 +53,7 @@ public class ControllerReport {
     *Changes the Manager's scene to the Manager menu scene.
     *@param event Clicking on the menu button.
     */
-    public void linktomenuButtonPressed(javafx.event.ActionEvent event) throws IOException {
+    public void linktomenuview(javafx.event.ActionEvent event) throws IOException {
         Parent menuParent = FXMLLoader.load(getClass().getResource("customerMenu.fxml"));
         Scene menuScene = new Scene(menuParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -65,7 +65,7 @@ public class ControllerReport {
     *Changes the Manager's scene to the Manager bookingSubmitted scene.
     *@param event Clicking on the booking button.
     */
-    public void linktobookingsButtonPressed(javafx.event.ActionEvent event) throws IOException {
+    public void linktobookingsview(javafx.event.ActionEvent event) throws IOException {
         Parent bookingParent = FXMLLoader.load(getClass().getResource("bookingSubmitted.fxml"));
         Scene bookingScene = new Scene(bookingParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -77,7 +77,7 @@ public class ControllerReport {
     *Changes the Manager's scene to the Manager report scene.
     *@param event Clicking on the report button.
     */
-    public void linktoreportsButtonPressed(javafx.event.ActionEvent event) throws IOException {
+    public void linktoreportsview(javafx.event.ActionEvent event) throws IOException {
         Parent reportParent = FXMLLoader.load(getClass().getResource("report.fxml"));
         Scene reportScene = new Scene(reportParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();

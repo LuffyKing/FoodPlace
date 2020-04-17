@@ -3,11 +3,10 @@ package FoodPlace.Controller;
 import java.io.IOException;
 
 /**
- *Controller for the scene a Delivery Driver gets when they log in.
+ *Controller for the scene a Driver views when they click on the orders button.
  *@author Haixin Wang
  *@version ?
  */
-
 public class ControllerOrdersDriver {
     public Button linktostaff;
     public Button linktoorders;
@@ -19,7 +18,7 @@ public class ControllerOrdersDriver {
     public Button linktoordereditdriver;
 
     /**
-     *Changes the scene to the permissiondenied scene.
+     *Changes the scene to the permission denied scene.
      *@param event Clicking on the staff button.
      */
     public void linktostaffButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -31,7 +30,7 @@ public class ControllerOrdersDriver {
     }
 
     /**
-     *Changes the scene to the ordersChef scene.
+     *Changes the scene to the orders scene.
      *@param event Clicking on the orders button.
      */
     public void linktoordersdriverButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -43,7 +42,7 @@ public class ControllerOrdersDriver {
     }
 
     /**
-     *Changes the scene to the Menu_Scene scene.
+     *Changes the scene to the permission denied scene.
      *@param event Clicking on the menu button.
      */
     public void linktomenusceneButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -55,7 +54,7 @@ public class ControllerOrdersDriver {
     }
 
     /**
-     *Changes the scene to the permissiondeniedchef scene.
+     *Changes the scene to the permission denied scene.
      *@param event Clicking on the bookings button.
      */
     public void linktobookinghomeButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -67,7 +66,7 @@ public class ControllerOrdersDriver {
     }
 
     /**
-     *Changes the scene to the permissiondeniedchef scene.
+     *Changes the scene to the permission denied scene.
      *@param event Clicking on the reports button.
      */
     public void linktoreportsButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -79,7 +78,7 @@ public class ControllerOrdersDriver {
     }
 
     /**
-     *Changes the scene to the Chef Notifications scene.
+     *Changes the scene to the Notifications scene.
      *@param event Clicking on the Notifications button.
      */
     public void notificationspageButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -91,7 +90,7 @@ public class ControllerOrdersDriver {
     }
 
     /**
-     *Changes the scene to the Staff login Draft scene.
+     *Changes the scene to the Staff login scene.
      *@param event Clicking on the Logout button.
      */
     public void logoutbuttonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -103,8 +102,8 @@ public class ControllerOrdersDriver {
     }
 
     /**
-     *Changes the scene to the orderEditDrivere scene.
-     *@param event Clicking on the Edit Order button.
+     *Changes the scene to the where the driver can mark the order as complete.
+     *@param event Clicking on the Complete Delivery Order button.
      */
     public void linktoordereditdriverButtonPressed(javafx.event.ActionEvent event) throws IOException {
         Parent editParent = FXMLLoader.load(getClass().getResource("orderEditDriver.fxml"));

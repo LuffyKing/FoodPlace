@@ -15,8 +15,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
 /**
- *Controller for the scene a Delivery Driver gets when they log in.
+ *Controller for the scene a Customer gets when they log in.
  *@author Haixin Wang
  *@version ?
  */
@@ -37,6 +38,10 @@ public class ControllerCustomerHome implements Initializable {
 
     }
 
+    /**
+    *Sets the customer to the logged in customer.
+    *@param customer The logged in customer.
+    */
     public void setCustomer(Customer customer) {
         this.customer = customer;
         welcomeText.setText("Welcome "+customer.getFirstName());;
@@ -49,8 +54,13 @@ public class ControllerCustomerHome implements Initializable {
 
 
     /**
+<<<<<<< HEAD
      *Changes the customer's scene to the customer account scene.
      *@param event Clicking on the account button.
+=======
+     *Changes the scene to the My Account scene.
+     *@param event Clicking on the My Account button.
+>>>>>>> e27f3093bc39f2391af64b88a0378033a9138805
      */
     public void linktomyaccountButtonPressed(javafx.event.ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/MyAccount.fxml"));
@@ -64,8 +74,13 @@ public class ControllerCustomerHome implements Initializable {
     }
 
     /**
+<<<<<<< HEAD
      *Changes the customer's scene to the customer Menu scene.
      *@param event Clicking on the menu button.
+=======
+     *Changes the scene to the customer Menu scene.
+     *@param event Clicking on the Menu button.
+>>>>>>> e27f3093bc39f2391af64b88a0378033a9138805
      */
     public void linktomenuButtonPressed(javafx.event.ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/customerMenu.fxml"));
@@ -79,8 +94,13 @@ public class ControllerCustomerHome implements Initializable {
     }
 
     /**
+<<<<<<< HEAD
      *Changes the customer's scene to the customer own orders.
      *@param event Clicking on the orders button.
+=======
+     *Changes the scene to the my orders scene.
+     *@param event Clicking on the My Orders button.
+>>>>>>> e27f3093bc39f2391af64b88a0378033a9138805
      */
     public void linktomyordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/myOrdersHome.fxml"));
@@ -94,8 +114,13 @@ public class ControllerCustomerHome implements Initializable {
     }
 
     /**
+<<<<<<< HEAD
      *Changes the customer's scene to the customer own bookings.
      *@param event Clicking on the bookings button.
+=======
+     *Changes the scene to the my bookings scene.
+     *@param event Clicking on the My Bookings button.
+>>>>>>> e27f3093bc39f2391af64b88a0378033a9138805
      */
     public void linktobookinghomeButtonPressed(javafx.event.ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../FXML/bookingHome.fxml"));

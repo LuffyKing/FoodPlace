@@ -46,7 +46,7 @@ public class ControllerBookingHome implements Initializable {
     *@param event Clicking on the Create Booking button.
     */
     public void linktobookingcreateButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent bookingCreateParent = FXMLLoader.load(getClass().getResource("bookingCreate.fxml"));
+        Parent bookingCreateParent = FXMLLoader.load(getClass().getResource("../FXML/bookingCreate.fxml"));
         Scene bookingCreateScene = new Scene(bookingCreateParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(bookingCreateScene);

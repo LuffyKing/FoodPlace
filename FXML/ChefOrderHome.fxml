@@ -4,15 +4,15 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FoodPlace.Controller.ControllerDriverNotifications">
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FoodPlace.ControllerChefHome">
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
         <VBox prefHeight="398.0" prefWidth="175.0">
             <AnchorPane prefHeight="104.0" prefWidth="175.0">
@@ -20,12 +20,12 @@
                     <effect>
                         <DropShadow />
                     </effect>
-                    <Image url="@../Documents/Swansea/Computer%20Science/Second%20Semester/CSCM94%20Software%20Engineering%20Principles/CW/Downloads/FoodPlace-master/sample/Logo.png" />
+                    <Image url="@../../../../../Downloads/FoodPlace-master/sample/Logo.png" />
                 </ImageView>
             </AnchorPane>
             <Button fx:id="linktostaff" mnemonicParsing="false" onAction="#permissiondeniedscreen" prefHeight="62.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Staff" />
-            <Button fx:id="linktoorders" mnemonicParsing="false" onAction="#linktoordersButtonPressed" prefHeight="64.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Orders" />
-            <Button fx:id="linktomenu" mnemonicParsing="false" onAction="#permissiondeniedscreen" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Menu" />
+            <Button fx:id="linktoorders" mnemonicParsing="false" onAction="#linktoorderschefview" prefHeight="64.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Orders" />
+            <Button fx:id="linktomenu" mnemonicParsing="false" onAction="#linktomenuchefview" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Menu" />
             <Button fx:id="linktobookings" mnemonicParsing="false" onAction="#permissiondeniedscreen" prefHeight="63.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Bookings" />
             <Button fx:id="linktoreports" mnemonicParsing="false" onAction="#permissiondeniedscreen" prefHeight="60.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Reports" />
         </VBox>
@@ -41,22 +41,9 @@
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
             <children>
-               <Label layoutX="14.0" layoutY="14.0" text="Notifications">
-                  <font>
-                     <Font size="33.0" />
-                  </font>
-               </Label>
-               <ImageView fitHeight="129.0" fitWidth="129.0" layoutX="278.0" layoutY="6.0">
-                  <image>
-                     <Image url="@../Documents/Swansea/Computer%20Science/Second%20Semester/CSCM94%20Software%20Engineering%20Principles/CW/Downloads/waiter-150452_1280.png" />
-                  </image>
-               </ImageView>
-               <Button fx:id="linktodelivery" layoutX="24.0" layoutY="167.0" mnemonicParsing="false" onAction="#deliveryview" prefHeight="27.0" prefWidth="184.0" text="check delivery" />
-               <Label layoutX="256.0" layoutY="167.0" text="New Delivery!">
-                  <font>
-                     <Font size="23.0" />
-                  </font>
-               </Label>
+               <TableView fx:id="ChefTable" layoutX="26.0" layoutY="46.0" prefHeight="230.0" prefWidth="358.0" />
+               <Label layoutX="26.0" layoutY="29.0" text="Orders:" />
+               <Button layoutX="177.0" layoutY="308.0" mnemonicParsing="false" text="Update" />
             </children>
             </AnchorPane>
         </SplitPane>

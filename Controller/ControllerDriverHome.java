@@ -28,7 +28,7 @@ public class ControllerDriverHome {
     *@param event Clicking on the Notifications button.
     */
     public void notificationspageButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent notificationsParent = FXMLLoader.load(getClass().getResource("DriverNotifications.fxml"));
+        Parent notificationsParent = FXMLLoader.load(getClass().getResource("../FXML/DriverNotifications.fxml"));
         Scene notificationsScene = new Scene(notificationsParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(notificationsScene);
@@ -40,7 +40,7 @@ public class ControllerDriverHome {
     *@param event Clicking on the Logout button.
     */
     public void logoutbuttonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent logoutParent = FXMLLoader.load(getClass().getResource("Staff_login_Draft.fxml"));
+        Parent logoutParent = FXMLLoader.load(getClass().getResource("../FXML/Staff_login_Draft.fxml"));
         Scene logoutScene = new Scene(logoutParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(logoutScene);
@@ -52,7 +52,7 @@ public class ControllerDriverHome {
     *@param event Clicking on a button that leads to a scene that the driver doesn't have access to.
     */
     public void permissiondeniedscreen(javafx.event.ActionEvent event) throws IOException {
-        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("permissiondenieddriver.fxml"));
+        Parent permissiondeniedParent = FXMLLoader.load(getClass().getResource("../FXML/permissiondenieddriver.fxml"));
         Scene permissiondeniedScene = new Scene(permissiondeniedParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(permissiondeniedScene);
@@ -64,7 +64,7 @@ public class ControllerDriverHome {
     *@param event Clicking on the Orders button.
     */
     public void linktoordersdriverview(javafx.event.ActionEvent event) throws IOException {
-        Parent ordersdriverviewParent = FXMLLoader.load(getClass().getResource("ordersDriver.fxml"));
+        Parent ordersdriverviewParent = FXMLLoader.load(getClass().getResource("../FXML/ordersDriver.fxml"));
         Scene ordersdriverviewScene = new Scene(ordersdriverviewParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(ordersdriverviewScene);
