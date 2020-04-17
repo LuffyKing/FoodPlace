@@ -55,6 +55,11 @@ public class ControllerMyOrdersHome implements Initializable {
     private TableColumn<Order, Integer> customerIdColumn;
     private Customer customer;
 
+    /**
+    *Function to initialise the table view on load of the scene.
+    *@param location
+    *@param resources
+    */
     @Override
     public void initialize(URL location, ResourceBundle resources){
         orderIdColumn.setCellValueFactory(new PropertyValueFactory<Order, Integer>("orderId"));
@@ -65,14 +70,27 @@ public class ControllerMyOrdersHome implements Initializable {
         ObservableList<Order> orders = getAllCustomerOrders(customer.getCustomerId());
     }
 
+    /**
+    *Sets the customer to the one who is logged in.
+    *@param customer the customer who is logged in.
+    */
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
 
+    /**
+    *Returns the customer who is logged in.
+    *@return The customer.
+    */
     public Customer getCustomer() {
         return customer;
     }
 
+    /**
+    *Returns all orders associated with the customer who is logged in.
+    *@param customerId The customer Id.
+    *@return A list of orders for the logged in customer.
+    */
     private ObservableList<Order> getAllCustomerOrders(int customerId){
         ObservableList<Order> customerOrders = null;
         try {
