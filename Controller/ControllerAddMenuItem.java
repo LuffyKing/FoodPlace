@@ -3,11 +3,10 @@ package FoodPlace.Controller;
 import java.io.IOException;
 
 /**
- *Controller for the scene a Delivery Driver gets when they log in.
+ *Controller for the scene a Chef views when they go to add a menu item.
  *@author Haixin Wang
  *@version ?
  */
-
 public class ControllerAddMenuItem {
     public Button linktostaff;
     public Button linktoorders;
@@ -19,7 +18,7 @@ public class ControllerAddMenuItem {
     public Button linktoeidtmenuitem;
 
     /**
-     *Changes the scene to the permissiondenied scene.
+     *Changes the scene to the permission denied scene.
      *@param event Clicking on the staff button.
      */
     public void linktostaffButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -31,7 +30,7 @@ public class ControllerAddMenuItem {
     }
 
     /**
-     *Changes the scene to the ordersChef scene.
+     *Changes the scene to the chef view orders scene.
      *@param event Clicking on the orders button.
      */
     public void linktoordersdriverButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -43,7 +42,7 @@ public class ControllerAddMenuItem {
     }
 
     /**
-     *Changes the scene to the Menu_Scene scene.
+     *Changes the scene to the chef view Menu scene.
      *@param event Clicking on the menu button.
      */
     public void linktomenusceneButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -55,7 +54,7 @@ public class ControllerAddMenuItem {
     }
 
     /**
-     *Changes the scene to the permissiondeniedchef scene.
+     *Changes the scene to the permission denied scene.
      *@param event Clicking on the bookings button.
      */
     public void linktobookinghomeButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -67,7 +66,7 @@ public class ControllerAddMenuItem {
     }
 
     /**
-     *Changes the scene to the permissiondeniedchef scene.
+     *Changes the scene to the permission denied scene.
      *@param event Clicking on the reports button.
      */
     public void linktoreportsButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -91,7 +90,7 @@ public class ControllerAddMenuItem {
     }
 
     /**
-     *Changes the scene to the Staff login Draft scene.
+     *Changes the scene to the Staff login scene.
      *@param event Clicking on the Logout button.
      */
     public void logoutbuttonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -103,7 +102,7 @@ public class ControllerAddMenuItem {
     }
 
     /**
-     *Changes the scene to the Edit Menu Item Scene scene.
+     *Changes the scene to the Edit Menu Item scene.
      *@param event Clicking on the confirm button.
      */
     public void linktoeidtmenuitemButtonPressed(javafx.event.ActionEvent event) throws IOException {
