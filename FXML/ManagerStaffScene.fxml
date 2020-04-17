@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FoodPlace.Controller.ControllerManagerStaffScene">
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
@@ -22,7 +15,7 @@
                      <children>
                         <ImageView fitHeight="139.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Black%20with%20Utensils%20Icon%20Restaurant%20Logo.png" />
+                              <Image url="@Logo.png" />
                            </image>
                            <effect>
                               <DropShadow />
@@ -55,12 +48,13 @@
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                      <children>
-                        <TableView layoutX="22.0" layoutY="14.0" prefHeight="255.0" prefWidth="381.0">
+                        <TableView fx:id="StaffTable" layoutX="7.0" layoutY="14.0" prefHeight="255.0" prefWidth="403.0">
                           <columns>
-                            <TableColumn fx:id="StaffNameColumn" prefWidth="75.0" text="StaffName" />
-                            <TableColumn fx:id="StaffTypeColumn" prefWidth="57.0" text="Type" />
-                              <TableColumn fx:id="StaffHoursWorkedColumn" prefWidth="127.0" text="HoursWorked" />
-                              <TableColumn fx:id="StaffHoursTobeWorkedColumn" prefWidth="121.0" text="HoursTobeWorked" />
+                              <TableColumn fx:id="S_idColumn" prefWidth="37.0" text="S_id" />
+                            <TableColumn fx:id="StaffNameColumn" prefWidth="84.0" text="StaffName" />
+                            <TableColumn fx:id="StaffTypeColumn" prefWidth="56.0" text="Type" />
+                              <TableColumn fx:id="StaffHoursWorkedColumn" prefWidth="99.0" text="HoursWorked" />
+                              <TableColumn fx:id="StaffHoursTobeWorkedColumn" prefWidth="119.0" text="HoursTobeWorked" />
                           </columns>
                         </TableView>
                         <Button fx:id="StaffOptionsButton" layoutX="170.0" layoutY="295.0" mnemonicParsing="false" text="Staff Options" />
