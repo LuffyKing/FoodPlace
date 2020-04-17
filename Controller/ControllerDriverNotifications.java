@@ -11,11 +11,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
-*Controller for the scene that the driver see the Notifications.
+*Controller for the driver Notifications scene.
 *@author Chunlei Liu
 *@version ?
 */
-
 public class ControllerDriverNotifications {
     public Button linktostaff;
     public Button linktoorders;
@@ -25,6 +24,7 @@ public class ControllerDriverNotifications {
     public Button linktocheckdelivery;
     public Button notificationspage;
     public Button logoutbutton;
+    public button linktodelivery;
 
     /**
     *Changes the driver's scene to the driver permission denied scene.
@@ -43,7 +43,7 @@ public class ControllerDriverNotifications {
     *@param event Clicking on the orders button.
     */
     public void linktoordersButtonPressed(javafx.event.ActionEvent event) throws IOException {
-        Parent myordersParent = FXMLLoader.load(getClass().getResource("myOrdersHome.fxml"));
+        Parent myordersParent = FXMLLoader.load(getClass().getResource("ordersDriver.fxml"));
         Scene myordersScene = new Scene(myordersParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(myordersScene);
@@ -99,7 +99,7 @@ public class ControllerDriverNotifications {
     }
 
     /**
-    *Changes the driver's scene to the driver logout scene.
+    *Changes the driver's scene to the staff login scene.
     *@param event Clicking on the logout button.
     */
     public void logoutButtonPressed(javafx.event.ActionEvent event) throws IOException {
@@ -107,6 +107,18 @@ public class ControllerDriverNotifications {
         Scene logoutScene = new Scene(logoutParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(logoutScene);
+        window.show();
+    }
+    
+    /**
+    *Changes the driver's scene to the delivery orders.
+    *@param event Clicking on the check delivery button.
+    */
+    public void deliveryview(javafx.event.ActionEvent event) throws IOException {
+        Parent myordersParent = FXMLLoader.load(getClass().getResource("ordersDriver.fxml"));
+        Scene myordersScene = new Scene(myordersParent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(myordersScene);
         window.show();
     }
 
