@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FoodPlace.ControllerChefHome">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+        <VBox prefHeight="398.0" prefWidth="175.0">
+            <AnchorPane prefHeight="104.0" prefWidth="175.0">
+                <ImageView fitHeight="139.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <Image url="@../../../../../Downloads/FoodPlace-master/sample/Logo.png" />
+                </ImageView>
+            </AnchorPane>
+            <Button fx:id="linktostaff" mnemonicParsing="false" onAction="#permissiondeniedscreen" prefHeight="62.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Staff" />
+            <Button fx:id="linktoorders" mnemonicParsing="false" onAction="#linktoorderschefview" prefHeight="64.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Orders" />
+            <Button fx:id="linktomenu" mnemonicParsing="false" onAction="#linktomenuchefview" prefHeight="61.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Menu" />
+            <Button fx:id="linktobookings" mnemonicParsing="false" onAction="#permissiondeniedscreen" prefHeight="63.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Bookings" />
+            <Button fx:id="linktoreports" mnemonicParsing="false" onAction="#permissiondeniedscreen" prefHeight="60.0" prefWidth="175.0" style="-fx-background-color: #E3FFFB; -fx-border-color: #84AFA9; -fx-border-width: 1px;" text="Reports" />
+        </VBox>
+    </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+        <SplitPane dividerPositions="0.0829145728643216" orientation="VERTICAL" prefHeight="400.0" prefWidth="417.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="22.0" prefWidth="415.0">
+                <HBox layoutY="1.0" prefHeight="26.0" prefWidth="415.0">
+                    <Button fx:id="notificationspage" mnemonicParsing="false" onAction="#notificationspageButtonPressed" prefHeight="27.0" prefWidth="204.0" style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;" text="Notifications" />
+                    <Separator orientation="VERTICAL" prefHeight="27.0" prefWidth="0.0" />
+                    <Button fx:id="logoutbutton" mnemonicParsing="false" onAction="#logoutbuttonPressed" prefHeight="27.0" prefWidth="204.0" style="-fx-background-color: #B1B1B1; -fx-border-color: #868686;" text="Logout" />
+                </HBox>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <children>
+               <TableView fx:id="ChefTable" layoutX="26.0" layoutY="46.0" prefHeight="230.0" prefWidth="358.0" />
+               <Label layoutX="26.0" layoutY="29.0" text="Orders:" />
+               <Button layoutX="177.0" layoutY="308.0" mnemonicParsing="false" text="Update" />
+            </children>
+            </AnchorPane>
+        </SplitPane>
+    </AnchorPane>
+</SplitPane>
