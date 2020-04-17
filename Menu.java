@@ -3,16 +3,15 @@ package FoodPlace;
 import javafx.collections.ObservableList;
 
 /**
-*This class represents the generated reports required by the manager.
-*@author Haixi Wang
-*@author Damola Aderinwale 
+*This class represents the menu which is a list of menu items.
+*@author Damola Aderinwale (JavaDoc by Haixin Wang & Sara Philipson)
 *@version ?
 */
 
 public class Menu {
     private ObservableList<MenuItem> menuItems;
     /**
-    *Updates the menu item.
+    *Constructor for the menu.
     *@param menuItems The item on menu.
     */
     public Menu(ObservableList<MenuItem> items){
@@ -44,11 +43,10 @@ public class Menu {
     }
 
     /**
-    *Function to remove duplicate item by check description and category.
-    *@param menuItem The menu item.
+    *Function to check for a duplicate item by check description and category.
     *@param description The description.
     *@param category The category.
-    *@return The menu item that not duplicate.
+    *@return True or false depending on if it is a duplicate or not.
     */
     public boolean isDuplicate(String description, String category){
         for (MenuItem item:
@@ -61,11 +59,11 @@ public class Menu {
     }
 
     /**
-    *Function to remove duplicate item by check exception id.
-    *@param menuItem The menu item.
+    *Function to check for a duplicate item by checking against the description, category & exception id.
     *@param description The description.
     *@param category The category.
-    *@return The menu item that not duplicate.
+    *@param exceptionId The exception Id.
+    *@return True or false depending on if it is a duplicate or not.
     */
     public boolean isDuplicate(String description, String category, int exceptionId){
         for (MenuItem item:
@@ -79,13 +77,13 @@ public class Menu {
     }
 
     /**
-    *Function to save to database.
-    *@param menuItem The menu item.
+    *Function to add a new menu item to the menu.
     *@param description The description.
     *@param price The price.
     *@param category The category.
     *@param mId The menu id.
     *@param name The name.
+    *@return The new menu item.
     */
     public MenuItem addMenuItem(String description, double price, String category, int mId, String name){
         if (!isDuplicate(description, category)){
@@ -99,7 +97,7 @@ public class Menu {
     }
 
     /**
-    *Function to remove menu item.
+    *Function to remove menu item from the menu.
     *@param menuItemId The menu item id.
     */
     public void removeMenuItem(int menuItemId){
@@ -108,8 +106,11 @@ public class Menu {
     }
 
     /**
-    *Function to edit menu item.
+    *Function to edit a menu item in the menu.
     *@param menuItem The menu item .
+    *@param description The item description.
+    *@param price The price.
+    *@param category The item category.
     */
     public void editMenuItem(MenuItem menuItem, String description, double price, String category){
         if (description != null && category != null) {
@@ -129,15 +130,16 @@ public class Menu {
     }
     
     /**
-    *set the specials.
-    *@param setAsApecial The specials.
+    *Update the item on the menu's status as a special or not.
+    *@param menuItem The menu item.
+    *@param status The special status.
     */
     private void updateSpecials(MenuItem menuItem, boolean status){
         menuItem.setAsSpecial(status);
     }
     
     /**
-    *Updates the special.
+    *Turns a menu item into a special.
     *@param menuItem The menu item.
     */
     public void assignMenuItemAsSpecial(MenuItem menuItem){
@@ -145,7 +147,7 @@ public class Menu {
     }
 
     /**
-    *Remove the specials.
+    *Remove the special status from a menu item.
     *@param menuItem The menu item.
     */
     public void removeMenuItemAsSpecial(MenuItem menuItem){
@@ -153,7 +155,7 @@ public class Menu {
     }
 
     /**
-    *Create the specials.
+    *Create a daily special menu item.
     *@param description The description.
     *@param price The price.
     *@param category The category.
