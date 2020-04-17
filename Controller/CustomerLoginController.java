@@ -67,7 +67,7 @@ public class CustomerLoginController implements Initializable {
     }
 
     /**
-     * Method for getting Username and password
+     * Method for login and scene change
      *
      * @param event
      */
